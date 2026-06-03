@@ -324,6 +324,7 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
                 setError(getString(R.string.ai_model_not_downloaded))
                 return@LaunchedEffect
             }
+            setError(null)
             if (!aiSubsystem.isEngineReady()) {
                 setIsInitializing(true)
                 try {
@@ -345,6 +346,11 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
 
         fun sendMessage(text: String) {
             if (text.isBlank() || isGenerating) return
+            if (!aiSubsystem.isModelAvailable()) {
+                setError(getString(R.string.ai_model_not_downloaded))
+                findNavController().navigateWithAnimation(R.id.aiSettingsFragment)
+                return
+            }
             val messageImage = attachedImage ?: aiContext?.image
             val userMessage = ChatMessage(text, isUser = true, image = messageImage)
             val loadingMessage = ChatMessage("", isUser = false, isLoading = true)
@@ -612,11 +618,15 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
                 isGenerating = isGenerating,
                 isInitializing = isInitializing,
                 error = error,
+                showDownloadModelAction = error == getString(R.string.ai_model_not_downloaded),
                 suggestedQuestions = suggestedQuestions,
                 attachedImage = attachedImage,
                 onInputChanged = setInputText,
                 onSend = ::sendMessage,
                 onStop = { aiSubsystem.stopResponse() },
+                onDownloadModelClick = {
+                    findNavController().navigateWithAnimation(R.id.aiSettingsFragment)
+                },
                 onCameraClick = {
                     scope.launch {
                         val uri = CustomUiUtils.takePhoto(this@AiAssistantFragment)
@@ -771,11 +781,13 @@ private fun AiAssistantContent(
     isGenerating: Boolean,
     isInitializing: Boolean,
     error: String?,
+    showDownloadModelAction: Boolean,
     suggestedQuestions: List<String>,
     attachedImage: Bitmap?,
     onInputChanged: (String) -> Unit,
     onSend: (String) -> Unit,
     onStop: () -> Unit,
+    onDownloadModelClick: () -> Unit,
     onCameraClick: () -> Unit,
     onPickImageClick: () -> Unit,
     onPickScreenshotClick: () -> Unit,
@@ -840,11 +852,25 @@ private fun AiAssistantContent(
         }
 
         if (error != null) {
-            Text(
-                text = error,
-                color = MaterialTheme.colorScheme.error,
-                modifier = Modifier.padding(bottom = 8.dp).testTag("error_text")
-            )
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 8.dp)
+                    .testTag("error_text")
+            ) {
+                Text(
+                    text = error,
+                    color = MaterialTheme.colorScheme.error
+                )
+                if (showDownloadModelAction) {
+                    OutlinedButton(
+                        onClick = onDownloadModelClick,
+                        modifier = Modifier.padding(top = 8.dp)
+                    ) {
+                        Text(stringResource(R.string.ai_download_model))
+                    }
+                }
+            }
         }
 
         if (isInitializing) {
