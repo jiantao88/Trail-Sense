@@ -4,7 +4,7 @@
 
 项目仓库：https://github.com/jiantao88/Trail-Sense/tree/feature/ai-assistant
 
-当前提交版本：`2df328b271fb4248a78225c0fbccbd758efa9b04`
+当前提交版本：`0cba0fadad0be2ba456e31c479b927c6ff930852`
 
 ## 项目简介
 
@@ -92,4 +92,3 @@ PR 标题格式：
 ```text
 [赛道C] Trail Sense AI Assistant - 队伍名
 ```
-
