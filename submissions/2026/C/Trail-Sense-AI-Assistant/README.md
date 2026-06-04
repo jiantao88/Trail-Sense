@@ -4,7 +4,7 @@
 
 项目仓库：https://github.com/jiantao88/Trail-Sense/tree/feature/ai-assistant
 
-当前提交版本：`0cba0fadad0be2ba456e31c479b927c6ff930852`
+当前提交版本：以 `feature/ai-assistant` 分支最新 HEAD 为准。
 
 ## 项目简介
 
