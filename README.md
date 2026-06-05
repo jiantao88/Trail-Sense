@@ -42,7 +42,15 @@ Trail Sense 原本是一个面向徒步、露营、地理定位和生存场景�
 
 ## 使用的 AI 技术
 
-### 模型
+本项目参考 Gemma 4 Gallery App 能展示的几类核心能力，把它们落到 Trail Sense 的户外工具场景中：
+
+- **LLM 本地问答**：使用 Gemma 4 在手机端进行自然语言理解、工具推荐、读数解释和户外安全问答。
+- **图片识别 / 多模态输入**：支持在聊天中附加图片，为云层识别、户外环境观察和视觉问答提供入口。
+- **Agent Skill**：把 Trail Sense 的户外工具封装成可被 AI 理解和调度的技能，例如天气、导航、路径、信标、SOS 手电筒和哨子。
+- **Native Function Calling / Tool Calling**：让 Gemma 4 不只是生成文本，而是可以调用 App 内本地工具读取上下文或生成行动卡片。
+- **Edge AI**：模型下载后在 Android 设备本地运行，不依赖云端 LLM API。
+
+### LLM：Gemma 4 本地大语言模型
 
 默认模型：
 
@@ -53,6 +61,13 @@ Trail Sense 原本是一个面向徒步、露营、地理定位和生存场景�
 - `Gemma-4-E4B-it`
 
 模型通过 Hugging Face 下载为 LiteRT-LM 可加载的本地模型文件。首次下载需要网络，下载完成后推理在设备本地运行。
+
+Gemma 4 在本项目中承担 LLM 能力：
+
+- 理解用户自然语言问题
+- 判断用户意图是找工具、解释读数、执行应急动作还是询问户外安全知识
+- 基于系统 Prompt、工具知识库和 App 上下文生成回答
+- 在需要时触发工具调用，而不是只返回泛泛建议
 
 ### 推理运行时
 
@@ -74,6 +89,23 @@ implementation(libs.litertlm)
 - 发送文本和图片输入
 - 控制 token、采样参数和图片压缩尺寸
 
+### 图片识别 / 多模态输入
+
+Gemma 4 Gallery App 中的一个重要能力是多模态输入。本项目把这个能力迁移到 Trail Sense 的户外场景中：AI Assistant 聊天界面支持附加图片，并在推理层把图片压缩后传入 LiteRT-LM Conversation。
+
+相关代码：
+
+- `app/src/main/java/com/kylecorry/trail_sense/tools/ai_assistant/ui/AiAssistantFragment.kt`
+- `app/src/main/java/com/kylecorry/trail_sense/tools/ai_assistant/infrastructure/AiInferenceSubsystem.kt`
+
+可支持的场景包括：
+
+- 上传天空或云层图片，让 AI 辅助解释云层和天气风险
+- 上传户外环境照片，让 AI 结合 Trail Sense 工具给出观察建议
+- 为后续物种、地形、天气迹象等视觉识别工作流预留入口
+
+当前实现重点是完成图片输入链路和端侧多模态推理接口，具体识别准确度仍取决于所选 Gemma 4 模型和设备性能。
+
 ### 模型管理
 
 模型下载和本地文件管理位于：
@@ -87,6 +119,25 @@ implementation(libs.litertlm)
 - 断点续传下载
 - 本地模型路径管理
 - 模型删除和磁盘大小统计
+
+### Agent Skill：把 Trail Sense 工具变成 AI 技能
+
+Gemma 4 Gallery App 展示的 Agent Skill 能力，本项目用 Trail Sense 的真实工具来实现：AI 不只是回答“你可以试试某某工具”，而是知道每个工具能解决什么问题、入口在哪里、需要什么参数、是否能读取当前上下文。
+
+Agent Skill 相关资源：
+
+- `app/src/main/res/raw/ai_tool_skills.md`
+- `app/src/main/res/raw/ai_tool_knowledge.md`
+- `app/src/main/java/com/kylecorry/trail_sense/tools/ai_assistant/domain/AiToolSkillMatcher.kt`
+- `app/src/main/java/com/kylecorry/trail_sense/tools/ai_assistant/domain/AiToolKnowledgeMatcher.kt`
+
+目前封装的 Skill 类型包括：
+
+- 工具发现：根据用户目标推荐正确的 Trail Sense 工具
+- 工具使用说明：解释某个工具怎么打开、怎么操作
+- 读数解释：解释天气、导航、气压、云层等上下文
+- 应急操作：准备 SOS 手电筒、哨子等行动卡片
+- 安全约束：在高风险场景提醒用户使用真实装备、官方信息或救援渠道
 
 ### Native Function Calling / Tool Calling
 
@@ -297,4 +348,3 @@ AI 输出可能不完整或不适用于所有环境。涉及生命安全、天�
 - 上游项目：https://github.com/kylecorry31/Trail-Sense
 - 原项目贡献者：https://github.com/kylecorry31/Trail-Sense/graphs/contributors
 - 许可协议：[MIT license](LICENSE)
-
