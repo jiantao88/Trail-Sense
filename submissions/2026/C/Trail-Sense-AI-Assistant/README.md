@@ -75,7 +75,9 @@ app/build/outputs/apk/debug/app-debug.apk
 5. 输入“天气读数怎么看？”展示 AI 读取 Trail Sense 天气/气压上下文并解释。
 6. 强调模型端侧运行、位置和聊天数据不上传云端。
 
-Demo 视频链接：https://raw.githubusercontent.com/jiantao88/Trail-Sense/feature/ai-assistant/submissions/2026/C/Trail-Sense-AI-Assistant/demo/trail-sense-ai-assistant-demo.mp4
+Demo 视频链接：https://www.youtube.com/watch?v=EkK9DF7OfXg
+
+Demo 视频备用下载：https://raw.githubusercontent.com/jiantao88/Trail-Sense/feature/ai-assistant/submissions/2026/C/Trail-Sense-AI-Assistant/demo/trail-sense-ai-assistant-demo.mp4
 
 在线 APK 下载链接：https://raw.githubusercontent.com/jiantao88/Trail-Sense/feature/ai-assistant/submissions/2026/C/Trail-Sense-AI-Assistant/demo/trail-sense-ai-assistant-release-unsigned.apk
 

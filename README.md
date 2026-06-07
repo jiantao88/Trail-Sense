@@ -337,7 +337,8 @@ submissions/2026/C/Trail-Sense-AI-Assistant/demo/trail-sense-ai-assistant-demo.m
 
 在线视频链接：
 
-- Demo 视频：https://raw.githubusercontent.com/jiantao88/Trail-Sense/feature/ai-assistant/submissions/2026/C/Trail-Sense-AI-Assistant/demo/trail-sense-ai-assistant-demo.mp4
+- Demo 视频（YouTube）：https://www.youtube.com/watch?v=EkK9DF7OfXg
+- Demo 视频备用下载：https://raw.githubusercontent.com/jiantao88/Trail-Sense/feature/ai-assistant/submissions/2026/C/Trail-Sense-AI-Assistant/demo/trail-sense-ai-assistant-demo.mp4
 - Release APK：https://raw.githubusercontent.com/jiantao88/Trail-Sense/feature/ai-assistant/submissions/2026/C/Trail-Sense-AI-Assistant/demo/trail-sense-ai-assistant-release-unsigned.apk
 
 APK SHA256：
