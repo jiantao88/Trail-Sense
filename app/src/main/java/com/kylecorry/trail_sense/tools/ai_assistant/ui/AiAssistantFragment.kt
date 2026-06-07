@@ -25,7 +25,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
-import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -811,7 +811,7 @@ private fun AiAssistantContent(
 ) {
     val (showImageMenu, setShowImageMenu) = useState(false)
 
-    Column(modifier = modifier.fillMaxSize().imePadding().padding(16.dp)) {
+    Column(modifier = modifier.fillMaxSize().navigationBarsPadding().padding(16.dp)) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
