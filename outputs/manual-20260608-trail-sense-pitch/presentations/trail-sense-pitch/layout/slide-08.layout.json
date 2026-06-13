@@ -1,0 +1,4576 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/etabp9",
+    "id": "etabp9",
+    "slide": 8,
+    "layoutId": "d26b9ead-8fe0-46be-bff5-3af6fa44cac0",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "82e2fb69-29a0-4000-a7fd-d072a216786f",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFF9EC",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Avenir Next",
+      "Avenir Next Condensed"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "d26b9ead-8fe0-46be-bff5-3af6fa44cac0",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "82e2fb69-29a0-4000-a7fd-d072a216786f",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "82e2fb69-29a0-4000-a7fd-d072a216786f",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/psfil0rq",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.8.0.0"
+      },
+      "geometry": "rect"
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e1w7mp0b",
+      "id": "2",
+      "bbox": [
+        0,
+        0,
+        34,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "fillColor": "#0B3B2E"
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7mp0bi9s",
+      "id": "3",
+      "bbox": [
+        34,
+        0,
+        8,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2"
+      },
+      "geometry": "rect",
+      "fillColor": "#F0B35A"
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wval87ed",
+      "id": "4",
+      "bbox": [
+        72,
+        50,
+        108,
+        6
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.3"
+      },
+      "geometry": "rect",
+      "fillColor": "#F0B35A"
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pg3ex0nu",
+      "id": "5",
+      "bbox": [
+        72,
+        34,
+        520,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.4"
+      },
+      "geometry": "rect",
+      "text": "TRAIL SENSE AI ASSISTANT",
+      "textPreview": "TRAIL SENSE AI ASSISTANT",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "Avenir Next Condensed",
+        "color": "#234D36",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "TRAIL SENSE AI ASSISTANT"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "TRAIL SENSE AI ASSISTANT",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Avenir Next Condensed",
+            "color": "#234D36",
+            "bold": true,
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "TRAIL SENSE AI ASSISTANT",
+              "fontSize": 15,
+              "typeface": "Avenir Next Condensed",
+              "color": "#234D36",
+              "bold": true,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/epkzupwb",
+      "id": "6",
+      "bbox": [
+        72,
+        62,
+        820,
+        60
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.5"
+      },
+      "geometry": "rect",
+      "text": "路演 Demo 应该讲一个完整户外故事，而不是逐项点功能",
+      "textPreview": "路演 Demo 应该讲一个完整户外故事，而不是逐项点功能",
+      "resolvedFontSize": 31,
+      "resolvedTextStyle": {
+        "fontSize": 31,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "路演 Demo 应该讲一个完整户外故事，而不是逐项点功能"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "路演 Demo 应该讲一个完整户外故事，而不是逐项点功能",
+          "resolvedTextStyle": {
+            "fontSize": 31,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "路演 Demo 应该讲一个完整户外故事，而不是逐项点功能",
+              "fontSize": 31,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7adsji5s",
+      "id": "7",
+      "bbox": [
+        1160,
+        646,
+        80,
+        32
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.6"
+      },
+      "geometry": "rect",
+      "text": "08",
+      "textPreview": "08",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "Avenir Next Condensed",
+        "color": "#234D36",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "08"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "08",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Avenir Next Condensed",
+            "color": "#234D36",
+            "bold": true,
+            "alignment": "right",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "08",
+              "fontSize": 22,
+              "typeface": "Avenir Next Condensed",
+              "color": "#234D36",
+              "bold": true,
+              "alignment": "right",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wra5gbq1",
+      "id": "8",
+      "bbox": [
+        76,
+        148,
+        800,
+        76
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.5.0"
+      },
+      "geometry": "rect",
+      "text": "推荐演示脚本：从“迷路无信号”进入，逐步展示工具协同。",
+      "textPreview": "推荐演示脚本：从“迷路无信号”进入，逐步展示工具协同。",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "推荐演示脚本：从“迷路无信号”进入，逐步展示工具"
+          },
+          {
+            "index": 2,
+            "text": "协同。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "推荐演示脚本：从“迷路无信号”进入，逐步展示工具协同。",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "推荐演示脚本：从“迷路无信号”进入，逐步展示工具协同。",
+              "fontSize": 34,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lc7u54zi",
+      "id": "9",
+      "bbox": [
+        76,
+        238,
+        760,
+        54
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.5.1"
+      },
+      "geometry": "rect",
+      "text": "半决赛时建议把 demo 控制在 3-4 分钟：先讲原 App 的离线工具，再展示 AI 如何把这些工具串成行动。",
+      "textPreview": "半决赛时建议把 demo 控制在 3-4 分钟：先讲原 App 的离线工具，再展示 AI 如何把这些工具串成行动。",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "半决赛时建议把 demo 控制在 3-4 分钟：先讲原 App 的离线工具，再展示 AI"
+          },
+          {
+            "index": 2,
+            "text": "如何把这些工具串成行动。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "半决赛时建议把 demo 控制在 3-4 分钟：先讲原 App 的离线工具，再展示 AI 如何把这些工具串成行动。",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "半决赛时建议把 demo 控制在 3-4 分钟：先讲原 App 的离线工具，再展示 AI 如何把这些工具串成行动。",
+              "fontSize": 20,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9w3m94fu",
+      "id": "10",
+      "bbox": [
+        94,
+        340,
+        210,
+        120
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8EFE4",
+      "lineWidth": 1
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kb6xkf6d",
+      "id": "11",
+      "bbox": [
+        110,
+        356,
+        34,
+        5
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.2.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#F0B35A"
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rqd4vmtw",
+      "id": "12",
+      "bbox": [
+        110,
+        371,
+        178,
+        24
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.2.0.1"
+      },
+      "geometry": "rect",
+      "text": "1. 进入 AI Assistant",
+      "textPreview": "1. 进入 AI Assistant",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "1. 进入 AI Assistant"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "1. 进入 AI Assistant",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "1. 进入 AI Assistant",
+              "fontSize": 18,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/25kb6xkf",
+      "id": "13",
+      "bbox": [
+        110,
+        410,
+        178,
+        42
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.2.0.2"
+      },
+      "geometry": "rect",
+      "text": "展示这是 Trail Sense 内部新工具，而非外部 Web chatbot。",
+      "textPreview": "展示这是 Trail Sense 内部新工具，而非外部 Web chatbot。",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "fontSize": 12.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "展示这是 Trail Sense"
+          },
+          {
+            "index": 2,
+            "text": "内部新工具，而非外部 Web"
+          },
+          {
+            "index": 3,
+            "text": "chatbot。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "展示这是 Trail Sense 内部新工具，而非外部 Web chatbot。",
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "展示这是 Trail Sense 内部新工具，而非外部 Web chatbot。",
+              "fontSize": 12.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9knih4by",
+      "id": "14",
+      "bbox": [
+        314,
+        398.5,
+        58,
+        3
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.3.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#234D36"
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kzupwb2h",
+      "id": "15",
+      "bbox": [
+        367,
+        395,
+        10,
+        10
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.3.1"
+      },
+      "geometry": "ellipse",
+      "fillColor": "#234D36"
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/re1w7mp0",
+      "id": "16",
+      "bbox": [
+        382,
+        340,
+        210,
+        120
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.4"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8EFE4",
+      "lineWidth": 1
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2t83itgf",
+      "id": "17",
+      "bbox": [
+        398,
+        356,
+        34,
+        5
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.4.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#C45C3B"
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9gr2p8nq",
+      "id": "18",
+      "bbox": [
+        398,
+        371,
+        178,
+        24
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.4.0.1"
+      },
+      "geometry": "rect",
+      "text": "2. 迷路无信号",
+      "textPreview": "2. 迷路无信号",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "2. 迷路无信号"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "2. 迷路无信号",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2. 迷路无信号",
+              "fontSize": 18,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gvy90je9",
+      "id": "19",
+      "bbox": [
+        398,
+        410,
+        178,
+        42
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.4.0.2"
+      },
+      "geometry": "rect",
+      "text": "输入：我迷路了，手机没信号怎么办？",
+      "textPreview": "输入：我迷路了，手机没信号怎么办？",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "fontSize": 12.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "输入：我迷路了，手机没信号"
+          },
+          {
+            "index": 2,
+            "text": "怎么办？"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "输入：我迷路了，手机没信号怎么办？",
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "输入：我迷路了，手机没信号怎么办？",
+              "fontSize": 12.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wra5gbq1",
+      "id": "20",
+      "bbox": [
+        602,
+        398.5,
+        58,
+        3
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.5.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#234D36"
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lc7u54zi",
+      "id": "21",
+      "bbox": [
+        655,
+        395,
+        10,
+        10
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.5.1"
+      },
+      "geometry": "ellipse",
+      "fillColor": "#234D36"
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/eloj2t83",
+      "id": "22",
+      "bbox": [
+        670,
+        340,
+        210,
+        120
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.6"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8EFE4",
+      "lineWidth": 1
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/36hcrmhk",
+      "id": "23",
+      "bbox": [
+        686,
+        356,
+        34,
+        5
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.6.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#77A35D"
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wfyxobm5",
+      "id": "24",
+      "bbox": [
+        686,
+        371,
+        178,
+        24
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.6.0.1"
+      },
+      "geometry": "rect",
+      "text": "3. 工具推荐",
+      "textPreview": "3. 工具推荐",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "3. 工具推荐"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "3. 工具推荐",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3. 工具推荐",
+              "fontSize": 18,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l0rqd4vm",
+      "id": "25",
+      "bbox": [
+        686,
+        410,
+        178,
+        42
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.6.0.2"
+      },
+      "geometry": "rect",
+      "text": "AI 推荐导航、路径、信标、离线地图和安全步骤。",
+      "textPreview": "AI 推荐导航、路径、信标、离线地图和安全步骤。",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "fontSize": 12.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "AI"
+          },
+          {
+            "index": 2,
+            "text": "推荐导航、路径、信标、离线"
+          },
+          {
+            "index": 3,
+            "text": "地图和安全步骤。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "AI 推荐导航、路径、信标、离线地图和安全步骤。",
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "AI 推荐导航、路径、信标、离线地图和安全步骤。",
+              "fontSize": 12.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ed8bat47",
+      "id": "26",
+      "bbox": [
+        890,
+        398.5,
+        58,
+        3
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.7.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#234D36"
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7u54zido",
+      "id": "27",
+      "bbox": [
+        943,
+        395,
+        10,
+        10
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.7.1"
+      },
+      "geometry": "ellipse",
+      "fillColor": "#234D36"
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w7mp0bi9",
+      "id": "28",
+      "bbox": [
+        958,
+        340,
+        210,
+        120
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.8"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8EFE4",
+      "lineWidth": 1
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/psfil0rq",
+      "id": "29",
+      "bbox": [
+        974,
+        356,
+        34,
+        5
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.8.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#8EB6A7"
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fil0rqd4",
+      "id": "30",
+      "bbox": [
+        974,
+        371,
+        178,
+        24
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.8.0.1"
+      },
+      "geometry": "rect",
+      "text": "4. 应急动作",
+      "textPreview": "4. 应急动作",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "4. 应急动作"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "4. 应急动作",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "4. 应急动作",
+              "fontSize": 18,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qxs72x4n",
+      "id": "31",
+      "bbox": [
+        974,
+        410,
+        178,
+        42
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.8.0.2"
+      },
+      "geometry": "rect",
+      "text": "输入打开 SOS 手电筒或用哨子求救，展示行动卡片。",
+      "textPreview": "输入打开 SOS 手电筒或用哨子求救，展示行动卡片。",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "fontSize": 12.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "输入打开 SOS"
+          },
+          {
+            "index": 2,
+            "text": "手电筒或用哨子求救，展示行"
+          },
+          {
+            "index": 3,
+            "text": "动卡片。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "输入打开 SOS 手电筒或用哨子求救，展示行动卡片。",
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "输入打开 SOS 手电筒或用哨子求救，展示行动卡片。",
+              "fontSize": 12.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xobm58z2",
+      "id": "32",
+      "bbox": [
+        382,
+        510,
+        210,
+        100
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.9"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8EFE4",
+      "lineWidth": 1
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/83itgfml",
+      "id": "33",
+      "bbox": [
+        398,
+        526,
+        34,
+        5
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.9.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#F0B35A"
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fu18jqh0",
+      "id": "34",
+      "bbox": [
+        398,
+        541,
+        178,
+        24
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.9.0.1"
+      },
+      "geometry": "rect",
+      "text": "5. 读数解释",
+      "textPreview": "5. 读数解释",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "5. 读数解释"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "5. 读数解释",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "5. 读数解释",
+              "fontSize": 18,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 35,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m94fu18j",
+      "id": "35",
+      "bbox": [
+        398,
+        580,
+        178,
+        22
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.9.0.2"
+      },
+      "geometry": "rect",
+      "text": "天气/气压怎么看？展示本地上下文解释能力。",
+      "textPreview": "天气/气压怎么看？展示本地上下文解释能力。",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "fontSize": 12.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "天气/气压怎么看？展示本地上"
+          },
+          {
+            "index": 2,
+            "text": "下文解释能力。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "天气/气压怎么看？展示本地上下文解释能力。",
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "天气/气压怎么看？展示本地上下文解释能力。",
+              "fontSize": 12.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 36,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x0nuxc3y",
+      "id": "36",
+      "bbox": [
+        670,
+        510,
+        210,
+        100
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.10"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8EFE4",
+      "lineWidth": 1
+    },
+    {
+      "order": 37,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4fu18jqh",
+      "id": "37",
+      "bbox": [
+        686,
+        526,
+        34,
+        5
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.10.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#77A35D"
+    },
+    {
+      "order": 38,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/f6dcbulw",
+      "id": "38",
+      "bbox": [
+        686,
+        541,
+        178,
+        24
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.10.0.1"
+      },
+      "geometry": "rect",
+      "text": "6. 图片输入",
+      "textPreview": "6. 图片输入",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "6. 图片输入"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "6. 图片输入",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "6. 图片输入",
+              "fontSize": 18,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 39,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mlkjm1cf",
+      "id": "39",
+      "bbox": [
+        686,
+        580,
+        178,
+        22
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.10.0.2"
+      },
+      "geometry": "rect",
+      "text": "附加云层或截图，展示多模态入口。",
+      "textPreview": "附加云层或截图，展示多模态入口。",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "fontSize": 12.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "附加云层或截图，展示多模态"
+          },
+          {
+            "index": 2,
+            "text": "入口。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "附加云层或截图，展示多模态入口。",
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "附加云层或截图，展示多模态入口。",
+              "fontSize": 12.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 40,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ixczed8v",
+      "id": "40",
+      "bbox": [
+        412,
+        612,
+        460,
+        38
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.11"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#0B3B2E"
+    },
+    {
+      "order": 41,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bi9s36hc",
+      "id": "41",
+      "bbox": [
+        412,
+        617,
+        460,
+        28
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.11.0"
+      },
+      "geometry": "rect",
+      "text": "结论：用户说目标，Trail Sense 组织工具",
+      "textPreview": "结论：用户说目标，Trail Sense 组织工具",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next Condensed",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "结论：用户说目标，Trail Sense 组织工具"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "结论：用户说目标，Trail Sense 组织工具",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next Condensed",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "结论：用户说目标，Trail Sense 组织工具",
+              "fontSize": 18,
+              "typeface": "Avenir Next Condensed",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 42,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/032lszqt",
+      "id": "42",
+      "bbox": [
+        72,
+        652,
+        700,
+        24
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "text": "Gemma 4 Hackathon Shanghai · Trail Sense AI Assistant",
+      "textPreview": "Gemma 4 Hackathon Shanghai · Trail Sense AI Assistant",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Gemma 4 Hackathon Shanghai · Trail Sense AI Assistant"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Gemma 4 Hackathon Shanghai · Trail Sense AI Assistant",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Gemma 4 Hackathon Shanghai · Trail Sense AI Assistant",
+              "fontSize": 13,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 1280,
+          "height": 720
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "position": {
+              "left": 0,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1280
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 1280,
+              "height": 720
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/psfil0rq",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "shape",
+            "position": {
+              "left": 0,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 34
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 34,
+              "height": 720
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 34,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/e1w7mp0b",
+              "id": "2",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "shape",
+            "position": {
+              "left": 34,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 8
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 8,
+              "height": 720
+            },
+            "frame": {
+              "left": 34,
+              "top": 0,
+              "width": 8,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/7mp0bi9s",
+              "id": "3",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "shape",
+            "position": {
+              "left": 72,
+              "top": 50
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 108
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 6
+              }
+            },
+            "intrinsicSize": {
+              "width": 108,
+              "height": 6
+            },
+            "frame": {
+              "left": 72,
+              "top": 50,
+              "width": 108,
+              "height": 6
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/wval87ed",
+              "id": "4",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.4",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 34
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 520
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 28
+              }
+            },
+            "intrinsicSize": {
+              "width": 520,
+              "height": 28
+            },
+            "frame": {
+              "left": 72,
+              "top": 34,
+              "width": 520,
+              "height": 28
+            },
+            "children": [],
+            "text": "TRAIL SENSE AI ASSISTANT",
+            "transform": "none",
+            "element": {
+              "aid": "sh/pg3ex0nu",
+              "id": "5",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.5",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 62
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 820
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 60
+              }
+            },
+            "intrinsicSize": {
+              "width": 820,
+              "height": 60
+            },
+            "frame": {
+              "left": 72,
+              "top": 62,
+              "width": 820,
+              "height": 60
+            },
+            "children": [],
+            "text": "路演 Demo 应该讲一个完整户外故事，而不是逐项点功能",
+            "transform": "none",
+            "element": {
+              "aid": "sh/epkzupwb",
+              "id": "6",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.6",
+            "kind": "text",
+            "position": {
+              "left": 1160,
+              "top": 646
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 80
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 32
+              }
+            },
+            "intrinsicSize": {
+              "width": 80,
+              "height": 32
+            },
+            "frame": {
+              "left": 1160,
+              "top": 646,
+              "width": 80,
+              "height": 32
+            },
+            "children": [],
+            "text": "08",
+            "transform": "none",
+            "element": {
+              "aid": "sh/7adsji5s",
+              "id": "7",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 34,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 34,
+              "top": 0,
+              "width": 8,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 72,
+              "top": 50,
+              "width": 108,
+              "height": 6
+            }
+          },
+          {
+            "path": "0.4",
+            "frame": {
+              "left": 72,
+              "top": 34,
+              "width": 520,
+              "height": 28
+            }
+          },
+          {
+            "path": "0.5",
+            "frame": {
+              "left": 72,
+              "top": 62,
+              "width": 820,
+              "height": 60
+            }
+          },
+          {
+            "path": "0.6",
+            "frame": {
+              "left": 1160,
+              "top": 646,
+              "width": 80,
+              "height": 32
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 1280,
+          "height": 720
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "text",
+            "position": {
+              "left": 76,
+              "top": 148
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 800
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 76
+              }
+            },
+            "intrinsicSize": {
+              "width": 800,
+              "height": 76
+            },
+            "frame": {
+              "left": 76,
+              "top": 148,
+              "width": 800,
+              "height": 76
+            },
+            "children": [],
+            "text": "推荐演示脚本：从“迷路无信号”进入，逐步展示工具协同。",
+            "transform": "none",
+            "element": {
+              "aid": "sh/wra5gbq1",
+              "id": "8",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "text",
+            "position": {
+              "left": 76,
+              "top": 238
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 760
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 54
+              }
+            },
+            "intrinsicSize": {
+              "width": 760,
+              "height": 54
+            },
+            "frame": {
+              "left": 76,
+              "top": 238,
+              "width": 760,
+              "height": 54
+            },
+            "children": [],
+            "text": "半决赛时建议把 demo 控制在 3-4 分钟：先讲原 App 的离线工具，再展示 AI 如何把这些工具串成行动。",
+            "transform": "none",
+            "element": {
+              "aid": "sh/lc7u54zi",
+              "id": "9",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "panel",
+            "position": {
+              "left": 94,
+              "top": 340
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 210
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 120
+              }
+            },
+            "intrinsicSize": {
+              "width": 210,
+              "height": 120
+            },
+            "frame": {
+              "left": 94,
+              "top": 340,
+              "width": 210,
+              "height": 120
+            },
+            "children": [
+              {
+                "path": "0.2.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 178
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 88
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 178,
+                  "height": 96
+                },
+                "frame": {
+                  "left": 110,
+                  "top": 356,
+                  "width": 178,
+                  "height": 88
+                },
+                "children": [
+                  {
+                    "path": "0.2.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 34
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 34,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 110,
+                      "top": 356,
+                      "width": 34,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/kb6xkf6d",
+                      "id": "11",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.2.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 15
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 178
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 24
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 178,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 110,
+                      "top": 371,
+                      "width": 178,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "1. 进入 AI Assistant",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/rqd4vmtw",
+                      "id": "12",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.2.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 54
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 178
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 42
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 178,
+                      "height": 42
+                    },
+                    "frame": {
+                      "left": 110,
+                      "top": 410,
+                      "width": 178,
+                      "height": 42
+                    },
+                    "children": [],
+                    "text": "展示这是 Trail Sense 内部新工具，而非外部 Web chatbot。",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/25kb6xkf",
+                      "id": "13",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 110,
+                  "top": 356,
+                  "width": 178,
+                  "height": 88
+                },
+                "items": [
+                  {
+                    "path": "0.2.0.0",
+                    "frame": {
+                      "left": 110,
+                      "top": 356,
+                      "width": 34,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.2.0.1",
+                    "frame": {
+                      "left": 110,
+                      "top": 371,
+                      "width": 178,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.2.0.2",
+                    "frame": {
+                      "left": 110,
+                      "top": 410,
+                      "width": 178,
+                      "height": 42
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 16,
+              "right": 16,
+              "bottom": 16,
+              "left": 16
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 110,
+              "top": 356,
+              "width": 178,
+              "height": 88
+            },
+            "element": {
+              "aid": "sh/9w3m94fu",
+              "id": "10",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "layers",
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1280
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 377,
+              "height": 405
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "children": [
+              {
+                "path": "0.3.0",
+                "kind": "shape",
+                "position": {
+                  "left": 314,
+                  "top": 398.5
+                },
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 58
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 3
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 58,
+                  "height": 3
+                },
+                "frame": {
+                  "left": 314,
+                  "top": 398.5,
+                  "width": 58,
+                  "height": 3
+                },
+                "children": [],
+                "geometry": "rect",
+                "element": {
+                  "aid": "sh/9knih4by",
+                  "id": "14",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.3.1",
+                "kind": "shape",
+                "position": {
+                  "left": 367,
+                  "top": 395
+                },
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 10
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 10
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 10,
+                  "height": 10
+                },
+                "frame": {
+                  "left": 367,
+                  "top": 395,
+                  "width": 10,
+                  "height": 10
+                },
+                "children": [],
+                "geometry": "ellipse",
+                "element": {
+                  "aid": "sh/kzupwb2h",
+                  "id": "15",
+                  "kind": "shape"
+                }
+              }
+            ],
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignItems": "stretch",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "items": [
+              {
+                "path": "0.3.0",
+                "frame": {
+                  "left": 314,
+                  "top": 398.5,
+                  "width": 58,
+                  "height": 3
+                }
+              },
+              {
+                "path": "0.3.1",
+                "frame": {
+                  "left": 367,
+                  "top": 395,
+                  "width": 10,
+                  "height": 10
+                }
+              }
+            ]
+          },
+          {
+            "path": "0.4",
+            "kind": "panel",
+            "position": {
+              "left": 382,
+              "top": 340
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 210
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 120
+              }
+            },
+            "intrinsicSize": {
+              "width": 210,
+              "height": 120
+            },
+            "frame": {
+              "left": 382,
+              "top": 340,
+              "width": 210,
+              "height": 120
+            },
+            "children": [
+              {
+                "path": "0.4.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 178
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 88
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 178,
+                  "height": 96
+                },
+                "frame": {
+                  "left": 398,
+                  "top": 356,
+                  "width": 178,
+                  "height": 88
+                },
+                "children": [
+                  {
+                    "path": "0.4.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 34
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 34,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 398,
+                      "top": 356,
+                      "width": 34,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/2t83itgf",
+                      "id": "17",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.4.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 15
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 178
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 24
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 178,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 398,
+                      "top": 371,
+                      "width": 178,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "2. 迷路无信号",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/9gr2p8nq",
+                      "id": "18",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.4.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 54
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 178
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 42
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 178,
+                      "height": 42
+                    },
+                    "frame": {
+                      "left": 398,
+                      "top": 410,
+                      "width": 178,
+                      "height": 42
+                    },
+                    "children": [],
+                    "text": "输入：我迷路了，手机没信号怎么办？",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/gvy90je9",
+                      "id": "19",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 398,
+                  "top": 356,
+                  "width": 178,
+                  "height": 88
+                },
+                "items": [
+                  {
+                    "path": "0.4.0.0",
+                    "frame": {
+                      "left": 398,
+                      "top": 356,
+                      "width": 34,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.4.0.1",
+                    "frame": {
+                      "left": 398,
+                      "top": 371,
+                      "width": 178,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.4.0.2",
+                    "frame": {
+                      "left": 398,
+                      "top": 410,
+                      "width": 178,
+                      "height": 42
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 16,
+              "right": 16,
+              "bottom": 16,
+              "left": 16
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 398,
+              "top": 356,
+              "width": 178,
+              "height": 88
+            },
+            "element": {
+              "aid": "sh/re1w7mp0",
+              "id": "16",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.5",
+            "kind": "layers",
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1280
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 665,
+              "height": 405
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "children": [
+              {
+                "path": "0.5.0",
+                "kind": "shape",
+                "position": {
+                  "left": 602,
+                  "top": 398.5
+                },
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 58
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 3
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 58,
+                  "height": 3
+                },
+                "frame": {
+                  "left": 602,
+                  "top": 398.5,
+                  "width": 58,
+                  "height": 3
+                },
+                "children": [],
+                "geometry": "rect",
+                "element": {
+                  "aid": "sh/wra5gbq1",
+                  "id": "20",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.5.1",
+                "kind": "shape",
+                "position": {
+                  "left": 655,
+                  "top": 395
+                },
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 10
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 10
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 10,
+                  "height": 10
+                },
+                "frame": {
+                  "left": 655,
+                  "top": 395,
+                  "width": 10,
+                  "height": 10
+                },
+                "children": [],
+                "geometry": "ellipse",
+                "element": {
+                  "aid": "sh/lc7u54zi",
+                  "id": "21",
+                  "kind": "shape"
+                }
+              }
+            ],
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignItems": "stretch",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "items": [
+              {
+                "path": "0.5.0",
+                "frame": {
+                  "left": 602,
+                  "top": 398.5,
+                  "width": 58,
+                  "height": 3
+                }
+              },
+              {
+                "path": "0.5.1",
+                "frame": {
+                  "left": 655,
+                  "top": 395,
+                  "width": 10,
+                  "height": 10
+                }
+              }
+            ]
+          },
+          {
+            "path": "0.6",
+            "kind": "panel",
+            "position": {
+              "left": 670,
+              "top": 340
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 210
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 120
+              }
+            },
+            "intrinsicSize": {
+              "width": 210,
+              "height": 120
+            },
+            "frame": {
+              "left": 670,
+              "top": 340,
+              "width": 210,
+              "height": 120
+            },
+            "children": [
+              {
+                "path": "0.6.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 178
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 88
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 178,
+                  "height": 96
+                },
+                "frame": {
+                  "left": 686,
+                  "top": 356,
+                  "width": 178,
+                  "height": 88
+                },
+                "children": [
+                  {
+                    "path": "0.6.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 34
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 34,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 686,
+                      "top": 356,
+                      "width": 34,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/36hcrmhk",
+                      "id": "23",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.6.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 15
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 178
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 24
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 178,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 686,
+                      "top": 371,
+                      "width": 178,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "3. 工具推荐",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/wfyxobm5",
+                      "id": "24",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.6.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 54
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 178
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 42
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 178,
+                      "height": 42
+                    },
+                    "frame": {
+                      "left": 686,
+                      "top": 410,
+                      "width": 178,
+                      "height": 42
+                    },
+                    "children": [],
+                    "text": "AI 推荐导航、路径、信标、离线地图和安全步骤。",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/l0rqd4vm",
+                      "id": "25",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 686,
+                  "top": 356,
+                  "width": 178,
+                  "height": 88
+                },
+                "items": [
+                  {
+                    "path": "0.6.0.0",
+                    "frame": {
+                      "left": 686,
+                      "top": 356,
+                      "width": 34,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.6.0.1",
+                    "frame": {
+                      "left": 686,
+                      "top": 371,
+                      "width": 178,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.6.0.2",
+                    "frame": {
+                      "left": 686,
+                      "top": 410,
+                      "width": 178,
+                      "height": 42
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 16,
+              "right": 16,
+              "bottom": 16,
+              "left": 16
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 686,
+              "top": 356,
+              "width": 178,
+              "height": 88
+            },
+            "element": {
+              "aid": "sh/eloj2t83",
+              "id": "22",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.7",
+            "kind": "layers",
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1280
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 953,
+              "height": 405
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "children": [
+              {
+                "path": "0.7.0",
+                "kind": "shape",
+                "position": {
+                  "left": 890,
+                  "top": 398.5
+                },
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 58
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 3
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 58,
+                  "height": 3
+                },
+                "frame": {
+                  "left": 890,
+                  "top": 398.5,
+                  "width": 58,
+                  "height": 3
+                },
+                "children": [],
+                "geometry": "rect",
+                "element": {
+                  "aid": "sh/ed8bat47",
+                  "id": "26",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.7.1",
+                "kind": "shape",
+                "position": {
+                  "left": 943,
+                  "top": 395
+                },
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 10
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 10
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 10,
+                  "height": 10
+                },
+                "frame": {
+                  "left": 943,
+                  "top": 395,
+                  "width": 10,
+                  "height": 10
+                },
+                "children": [],
+                "geometry": "ellipse",
+                "element": {
+                  "aid": "sh/7u54zido",
+                  "id": "27",
+                  "kind": "shape"
+                }
+              }
+            ],
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignItems": "stretch",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "items": [
+              {
+                "path": "0.7.0",
+                "frame": {
+                  "left": 890,
+                  "top": 398.5,
+                  "width": 58,
+                  "height": 3
+                }
+              },
+              {
+                "path": "0.7.1",
+                "frame": {
+                  "left": 943,
+                  "top": 395,
+                  "width": 10,
+                  "height": 10
+                }
+              }
+            ]
+          },
+          {
+            "path": "0.8",
+            "kind": "panel",
+            "position": {
+              "left": 958,
+              "top": 340
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 210
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 120
+              }
+            },
+            "intrinsicSize": {
+              "width": 210,
+              "height": 120
+            },
+            "frame": {
+              "left": 958,
+              "top": 340,
+              "width": 210,
+              "height": 120
+            },
+            "children": [
+              {
+                "path": "0.8.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 178
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 88
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 178,
+                  "height": 96
+                },
+                "frame": {
+                  "left": 974,
+                  "top": 356,
+                  "width": 178,
+                  "height": 88
+                },
+                "children": [
+                  {
+                    "path": "0.8.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 34
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 34,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 974,
+                      "top": 356,
+                      "width": 34,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/psfil0rq",
+                      "id": "29",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.8.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 15
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 178
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 24
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 178,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 974,
+                      "top": 371,
+                      "width": 178,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "4. 应急动作",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/fil0rqd4",
+                      "id": "30",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.8.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 54
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 178
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 42
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 178,
+                      "height": 42
+                    },
+                    "frame": {
+                      "left": 974,
+                      "top": 410,
+                      "width": 178,
+                      "height": 42
+                    },
+                    "children": [],
+                    "text": "输入打开 SOS 手电筒或用哨子求救，展示行动卡片。",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/qxs72x4n",
+                      "id": "31",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 974,
+                  "top": 356,
+                  "width": 178,
+                  "height": 88
+                },
+                "items": [
+                  {
+                    "path": "0.8.0.0",
+                    "frame": {
+                      "left": 974,
+                      "top": 356,
+                      "width": 34,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.8.0.1",
+                    "frame": {
+                      "left": 974,
+                      "top": 371,
+                      "width": 178,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.8.0.2",
+                    "frame": {
+                      "left": 974,
+                      "top": 410,
+                      "width": 178,
+                      "height": 42
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 16,
+              "right": 16,
+              "bottom": 16,
+              "left": 16
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 974,
+              "top": 356,
+              "width": 178,
+              "height": 88
+            },
+            "element": {
+              "aid": "sh/w7mp0bi9",
+              "id": "28",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.9",
+            "kind": "panel",
+            "position": {
+              "left": 382,
+              "top": 510
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 210
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 100
+              }
+            },
+            "intrinsicSize": {
+              "width": 210,
+              "height": 100
+            },
+            "frame": {
+              "left": 382,
+              "top": 510,
+              "width": 210,
+              "height": 100
+            },
+            "children": [
+              {
+                "path": "0.9.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 178
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 68
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 178,
+                  "height": 76
+                },
+                "frame": {
+                  "left": 398,
+                  "top": 526,
+                  "width": 178,
+                  "height": 68
+                },
+                "children": [
+                  {
+                    "path": "0.9.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 34
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 34,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 398,
+                      "top": 526,
+                      "width": 34,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/83itgfml",
+                      "id": "33",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.9.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 15
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 178
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 24
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 178,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 398,
+                      "top": 541,
+                      "width": 178,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "5. 读数解释",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/fu18jqh0",
+                      "id": "34",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.9.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 54
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 178
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 22
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 178,
+                      "height": 22
+                    },
+                    "frame": {
+                      "left": 398,
+                      "top": 580,
+                      "width": 178,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "天气/气压怎么看？展示本地上下文解释能力。",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/m94fu18j",
+                      "id": "35",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 398,
+                  "top": 526,
+                  "width": 178,
+                  "height": 68
+                },
+                "items": [
+                  {
+                    "path": "0.9.0.0",
+                    "frame": {
+                      "left": 398,
+                      "top": 526,
+                      "width": 34,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.9.0.1",
+                    "frame": {
+                      "left": 398,
+                      "top": 541,
+                      "width": 178,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.9.0.2",
+                    "frame": {
+                      "left": 398,
+                      "top": 580,
+                      "width": 178,
+                      "height": 22
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 16,
+              "right": 16,
+              "bottom": 16,
+              "left": 16
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 398,
+              "top": 526,
+              "width": 178,
+              "height": 68
+            },
+            "element": {
+              "aid": "sh/xobm58z2",
+              "id": "32",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.10",
+            "kind": "panel",
+            "position": {
+              "left": 670,
+              "top": 510
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 210
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 100
+              }
+            },
+            "intrinsicSize": {
+              "width": 210,
+              "height": 100
+            },
+            "frame": {
+              "left": 670,
+              "top": 510,
+              "width": 210,
+              "height": 100
+            },
+            "children": [
+              {
+                "path": "0.10.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 178
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 68
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 178,
+                  "height": 76
+                },
+                "frame": {
+                  "left": 686,
+                  "top": 526,
+                  "width": 178,
+                  "height": 68
+                },
+                "children": [
+                  {
+                    "path": "0.10.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 34
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 34,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 686,
+                      "top": 526,
+                      "width": 34,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/4fu18jqh",
+                      "id": "37",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.10.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 15
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 178
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 24
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 178,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 686,
+                      "top": 541,
+                      "width": 178,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "6. 图片输入",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/f6dcbulw",
+                      "id": "38",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.10.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 54
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 178
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 22
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 178,
+                      "height": 22
+                    },
+                    "frame": {
+                      "left": 686,
+                      "top": 580,
+                      "width": 178,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "附加云层或截图，展示多模态入口。",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/mlkjm1cf",
+                      "id": "39",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 686,
+                  "top": 526,
+                  "width": 178,
+                  "height": 68
+                },
+                "items": [
+                  {
+                    "path": "0.10.0.0",
+                    "frame": {
+                      "left": 686,
+                      "top": 526,
+                      "width": 34,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.10.0.1",
+                    "frame": {
+                      "left": 686,
+                      "top": 541,
+                      "width": 178,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.10.0.2",
+                    "frame": {
+                      "left": 686,
+                      "top": 580,
+                      "width": 178,
+                      "height": 22
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 16,
+              "right": 16,
+              "bottom": 16,
+              "left": 16
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 686,
+              "top": 526,
+              "width": 178,
+              "height": 68
+            },
+            "element": {
+              "aid": "sh/x0nuxc3y",
+              "id": "36",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.11",
+            "kind": "panel",
+            "position": {
+              "left": 412,
+              "top": 612
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 460
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 38
+              }
+            },
+            "intrinsicSize": {
+              "width": 460,
+              "height": 28
+            },
+            "frame": {
+              "left": 412,
+              "top": 612,
+              "width": 460,
+              "height": 38
+            },
+            "children": [
+              {
+                "path": "0.11.0",
+                "kind": "text",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 460
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 28
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 460,
+                  "height": 28
+                },
+                "frame": {
+                  "left": 412,
+                  "top": 617,
+                  "width": 460,
+                  "height": 28
+                },
+                "children": [],
+                "text": "结论：用户说目标，Trail Sense 组织工具",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/bi9s36hc",
+                  "id": "41",
+                  "kind": "shape"
+                }
+              }
+            ],
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "align": "center",
+            "justify": "center",
+            "contentFrame": {
+              "left": 412,
+              "top": 612,
+              "width": 460,
+              "height": 38
+            },
+            "element": {
+              "aid": "sh/ixczed8v",
+              "id": "40",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 76,
+              "top": 148,
+              "width": 800,
+              "height": 76
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 76,
+              "top": 238,
+              "width": 760,
+              "height": 54
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 94,
+              "top": 340,
+              "width": 210,
+              "height": 120
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.4",
+            "frame": {
+              "left": 382,
+              "top": 340,
+              "width": 210,
+              "height": 120
+            }
+          },
+          {
+            "path": "0.5",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.6",
+            "frame": {
+              "left": 670,
+              "top": 340,
+              "width": 210,
+              "height": 120
+            }
+          },
+          {
+            "path": "0.7",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.8",
+            "frame": {
+              "left": 958,
+              "top": 340,
+              "width": 210,
+              "height": 120
+            }
+          },
+          {
+            "path": "0.9",
+            "frame": {
+              "left": 382,
+              "top": 510,
+              "width": 210,
+              "height": 100
+            }
+          },
+          {
+            "path": "0.10",
+            "frame": {
+              "left": 670,
+              "top": 510,
+              "width": 210,
+              "height": 100
+            }
+          },
+          {
+            "path": "0.11",
+            "frame": {
+              "left": 412,
+              "top": 612,
+              "width": 460,
+              "height": 38
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 772,
+          "height": 676
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 652
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 700
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 700,
+              "height": 24
+            },
+            "frame": {
+              "left": 72,
+              "top": 652,
+              "width": 700,
+              "height": 24
+            },
+            "children": [],
+            "text": "Gemma 4 Hackathon Shanghai · Trail Sense AI Assistant",
+            "transform": "none",
+            "element": {
+              "aid": "sh/032lszqt",
+              "id": "42",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 72,
+              "top": 652,
+              "width": 700,
+              "height": 24
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

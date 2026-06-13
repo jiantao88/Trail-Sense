@@ -1,0 +1,16 @@
+Macro layout plan:
+01 Hero cover with left title rail and right mountain/phone scene.
+02 Problem board with four friction cards and phone proof.
+03 Product system map with original tools on the left and AI layer on the right.
+04 User workflow with scenario cards and phone chat mock.
+05 Local architecture layered table.
+06 Agent Skill workflow diagram.
+07 Multimodal pipeline with phone answer mock.
+08 Engineering delivery board with module/test/submission columns.
+09 Differentiation comparison matrix with mountain background.
+10 Closing formula with Q&A hero.
+
+Rhythm rules:
+- No more than two consecutive slides share the same card density.
+- Cover, architecture, matrix, and closing slides use distinct macro layouts.
+- Every slide includes a claim, proof object, and bottom or side conclusion.

@@ -31,3 +31,16 @@
 -dontwarn com.caverock.androidsvg.SVG
 -dontwarn com.caverock.androidsvg.SVGParseException
 -dontwarn pl.droidsonroids.gif.GifDrawable
+
+# LiteRTLM uses JNI and reflection to access configuration objects, callbacks,
+# tool annotations, and tool methods. Release minification can rename or strip
+# these APIs, causing nativeCreateConversation to abort with "mid == null".
+-keep class com.google.ai.edge.litertlm.** { *; }
+-keep interface com.google.ai.edge.litertlm.** { *; }
+-keep @interface com.google.ai.edge.litertlm.** { *; }
+
+# AiAssistantTools is scanned reflectively by LiteRTLM for @Tool methods.
+-keep class com.kylecorry.trail_sense.tools.ai_assistant.infrastructure.AiAssistantTools { *; }
+
+# Preserve annotation and generic metadata used by LiteRTLM tool reflection.
+-keepattributes RuntimeVisibleAnnotations,RuntimeInvisibleAnnotations,RuntimeVisibleParameterAnnotations,RuntimeInvisibleParameterAnnotations,AnnotationDefault,Signature,InnerClasses,EnclosingMethod

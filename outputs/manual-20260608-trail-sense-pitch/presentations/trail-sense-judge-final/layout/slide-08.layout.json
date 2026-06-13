@@ -1,0 +1,3479 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/q2aihc",
+    "id": "q2aihc",
+    "slide": 8,
+    "layoutId": "23010e84-c1f2-437a-b3cd-97685f612b44",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "27d21f7c-39eb-469b-b752-f686ab5f6c49",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFF9EC",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Avenir Next",
+      "Avenir Next Condensed"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "23010e84-c1f2-437a-b3cd-97685f612b44",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "27d21f7c-39eb-469b-b752-f686ab5f6c49",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "27d21f7c-39eb-469b-b752-f686ab5f6c49",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mhk3q5o7",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect"
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t83itgfm",
+      "id": "2",
+      "bbox": [
+        0,
+        0,
+        34,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "fillColor": "#0B3328"
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4nap4r65",
+      "id": "3",
+      "bbox": [
+        34,
+        0,
+        8,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2"
+      },
+      "geometry": "rect",
+      "fillColor": "#F0B35A"
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bq1oryts",
+      "id": "4",
+      "bbox": [
+        72,
+        38,
+        420,
+        24
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "text": "TRAIL SENSE AI ASSISTANT",
+      "textPreview": "TRAIL SENSE AI ASSISTANT",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "Avenir Next Condensed",
+        "color": "#1F5A3E",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "TRAIL SENSE AI ASSISTANT"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "TRAIL SENSE AI ASSISTANT",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Avenir Next Condensed",
+            "color": "#1F5A3E",
+            "bold": true,
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "TRAIL SENSE AI ASSISTANT",
+              "fontSize": 15,
+              "typeface": "Avenir Next Condensed",
+              "color": "#1F5A3E",
+              "bold": true,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m58z25kb",
+      "id": "5",
+      "bbox": [
+        72,
+        60,
+        118,
+        6
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "fillColor": "#F0B35A"
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/twra5gbq",
+      "id": "6",
+      "bbox": [
+        72,
+        74,
+        860,
+        76
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.2"
+      },
+      "geometry": "rect",
+      "text": "工程交付：代码、测试、APK、Demo 和官方提交材料已完成",
+      "textPreview": "工程交付：代码、测试、APK、Demo 和官方提交材料已完成",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "fontSize": 32,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "工程交付：代码、测试、APK、Demo"
+          },
+          {
+            "index": 2,
+            "text": "和官方提交材料已完成"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "工程交付：代码、测试、APK、Demo 和官方提交材料已完成",
+          "resolvedTextStyle": {
+            "fontSize": 32,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "工程交付：代码、测试、APK、Demo 和官方提交材料已完成",
+              "fontSize": 32,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4byhgn29",
+      "id": "7",
+      "bbox": [
+        1160,
+        648,
+        72,
+        30
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.3"
+      },
+      "geometry": "rect",
+      "text": "08",
+      "textPreview": "08",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "Avenir Next Condensed",
+        "color": "#1F5A3E",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "08"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "08",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Avenir Next Condensed",
+            "color": "#1F5A3E",
+            "bold": true,
+            "alignment": "right",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "08",
+              "fontSize": 22,
+              "typeface": "Avenir Next Condensed",
+              "color": "#1F5A3E",
+              "bold": true,
+              "alignment": "right",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bm58z25k",
+      "id": "8",
+      "bbox": [
+        76,
+        150,
+        640,
+        72
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "text": "这是可运行的 Android 项目，而不是概念稿。",
+      "textPreview": "这是可运行的 Android 项目，而不是概念稿。",
+      "resolvedFontSize": 38,
+      "resolvedTextStyle": {
+        "fontSize": 38,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "这是可运行的 Android"
+          },
+          {
+            "index": 2,
+            "text": "项目，而不是概念稿。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "这是可运行的 Android 项目，而不是概念稿。",
+          "resolvedTextStyle": {
+            "fontSize": 38,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "这是可运行的 Android 项目，而不是概念稿。",
+              "fontSize": 38,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m1cfa9w3",
+      "id": "9",
+      "bbox": [
+        76,
+        246,
+        620,
+        56
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "text": "提交材料包含技术报告、Demo 视频、APK 下载、构建说明和核心代码路径。",
+      "textPreview": "提交材料包含技术报告、Demo 视频、APK 下载、构建说明和核心代码路径。",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "提交材料包含技术报告、Demo 视频、APK"
+          },
+          {
+            "index": 2,
+            "text": "下载、构建说明和核心代码路径。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "提交材料包含技术报告、Demo 视频、APK 下载、构建说明和核心代码路径。",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "提交材料包含技术报告、Demo 视频、APK 下载、构建说明和核心代码路径。",
+              "fontSize": 21,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cfa9w3m9",
+      "id": "10",
+      "bbox": [
+        740,
+        150,
+        250,
+        124
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "rgba(255, 255, 255, 0.82)",
+      "lineColor": "#DDE6D8",
+      "lineWidth": 1
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1032lszq",
+      "id": "11",
+      "bbox": [
+        758,
+        168,
+        45,
+        5
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.2.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#F0B35A"
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u9knih4b",
+      "id": "12",
+      "bbox": [
+        758,
+        186,
+        214,
+        38
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.2.0.1"
+      },
+      "geometry": "rect",
+      "text": "Gemma 4",
+      "textPreview": "Gemma 4",
+      "resolvedFontSize": 30,
+      "resolvedTextStyle": {
+        "fontSize": 30,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Gemma 4"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Gemma 4",
+          "resolvedTextStyle": {
+            "fontSize": 30,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Gemma 4",
+              "fontSize": 30,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/judg7ads",
+      "id": "13",
+      "bbox": [
+        758,
+        230,
+        214,
+        34
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.2.0.2"
+      },
+      "geometry": "rect",
+      "text": "E2B 默认模型 / E4B 可选",
+      "textPreview": "E2B 默认模型 / E4B 可选",
+      "resolvedFontSize": 14.51,
+      "resolvedTextStyle": {
+        "fontSize": 14.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "E2B 默认模型 / E4B 可选"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "E2B 默认模型 / E4B 可选",
+          "resolvedTextStyle": {
+            "fontSize": 14.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "E2B 默认模型 / E4B 可选",
+              "fontSize": 14.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c7u54zid",
+      "id": "14",
+      "bbox": [
+        1015,
+        150,
+        250,
+        124
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.3"
+      },
+      "geometry": "roundRect",
+      "fillColor": "rgba(255, 255, 255, 0.82)",
+      "lineColor": "#DDE6D8",
+      "lineWidth": 1
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1orytsvu",
+      "id": "15",
+      "bbox": [
+        1033,
+        168,
+        45,
+        5
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.3.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#78A85B"
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u18jqh0f",
+      "id": "16",
+      "bbox": [
+        1033,
+        186,
+        214,
+        38
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.3.0.1"
+      },
+      "geometry": "rect",
+      "text": "LiteRT-LM",
+      "textPreview": "LiteRT-LM",
+      "resolvedFontSize": 30,
+      "resolvedTextStyle": {
+        "fontSize": 30,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "LiteRT-LM"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "LiteRT-LM",
+          "resolvedTextStyle": {
+            "fontSize": 30,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "LiteRT-LM",
+              "fontSize": 30,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jm1cfa9w",
+      "id": "17",
+      "bbox": [
+        1033,
+        230,
+        214,
+        34
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.3.0.2"
+      },
+      "geometry": "rect",
+      "text": "本地 Engine + Conversation",
+      "textPreview": "本地 Engine + Conversation",
+      "resolvedFontSize": 14.51,
+      "resolvedTextStyle": {
+        "fontSize": 14.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "本地 Engine + Conversation"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "本地 Engine + Conversation",
+          "resolvedTextStyle": {
+            "fontSize": 14.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "本地 Engine + Conversation",
+              "fontSize": 14.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cvixczed",
+      "id": "18",
+      "bbox": [
+        740,
+        310,
+        250,
+        124
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.4"
+      },
+      "geometry": "roundRect",
+      "fillColor": "rgba(255, 255, 255, 0.82)",
+      "lineColor": "#DDE6D8",
+      "lineWidth": 1
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5gbq1ory",
+      "id": "19",
+      "bbox": [
+        758,
+        328,
+        45,
+        5
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.4.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#83B2A3"
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/90je9cvi",
+      "id": "20",
+      "bbox": [
+        758,
+        346,
+        214,
+        38
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.4.0.1"
+      },
+      "geometry": "rect",
+      "text": "Tests",
+      "textPreview": "Tests",
+      "resolvedFontSize": 30,
+      "resolvedTextStyle": {
+        "fontSize": 30,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Tests"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Tests",
+          "resolvedTextStyle": {
+            "fontSize": 30,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Tests",
+              "fontSize": 30,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gfmlkjm1",
+      "id": "21",
+      "bbox": [
+        758,
+        390,
+        214,
+        34
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.4.0.2"
+      },
+      "geometry": "rect",
+      "text": "Prompt、Skill、模型、工具服务",
+      "textPreview": "Prompt、Skill、模型、工具服务",
+      "resolvedFontSize": 14.51,
+      "resolvedTextStyle": {
+        "fontSize": 14.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Prompt、Skill、模型、工具服务"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Prompt、Skill、模型、工具服务",
+          "resolvedTextStyle": {
+            "fontSize": 14.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Prompt、Skill、模型、工具服务",
+              "fontSize": 14.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rytsvu9k",
+      "id": "22",
+      "bbox": [
+        1015,
+        310,
+        250,
+        124
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.5"
+      },
+      "geometry": "roundRect",
+      "fillColor": "rgba(255, 255, 255, 0.82)",
+      "lineColor": "#DDE6D8",
+      "lineWidth": 1
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yd0z6103",
+      "id": "23",
+      "bbox": [
+        1033,
+        328,
+        45,
+        5
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.5.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#C85F3D"
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9s36hcrm",
+      "id": "24",
+      "bbox": [
+        1033,
+        346,
+        214,
+        38
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.5.0.1"
+      },
+      "geometry": "rect",
+      "text": "APK + Demo",
+      "textPreview": "APK + Demo",
+      "resolvedFontSize": 30,
+      "resolvedTextStyle": {
+        "fontSize": 30,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "APK + Demo"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "APK + Demo",
+          "resolvedTextStyle": {
+            "fontSize": 30,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "APK + Demo",
+              "fontSize": 30,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g7adsji5",
+      "id": "25",
+      "bbox": [
+        1033,
+        390,
+        214,
+        34
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.5.0.2"
+      },
+      "geometry": "rect",
+      "text": "YouTube 视频 + APK 下载",
+      "textPreview": "YouTube 视频 + APK 下载",
+      "resolvedFontSize": 14.51,
+      "resolvedTextStyle": {
+        "fontSize": 14.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "YouTube 视频 + APK 下载"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "YouTube 视频 + APK 下载",
+          "resolvedTextStyle": {
+            "fontSize": 14.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "YouTube 视频 + APK 下载",
+              "fontSize": 14.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rmhk3q5o",
+      "id": "26",
+      "bbox": [
+        76,
+        470,
+        1110,
+        100
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.6"
+      },
+      "geometry": "roundRect",
+      "fillColor": "rgba(255, 255, 255, 0.8)",
+      "lineColor": "#DDE6D8",
+      "lineWidth": 1
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y1kre1w7",
+      "id": "27",
+      "bbox": [
+        94,
+        488,
+        44,
+        5
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.6.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#78A85B"
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5o7qpg3e",
+      "id": "28",
+      "bbox": [
+        94,
+        506,
+        1074,
+        34
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.6.0.1"
+      },
+      "geometry": "rect",
+      "text": "核心代码路径",
+      "textPreview": "核心代码路径",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "核心代码路径"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "核心代码路径",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "核心代码路径",
+              "fontSize": 22,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g3ex0nux",
+      "id": "29",
+      "bbox": [
+        94,
+        546,
+        1074,
+        28
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.6.0.2"
+      },
+      "geometry": "rect",
+      "text": "AiInferenceSubsystem / ModelManager / AiAssistantTools / TrailSenseAiToolRunner\nAiPromptBuilder / ai_tool_knowledge.md / ai_tool_skills.md",
+      "textPreview": "AiInferenceSubsystem / ModelManager / AiAssistantTools / TrailSenseAiToolRunner | AiPromptBuilder / ai_tool_knowledge.md / ai_tool_skills.md",
+      "resolvedFontSize": 15.51,
+      "resolvedTextStyle": {
+        "fontSize": 15.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "AiInferenceSubsystem / ModelManager / AiAssistantTools / TrailSenseAiToolRunner"
+          },
+          {
+            "index": 2,
+            "text": "AiPromptBuilder / ai_tool_knowledge.md / ai_tool_skills.md"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "AiInferenceSubsystem / ModelManager / AiAssistantTools / TrailSenseAiToolRunner",
+          "resolvedTextStyle": {
+            "fontSize": 15.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "AiInferenceSubsystem / ModelManager / AiAssistantTools / TrailSenseAiToolRunner",
+              "fontSize": 15.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "AiPromptBuilder / ai_tool_knowledge.md / ai_tool_skills.md",
+          "resolvedTextStyle": {
+            "fontSize": 15.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "AiPromptBuilder / ai_tool_knowledge.md / ai_tool_skills.md",
+              "fontSize": 15.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/adsji5sn",
+      "id": "30",
+      "bbox": [
+        72,
+        654,
+        520,
+        22
+      ],
+      "composeSource": {
+        "run": 4,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "text": "Gemma 4 Hackathon Shanghai · Track C Edge AI",
+      "textPreview": "Gemma 4 Hackathon Shanghai · Track C Edge AI",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "fontSize": 12.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Gemma 4 Hackathon Shanghai · Track C Edge AI"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Gemma 4 Hackathon Shanghai · Track C Edge AI",
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Gemma 4 Hackathon Shanghai · Track C Edge AI",
+              "fontSize": 12.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 1280,
+          "height": 720
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "position": {
+              "left": 0,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1280
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 1280,
+              "height": 720
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/mhk3q5o7",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "shape",
+            "position": {
+              "left": 0,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 34
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 34,
+              "height": 720
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 34,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/t83itgfm",
+              "id": "2",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "shape",
+            "position": {
+              "left": 34,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 8
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 8,
+              "height": 720
+            },
+            "frame": {
+              "left": 34,
+              "top": 0,
+              "width": 8,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/4nap4r65",
+              "id": "3",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 34,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 34,
+              "top": 0,
+              "width": 8,
+              "height": 720
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 1232,
+          "height": 678
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 38
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 420
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 420,
+              "height": 24
+            },
+            "frame": {
+              "left": 72,
+              "top": 38,
+              "width": 420,
+              "height": 24
+            },
+            "children": [],
+            "text": "TRAIL SENSE AI ASSISTANT",
+            "transform": "none",
+            "element": {
+              "aid": "sh/bq1oryts",
+              "id": "4",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "shape",
+            "position": {
+              "left": 72,
+              "top": 60
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 118
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 6
+              }
+            },
+            "intrinsicSize": {
+              "width": 118,
+              "height": 6
+            },
+            "frame": {
+              "left": 72,
+              "top": 60,
+              "width": 118,
+              "height": 6
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/m58z25kb",
+              "id": "5",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 74
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 860
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 76
+              }
+            },
+            "intrinsicSize": {
+              "width": 860,
+              "height": 76
+            },
+            "frame": {
+              "left": 72,
+              "top": 74,
+              "width": 860,
+              "height": 76
+            },
+            "children": [],
+            "text": "工程交付：代码、测试、APK、Demo 和官方提交材料已完成",
+            "transform": "none",
+            "element": {
+              "aid": "sh/twra5gbq",
+              "id": "6",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "text",
+            "position": {
+              "left": 1160,
+              "top": 648
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 72
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 30
+              }
+            },
+            "intrinsicSize": {
+              "width": 72,
+              "height": 30
+            },
+            "frame": {
+              "left": 1160,
+              "top": 648,
+              "width": 72,
+              "height": 30
+            },
+            "children": [],
+            "text": "08",
+            "transform": "none",
+            "element": {
+              "aid": "sh/4byhgn29",
+              "id": "7",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 72,
+              "top": 38,
+              "width": 420,
+              "height": 24
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 72,
+              "top": 60,
+              "width": 118,
+              "height": 6
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 72,
+              "top": 74,
+              "width": 860,
+              "height": 76
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 1160,
+              "top": 648,
+              "width": 72,
+              "height": 30
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 1265,
+          "height": 570
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "text",
+            "position": {
+              "left": 76,
+              "top": 150
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 640
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 72
+              }
+            },
+            "intrinsicSize": {
+              "width": 640,
+              "height": 72
+            },
+            "frame": {
+              "left": 76,
+              "top": 150,
+              "width": 640,
+              "height": 72
+            },
+            "children": [],
+            "text": "这是可运行的 Android 项目，而不是概念稿。",
+            "transform": "none",
+            "element": {
+              "aid": "sh/bm58z25k",
+              "id": "8",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "text",
+            "position": {
+              "left": 76,
+              "top": 246
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 620
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 56
+              }
+            },
+            "intrinsicSize": {
+              "width": 620,
+              "height": 56
+            },
+            "frame": {
+              "left": 76,
+              "top": 246,
+              "width": 620,
+              "height": 56
+            },
+            "children": [],
+            "text": "提交材料包含技术报告、Demo 视频、APK 下载、构建说明和核心代码路径。",
+            "transform": "none",
+            "element": {
+              "aid": "sh/m1cfa9w3",
+              "id": "9",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "panel",
+            "position": {
+              "left": 740,
+              "top": 150
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 250
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 124
+              }
+            },
+            "intrinsicSize": {
+              "width": 250,
+              "height": 124
+            },
+            "frame": {
+              "left": 740,
+              "top": 150,
+              "width": 250,
+              "height": 124
+            },
+            "children": [
+              {
+                "path": "0.2.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 214
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 88
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 214,
+                  "height": 96
+                },
+                "frame": {
+                  "left": 758,
+                  "top": 168,
+                  "width": 214,
+                  "height": 88
+                },
+                "children": [
+                  {
+                    "path": "0.2.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 45
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 45,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 758,
+                      "top": 168,
+                      "width": 45,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/1032lszq",
+                      "id": "11",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.2.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 18
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 214
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 38
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 214,
+                      "height": 38
+                    },
+                    "frame": {
+                      "left": 758,
+                      "top": 186,
+                      "width": 214,
+                      "height": 38
+                    },
+                    "children": [],
+                    "text": "Gemma 4",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/u9knih4b",
+                      "id": "12",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.2.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 62
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 214
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 34
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 214,
+                      "height": 34
+                    },
+                    "frame": {
+                      "left": 758,
+                      "top": 230,
+                      "width": 214,
+                      "height": 34
+                    },
+                    "children": [],
+                    "text": "E2B 默认模型 / E4B 可选",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/judg7ads",
+                      "id": "13",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 758,
+                  "top": 168,
+                  "width": 214,
+                  "height": 88
+                },
+                "items": [
+                  {
+                    "path": "0.2.0.0",
+                    "frame": {
+                      "left": 758,
+                      "top": 168,
+                      "width": 45,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.2.0.1",
+                    "frame": {
+                      "left": 758,
+                      "top": 186,
+                      "width": 214,
+                      "height": 38
+                    }
+                  },
+                  {
+                    "path": "0.2.0.2",
+                    "frame": {
+                      "left": 758,
+                      "top": 230,
+                      "width": 214,
+                      "height": 34
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 18,
+              "right": 18,
+              "bottom": 18,
+              "left": 18
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 758,
+              "top": 168,
+              "width": 214,
+              "height": 88
+            },
+            "element": {
+              "aid": "sh/cfa9w3m9",
+              "id": "10",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "panel",
+            "position": {
+              "left": 1015,
+              "top": 150
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 250
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 124
+              }
+            },
+            "intrinsicSize": {
+              "width": 250,
+              "height": 124
+            },
+            "frame": {
+              "left": 1015,
+              "top": 150,
+              "width": 250,
+              "height": 124
+            },
+            "children": [
+              {
+                "path": "0.3.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 214
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 88
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 214,
+                  "height": 96
+                },
+                "frame": {
+                  "left": 1033,
+                  "top": 168,
+                  "width": 214,
+                  "height": 88
+                },
+                "children": [
+                  {
+                    "path": "0.3.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 45
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 45,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 1033,
+                      "top": 168,
+                      "width": 45,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/1orytsvu",
+                      "id": "15",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.3.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 18
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 214
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 38
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 214,
+                      "height": 38
+                    },
+                    "frame": {
+                      "left": 1033,
+                      "top": 186,
+                      "width": 214,
+                      "height": 38
+                    },
+                    "children": [],
+                    "text": "LiteRT-LM",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/u18jqh0f",
+                      "id": "16",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.3.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 62
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 214
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 34
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 214,
+                      "height": 34
+                    },
+                    "frame": {
+                      "left": 1033,
+                      "top": 230,
+                      "width": 214,
+                      "height": 34
+                    },
+                    "children": [],
+                    "text": "本地 Engine + Conversation",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/jm1cfa9w",
+                      "id": "17",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 1033,
+                  "top": 168,
+                  "width": 214,
+                  "height": 88
+                },
+                "items": [
+                  {
+                    "path": "0.3.0.0",
+                    "frame": {
+                      "left": 1033,
+                      "top": 168,
+                      "width": 45,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.3.0.1",
+                    "frame": {
+                      "left": 1033,
+                      "top": 186,
+                      "width": 214,
+                      "height": 38
+                    }
+                  },
+                  {
+                    "path": "0.3.0.2",
+                    "frame": {
+                      "left": 1033,
+                      "top": 230,
+                      "width": 214,
+                      "height": 34
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 18,
+              "right": 18,
+              "bottom": 18,
+              "left": 18
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 1033,
+              "top": 168,
+              "width": 214,
+              "height": 88
+            },
+            "element": {
+              "aid": "sh/c7u54zid",
+              "id": "14",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.4",
+            "kind": "panel",
+            "position": {
+              "left": 740,
+              "top": 310
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 250
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 124
+              }
+            },
+            "intrinsicSize": {
+              "width": 250,
+              "height": 124
+            },
+            "frame": {
+              "left": 740,
+              "top": 310,
+              "width": 250,
+              "height": 124
+            },
+            "children": [
+              {
+                "path": "0.4.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 214
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 88
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 214,
+                  "height": 96
+                },
+                "frame": {
+                  "left": 758,
+                  "top": 328,
+                  "width": 214,
+                  "height": 88
+                },
+                "children": [
+                  {
+                    "path": "0.4.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 45
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 45,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 758,
+                      "top": 328,
+                      "width": 45,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/5gbq1ory",
+                      "id": "19",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.4.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 18
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 214
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 38
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 214,
+                      "height": 38
+                    },
+                    "frame": {
+                      "left": 758,
+                      "top": 346,
+                      "width": 214,
+                      "height": 38
+                    },
+                    "children": [],
+                    "text": "Tests",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/90je9cvi",
+                      "id": "20",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.4.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 62
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 214
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 34
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 214,
+                      "height": 34
+                    },
+                    "frame": {
+                      "left": 758,
+                      "top": 390,
+                      "width": 214,
+                      "height": 34
+                    },
+                    "children": [],
+                    "text": "Prompt、Skill、模型、工具服务",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/gfmlkjm1",
+                      "id": "21",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 758,
+                  "top": 328,
+                  "width": 214,
+                  "height": 88
+                },
+                "items": [
+                  {
+                    "path": "0.4.0.0",
+                    "frame": {
+                      "left": 758,
+                      "top": 328,
+                      "width": 45,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.4.0.1",
+                    "frame": {
+                      "left": 758,
+                      "top": 346,
+                      "width": 214,
+                      "height": 38
+                    }
+                  },
+                  {
+                    "path": "0.4.0.2",
+                    "frame": {
+                      "left": 758,
+                      "top": 390,
+                      "width": 214,
+                      "height": 34
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 18,
+              "right": 18,
+              "bottom": 18,
+              "left": 18
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 758,
+              "top": 328,
+              "width": 214,
+              "height": 88
+            },
+            "element": {
+              "aid": "sh/cvixczed",
+              "id": "18",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.5",
+            "kind": "panel",
+            "position": {
+              "left": 1015,
+              "top": 310
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 250
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 124
+              }
+            },
+            "intrinsicSize": {
+              "width": 250,
+              "height": 124
+            },
+            "frame": {
+              "left": 1015,
+              "top": 310,
+              "width": 250,
+              "height": 124
+            },
+            "children": [
+              {
+                "path": "0.5.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 214
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 88
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 214,
+                  "height": 96
+                },
+                "frame": {
+                  "left": 1033,
+                  "top": 328,
+                  "width": 214,
+                  "height": 88
+                },
+                "children": [
+                  {
+                    "path": "0.5.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 45
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 45,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 1033,
+                      "top": 328,
+                      "width": 45,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/yd0z6103",
+                      "id": "23",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.5.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 18
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 214
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 38
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 214,
+                      "height": 38
+                    },
+                    "frame": {
+                      "left": 1033,
+                      "top": 346,
+                      "width": 214,
+                      "height": 38
+                    },
+                    "children": [],
+                    "text": "APK + Demo",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/9s36hcrm",
+                      "id": "24",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.5.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 62
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 214
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 34
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 214,
+                      "height": 34
+                    },
+                    "frame": {
+                      "left": 1033,
+                      "top": 390,
+                      "width": 214,
+                      "height": 34
+                    },
+                    "children": [],
+                    "text": "YouTube 视频 + APK 下载",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/g7adsji5",
+                      "id": "25",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 1033,
+                  "top": 328,
+                  "width": 214,
+                  "height": 88
+                },
+                "items": [
+                  {
+                    "path": "0.5.0.0",
+                    "frame": {
+                      "left": 1033,
+                      "top": 328,
+                      "width": 45,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.5.0.1",
+                    "frame": {
+                      "left": 1033,
+                      "top": 346,
+                      "width": 214,
+                      "height": 38
+                    }
+                  },
+                  {
+                    "path": "0.5.0.2",
+                    "frame": {
+                      "left": 1033,
+                      "top": 390,
+                      "width": 214,
+                      "height": 34
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 18,
+              "right": 18,
+              "bottom": 18,
+              "left": 18
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 1033,
+              "top": 328,
+              "width": 214,
+              "height": 88
+            },
+            "element": {
+              "aid": "sh/rytsvu9k",
+              "id": "22",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.6",
+            "kind": "panel",
+            "position": {
+              "left": 76,
+              "top": 470
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1110
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 100
+              }
+            },
+            "intrinsicSize": {
+              "width": 1110,
+              "height": 100
+            },
+            "frame": {
+              "left": 76,
+              "top": 470,
+              "width": 1110,
+              "height": 100
+            },
+            "children": [
+              {
+                "path": "0.6.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 1074
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 64
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 1074,
+                  "height": 86
+                },
+                "frame": {
+                  "left": 94,
+                  "top": 488,
+                  "width": 1074,
+                  "height": 64
+                },
+                "children": [
+                  {
+                    "path": "0.6.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 44
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 44,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 94,
+                      "top": 488,
+                      "width": 44,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/y1kre1w7",
+                      "id": "27",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.6.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 18
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 1074
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 34
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1074,
+                      "height": 34
+                    },
+                    "frame": {
+                      "left": 94,
+                      "top": 506,
+                      "width": 1074,
+                      "height": 34
+                    },
+                    "children": [],
+                    "text": "核心代码路径",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/5o7qpg3e",
+                      "id": "28",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.6.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 58
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 1074
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 28
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1074,
+                      "height": 28
+                    },
+                    "frame": {
+                      "left": 94,
+                      "top": 546,
+                      "width": 1074,
+                      "height": 28
+                    },
+                    "children": [],
+                    "text": "AiInferenceSubsystem / ModelManager / AiAssistantTools / TrailSenseAiToolRunner\nAiPromptBuilder / ai_tool_knowledge.md / ai_tool_skills.md",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/g3ex0nux",
+                      "id": "29",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 94,
+                  "top": 488,
+                  "width": 1074,
+                  "height": 64
+                },
+                "items": [
+                  {
+                    "path": "0.6.0.0",
+                    "frame": {
+                      "left": 94,
+                      "top": 488,
+                      "width": 44,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.6.0.1",
+                    "frame": {
+                      "left": 94,
+                      "top": 506,
+                      "width": 1074,
+                      "height": 34
+                    }
+                  },
+                  {
+                    "path": "0.6.0.2",
+                    "frame": {
+                      "left": 94,
+                      "top": 546,
+                      "width": 1074,
+                      "height": 28
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 18,
+              "right": 18,
+              "bottom": 18,
+              "left": 18
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 94,
+              "top": 488,
+              "width": 1074,
+              "height": 64
+            },
+            "element": {
+              "aid": "sh/rmhk3q5o",
+              "id": "26",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 76,
+              "top": 150,
+              "width": 640,
+              "height": 72
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 76,
+              "top": 246,
+              "width": 620,
+              "height": 56
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 740,
+              "top": 150,
+              "width": 250,
+              "height": 124
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 1015,
+              "top": 150,
+              "width": 250,
+              "height": 124
+            }
+          },
+          {
+            "path": "0.4",
+            "frame": {
+              "left": 740,
+              "top": 310,
+              "width": 250,
+              "height": 124
+            }
+          },
+          {
+            "path": "0.5",
+            "frame": {
+              "left": 1015,
+              "top": 310,
+              "width": 250,
+              "height": 124
+            }
+          },
+          {
+            "path": "0.6",
+            "frame": {
+              "left": 76,
+              "top": 470,
+              "width": 1110,
+              "height": 100
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 592,
+          "height": 676
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 654
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 520
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 22
+              }
+            },
+            "intrinsicSize": {
+              "width": 520,
+              "height": 22
+            },
+            "frame": {
+              "left": 72,
+              "top": 654,
+              "width": 520,
+              "height": 22
+            },
+            "children": [],
+            "text": "Gemma 4 Hackathon Shanghai · Track C Edge AI",
+            "transform": "none",
+            "element": {
+              "aid": "sh/adsji5sn",
+              "id": "30",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 72,
+              "top": 654,
+              "width": 520,
+              "height": 22
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

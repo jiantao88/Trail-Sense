@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trail Sense AI Assistant — 半决赛路演</title>
+<style>
+  :root { --bg:#05080f; --accent:#3ad29f; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { height:100%; background:var(--bg); overflow:hidden; font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; }
+  body { color:#eaf2f0; -webkit-user-select:none; user-select:none; }
+
+  /* Stage keeps a 16:9 frame centered, letterboxed */
+  #stage {
+    position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+  }
+  .slide {
+    position:absolute; max-width:100vw; max-height:100vh;
+    width:auto; height:auto;
+    opacity:0; transform:scale(.985);
+    transition:opacity .45s ease, transform .45s ease;
+    pointer-events:none;
+    aspect-ratio:16/9;
+  }
+  .slide img { display:block; width:100%; height:100%; object-fit:contain; }
+  .slide.active { opacity:1; transform:scale(1); pointer-events:auto; z-index:2; }
+
+  /* size the slide frame to fill while preserving 16:9 */
+  @media (min-aspect-ratio:16/9) { .slide { height:100vh; } }
+  @media (max-aspect-ratio:16/9) { .slide { width:100vw; } }
+
+  /* Progress bar */
+  #bar { position:fixed; left:0; top:0; height:3px; background:var(--accent); width:0;
+    transition:width .35s ease; z-index:50; box-shadow:0 0 12px rgba(58,210,159,.7); }
+
+  /* HUD */
+  #hud { position:fixed; bottom:18px; right:22px; z-index:50; display:flex; gap:14px;
+    align-items:center; font-size:13px; color:#8aa; opacity:.0; transition:opacity .3s; }
+  body.show-ui #hud { opacity:.85; }
+  #counter { font-variant-numeric:tabular-nums; letter-spacing:.5px; }
+  .btn { cursor:pointer; padding:6px 10px; border:1px solid rgba(120,160,150,.3);
+    border-radius:8px; background:rgba(10,20,18,.5); color:#bcd; backdrop-filter:blur(6px);
+    transition:.2s; font-size:12px; }
+  .btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  /* Nav hot zones */
+  .zone { position:fixed; top:0; height:100%; width:18%; z-index:40; cursor:pointer; }
+  #zoneL { left:0; } #zoneR { right:0; }
+
+  /* Overview grid */
+  #grid { position:fixed; inset:0; background:rgba(3,6,12,.97); z-index:60; display:none;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; padding:34px;
+    overflow:auto; align-content:start; }
+  #grid.open { display:grid; }
+  .thumb { position:relative; border:2px solid transparent; border-radius:10px; overflow:hidden;
+    cursor:pointer; aspect-ratio:16/9; background:#0a0f18; transition:.2s; }
+  .thumb img { width:100%; height:100%; object-fit:cover; display:block; opacity:.85; transition:.2s; }
+  .thumb:hover img, .thumb.cur img { opacity:1; }
+  .thumb:hover { border-color:var(--accent); transform:translateY(-3px); }
+  .thumb.cur { border-color:var(--accent); }
+  .thumb span { position:absolute; left:8px; bottom:6px; font-size:12px; color:#cde;
+    background:rgba(0,0,0,.55); padding:2px 7px; border-radius:6px; }
+
+  /* Help hint */
+  #hint { position:fixed; bottom:18px; left:22px; z-index:50; font-size:12px; color:#567;
+    opacity:0; transition:opacity .3s; }
+  body.show-ui #hint { opacity:.7; }
+  kbd { background:#13202b; border:1px solid #2a3b48; border-radius:4px; padding:1px 6px;
+    font-size:11px; color:#9bd; }
+</style>
+</head>
+<body>
+  <div id="bar"></div>
+  <div id="stage"></div>
+
+  <div class="zone" id="zoneL" title="上一页"></div>
+  <div class="zone" id="zoneR" title="下一页"></div>
+
+  <div id="hint">
+    <kbd>←</kbd> <kbd>→</kbd> 翻页 · <kbd>F</kbd> 全屏 · <kbd>O</kbd> 总览 · <kbd>Home</kbd> 首页
+  </div>
+  <div id="hud">
+    <span id="counter">01 / 08</span>
+    <span class="btn" id="btnGrid">总览</span>
+    <span class="btn" id="btnFull">全屏</span>
+  </div>
+
+  <div id="grid"></div>
+
+<script>
+  const SLIDES = [
+    { image: "01", title: "封面 · 端侧 AI 判断力" },
+    { image: "02", title: "问题 · 缺少低成本判断" },
+    { image: "03", title: "完整产品 · 工具箱 + AI 操作层" },
+    { image: "04", title: "用户流程 · 说目标，组织工具" },
+    { image: "05", title: "端侧架构 · Gemma 4 推理链路" },
+    { image: "06", title: "Agent Skill · 任务工作流" },
+    { image: "07", title: "多模态输入 · 照片与截图" },
+    { image: "10", title: "结尾 · Q&A" },
+  ];
+  const TOTAL = SLIDES.length;
+  const src = i => `img/${SLIDES[i].image}.png`;
+
+  const stage = document.getElementById('stage');
+  const grid  = document.getElementById('grid');
+  const bar   = document.getElementById('bar');
+  const counter = document.getElementById('counter');
+  let cur = 0;
+
+  // Build slides
+  const slides = [];
+  for (let i=0;i<TOTAL;i++){
+    const d = document.createElement('div');
+    d.className = 'slide';
+    const img = document.createElement('img');
+    img.src = src(i); img.alt = SLIDES[i].title;
+    img.loading = i<2 ? 'eager' : 'lazy';
+    d.appendChild(img);
+    stage.appendChild(d);
+    slides.push(d);
+
+    const t = document.createElement('div');
+    t.className = 'thumb';
+    t.innerHTML = `<img src="${src(i)}" alt=""><span>${String(i+1).padStart(2,'0')} · ${SLIDES[i].title}</span>`;
+    t.onclick = () => { go(i); closeGrid(); };
+    grid.appendChild(t);
+  }
+
+  function render(){
+    slides.forEach((s,i)=> s.classList.toggle('active', i===cur));
+    [...grid.children].forEach((t,i)=> t.classList.toggle('cur', i===cur));
+    bar.style.width = ((cur+1)/TOTAL*100)+'%';
+    counter.textContent = `${String(cur+1).padStart(2,'0')} / ${TOTAL}`;
+  }
+  function go(i){ cur = Math.max(0, Math.min(TOTAL-1, i)); render(); }
+  const next = ()=> go(cur+1);
+  const prev = ()=> go(cur-1);
+
+  // Grid
+  const openGrid  = ()=> grid.classList.add('open');
+  const closeGrid = ()=> grid.classList.remove('open');
+  const toggleGrid= ()=> grid.classList.toggle('open');
+
+  // Fullscreen
+  function toggleFull(){
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
+    else document.exitFullscreen?.();
+  }
+
+  // Keyboard
+  document.addEventListener('keydown', e=>{
+    switch(e.key){
+      case 'ArrowRight': case 'PageDown': case ' ': next(); e.preventDefault(); break;
+      case 'ArrowLeft':  case 'PageUp':  prev(); e.preventDefault(); break;
+      case 'Home': go(0); break;
+      case 'End':  go(TOTAL-1); break;
+      case 'f': case 'F': toggleFull(); break;
+      case 'o': case 'O': toggleGrid(); break;
+      case 'Escape': closeGrid(); break;
+      default:
+        if (/^[0-9]$/.test(e.key)){ const n = e.key==='0'?9:+e.key-1; go(n); }
+    }
+  });
+
+  // Click zones & buttons
+  document.getElementById('zoneL').onclick = prev;
+  document.getElementById('zoneR').onclick = next;
+  document.getElementById('btnGrid').onclick = toggleGrid;
+  document.getElementById('btnFull').onclick = toggleFull;
+
+  // Touch swipe
+  let tx=0;
+  addEventListener('touchstart', e=> tx=e.touches[0].clientX, {passive:true});
+  addEventListener('touchend',   e=>{ const dx=e.changedTouches[0].clientX-tx;
+    if (Math.abs(dx)>50){ dx<0?next():prev(); } }, {passive:true});
+
+  // Show UI on mouse move, auto-hide
+  let hideT;
+  function poke(){ document.body.classList.add('show-ui'); clearTimeout(hideT);
+    hideT = setTimeout(()=> document.body.classList.remove('show-ui'), 2500); }
+  addEventListener('mousemove', poke);
+  poke();
+
+  render();
+</script>
+</body>
+</html>

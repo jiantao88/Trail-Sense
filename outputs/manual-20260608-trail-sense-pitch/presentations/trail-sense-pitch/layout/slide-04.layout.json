@@ -1,0 +1,4388 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/rv8m1q",
+    "id": "rv8m1q",
+    "slide": 4,
+    "layoutId": "d26b9ead-8fe0-46be-bff5-3af6fa44cac0",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "82e2fb69-29a0-4000-a7fd-d072a216786f",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFF9EC",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Avenir Next",
+      "Avenir Next Condensed"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "d26b9ead-8fe0-46be-bff5-3af6fa44cac0",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "82e2fb69-29a0-4000-a7fd-d072a216786f",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "82e2fb69-29a0-4000-a7fd-d072a216786f",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/90je9cvi",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect"
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yd0z6103",
+      "id": "2",
+      "bbox": [
+        0,
+        0,
+        34,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "fillColor": "#0B3B2E"
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rytsvu9k",
+      "id": "3",
+      "bbox": [
+        34,
+        0,
+        8,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2"
+      },
+      "geometry": "rect",
+      "fillColor": "#F0B35A"
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g7adsji5",
+      "id": "4",
+      "bbox": [
+        72,
+        50,
+        108,
+        6
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.3"
+      },
+      "geometry": "rect",
+      "fillColor": "#F0B35A"
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9s36hcrm",
+      "id": "5",
+      "bbox": [
+        72,
+        34,
+        520,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.4"
+      },
+      "geometry": "rect",
+      "text": "TRAIL SENSE AI ASSISTANT",
+      "textPreview": "TRAIL SENSE AI ASSISTANT",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "Avenir Next Condensed",
+        "color": "#234D36",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "TRAIL SENSE AI ASSISTANT"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "TRAIL SENSE AI ASSISTANT",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Avenir Next Condensed",
+            "color": "#234D36",
+            "bold": true,
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "TRAIL SENSE AI ASSISTANT",
+              "fontSize": 15,
+              "typeface": "Avenir Next Condensed",
+              "color": "#234D36",
+              "bold": true,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y1kre1w7",
+      "id": "6",
+      "bbox": [
+        72,
+        62,
+        820,
+        60
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.5"
+      },
+      "geometry": "rect",
+      "text": "AI 的角色：把“工具列表”变成“可执行户外工作流”",
+      "textPreview": "AI 的角色：把“工具列表”变成“可执行户外工作流”",
+      "resolvedFontSize": 31,
+      "resolvedTextStyle": {
+        "fontSize": 31,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "AI 的角色：把“工具列表”变成“可执行户外工作流”"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "AI 的角色：把“工具列表”变成“可执行户外工作流”",
+          "resolvedTextStyle": {
+            "fontSize": 31,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "AI 的角色：把“工具列表”变成“可执行户外工作流”",
+              "fontSize": 31,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rmhk3q5o",
+      "id": "7",
+      "bbox": [
+        1160,
+        646,
+        80,
+        32
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.6"
+      },
+      "geometry": "rect",
+      "text": "04",
+      "textPreview": "04",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "Avenir Next Condensed",
+        "color": "#234D36",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "04"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "04",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Avenir Next Condensed",
+            "color": "#234D36",
+            "bold": true,
+            "alignment": "right",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "04",
+              "fontSize": 22,
+              "typeface": "Avenir Next Condensed",
+              "color": "#234D36",
+              "bold": true,
+              "alignment": "right",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g3ex0nux",
+      "id": "8",
+      "bbox": [
+        76,
+        150,
+        480,
+        52
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "text": "用户不需要先知道工具名。",
+      "textPreview": "用户不需要先知道工具名。",
+      "resolvedFontSize": 38,
+      "resolvedTextStyle": {
+        "fontSize": 38,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "用户不需要先知道工具名。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "用户不需要先知道工具名。",
+          "resolvedTextStyle": {
+            "fontSize": 38,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "用户不需要先知道工具名。",
+              "fontSize": 38,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5o7qpg3e",
+      "id": "9",
+      "bbox": [
+        76,
+        218,
+        560,
+        92
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "text": "例如“我迷路了，手机没信号怎么办？”不是一个聊天问题，而是一个多工具协同问题：定位、路径、信标、离线地图、求救信号和安全提醒需要按顺序组织。",
+      "textPreview": "例如“我迷路了，手机没信号怎么办？”不是一个聊天问题，而是一个多工具协同问题：定位、路径、信标、离线地图、求救信号和安全提醒需要按顺序组织。",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "例如“我迷路了，手机没信号怎么办？”不是一个聊天问题，"
+          },
+          {
+            "index": 2,
+            "text": "而是一个多工具协同问题：定位、路径、信标、离线地图、"
+          },
+          {
+            "index": 3,
+            "text": "求救信号和安全提醒需要按顺序组织。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "例如“我迷路了，手机没信号怎么办？”不是一个聊天问题，而是一个多工具协同问题：定位、路径、信标、离线地图、求救信号和安全提醒需要按顺序组织。",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "例如“我迷路了，手机没信号怎么办？”不是一个聊天问题，而是一个多工具协同问题：定位、路径、信标、离线地图、求救信号和安全提醒需要按顺序组织。",
+              "fontSize": 21,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5gbq1ory",
+      "id": "10",
+      "bbox": [
+        90,
+        440,
+        180,
+        38
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#0B3B2E"
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cvixczed",
+      "id": "11",
+      "bbox": [
+        90,
+        445,
+        180,
+        28
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.2.0"
+      },
+      "geometry": "rect",
+      "text": "自然语言问题",
+      "textPreview": "自然语言问题",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next Condensed",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "自然语言问题"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "自然语言问题",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next Condensed",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "自然语言问题",
+              "fontSize": 18,
+              "typeface": "Avenir Next Condensed",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nap4r65w",
+      "id": "12",
+      "bbox": [
+        280,
+        457.5,
+        110,
+        3
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.3.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#234D36"
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/upwb2hwf",
+      "id": "13",
+      "bbox": [
+        385,
+        454,
+        10,
+        10
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.3.1"
+      },
+      "geometry": "ellipse",
+      "fillColor": "#234D36"
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/54zidony",
+      "id": "14",
+      "bbox": [
+        400,
+        440,
+        150,
+        38
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.4"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#77A35D"
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cj6tovah",
+      "id": "15",
+      "bbox": [
+        400,
+        445,
+        150,
+        28
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.4.0"
+      },
+      "geometry": "rect",
+      "text": "意图识别",
+      "textPreview": "意图识别",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next Condensed",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "意图识别"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "意图识别",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next Condensed",
+            "color": "#10231C",
+            "bold": true,
+            "alignment": "center",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "意图识别",
+              "fontSize": 18,
+              "typeface": "Avenir Next Condensed",
+              "color": "#10231C",
+              "bold": true,
+              "alignment": "center",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nyd0z610",
+      "id": "16",
+      "bbox": [
+        560,
+        457.5,
+        110,
+        3
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.5.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#234D36"
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/udg7adsj",
+      "id": "17",
+      "bbox": [
+        665,
+        454,
+        10,
+        10
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.5.1"
+      },
+      "geometry": "ellipse",
+      "fillColor": "#234D36"
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1032lszq",
+      "id": "18",
+      "bbox": [
+        680,
+        440,
+        150,
+        38
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.6"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F0B35A"
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cfa9w3m9",
+      "id": "19",
+      "bbox": [
+        680,
+        445,
+        150,
+        28
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.6.0"
+      },
+      "geometry": "rect",
+      "text": "工具组合",
+      "textPreview": "工具组合",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next Condensed",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "工具组合"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "工具组合",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next Condensed",
+            "color": "#10231C",
+            "bold": true,
+            "alignment": "center",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "工具组合",
+              "fontSize": 18,
+              "typeface": "Avenir Next Condensed",
+              "color": "#10231C",
+              "bold": true,
+              "alignment": "center",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/obm58z25",
+      "id": "20",
+      "bbox": [
+        840,
+        457.5,
+        110,
+        3
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.7.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#234D36"
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hwfyxobm",
+      "id": "21",
+      "bbox": [
+        945,
+        454,
+        10,
+        10
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.7.1"
+      },
+      "geometry": "ellipse",
+      "fillColor": "#234D36"
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/65wjudg7",
+      "id": "22",
+      "bbox": [
+        960,
+        440,
+        150,
+        38
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.8"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#C45C3B"
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zqtcj6to",
+      "id": "23",
+      "bbox": [
+        960,
+        445,
+        150,
+        28
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.8.0"
+      },
+      "geometry": "rect",
+      "text": "行动卡片",
+      "textPreview": "行动卡片",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next Condensed",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "行动卡片"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "行动卡片",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next Condensed",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "行动卡片",
+              "fontSize": 18,
+              "typeface": "Avenir Next Condensed",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/oza1gvy9",
+      "id": "24",
+      "bbox": [
+        720,
+        150,
+        260,
+        112
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.9"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8EFE4",
+      "lineWidth": 1
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hk3q5o7q",
+      "id": "25",
+      "bbox": [
+        736,
+        166,
+        34,
+        5
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.9.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#77A35D"
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6xkf6dcb",
+      "id": "26",
+      "bbox": [
+        736,
+        181,
+        228,
+        24
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.9.0.1"
+      },
+      "geometry": "rect",
+      "text": "找工具",
+      "textPreview": "找工具",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "找工具"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "找工具",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "找工具",
+              "fontSize": 18,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zed8v6ps",
+      "id": "27",
+      "bbox": [
+        736,
+        220,
+        228,
+        34
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.9.0.2"
+      },
+      "geometry": "rect",
+      "text": "根据目标推荐正确工具，而不是让用户翻工具列表。",
+      "textPreview": "根据目标推荐正确工具，而不是让用户翻工具列表。",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "fontSize": 12.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "根据目标推荐正确工具，而不是让用户"
+          },
+          {
+            "index": 2,
+            "text": "翻工具列表。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "根据目标推荐正确工具，而不是让用户翻工具列表。",
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "根据目标推荐正确工具，而不是让用户翻工具列表。",
+              "fontSize": 12.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/orytsvu9",
+      "id": "28",
+      "bbox": [
+        1010,
+        150,
+        260,
+        112
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.10"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8EFE4",
+      "lineWidth": 1
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hcrmhk3q",
+      "id": "29",
+      "bbox": [
+        1026,
+        166,
+        34,
+        5
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.10.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#F0B35A"
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/72x4nap4",
+      "id": "30",
+      "bbox": [
+        1026,
+        181,
+        228,
+        24
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.10.0.1"
+      },
+      "geometry": "rect",
+      "text": "解释读数",
+      "textPreview": "解释读数",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "解释读数"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "解释读数",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "解释读数",
+              "fontSize": 18,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ih4byhgn",
+      "id": "31",
+      "bbox": [
+        1026,
+        220,
+        228,
+        34
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.10.0.2"
+      },
+      "geometry": "rect",
+      "text": "把气压、天气、导航、云层等上下文解释成实际判断。",
+      "textPreview": "把气压、天气、导航、云层等上下文解释成实际判断。",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "fontSize": 12.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "把气压、天气、导航、云层等上下文解"
+          },
+          {
+            "index": 2,
+            "text": "释成实际判断。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "把气压、天气、导航、云层等上下文解释成实际判断。",
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "把气压、天气、导航、云层等上下文解释成实际判断。",
+              "fontSize": 12.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p8nqxs72",
+      "id": "32",
+      "bbox": [
+        720,
+        285,
+        260,
+        112
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.11"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8EFE4",
+      "lineWidth": 1
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0nuxc3yl",
+      "id": "33",
+      "bbox": [
+        736,
+        301,
+        34,
+        5
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.11.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#C45C3B"
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7ed8bat4",
+      "id": "34",
+      "bbox": [
+        736,
+        316,
+        228,
+        24
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.11.0.1"
+      },
+      "geometry": "rect",
+      "text": "执行动作",
+      "textPreview": "执行动作",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "执行动作"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "执行动作",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "执行动作",
+              "fontSize": 18,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 35,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/itgfmlkj",
+      "id": "35",
+      "bbox": [
+        736,
+        355,
+        228,
+        34
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.11.0.2"
+      },
+      "geometry": "rect",
+      "text": "SOS 手电筒、哨子、打开工具等通过本机动作呈现。",
+      "textPreview": "SOS 手电筒、哨子、打开工具等通过本机动作呈现。",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "fontSize": 12.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SOS"
+          },
+          {
+            "index": 2,
+            "text": "手电筒、哨子、打开工具等通过本机动"
+          },
+          {
+            "index": 3,
+            "text": "作呈现。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SOS 手电筒、哨子、打开工具等通过本机动作呈现。",
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SOS 手电筒、哨子、打开工具等通过本机动作呈现。",
+              "fontSize": 12.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 36,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pkzupwb2",
+      "id": "36",
+      "bbox": [
+        1010,
+        285,
+        260,
+        112
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.12"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8EFE4",
+      "lineWidth": 1
+    },
+    {
+      "order": 37,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0z61032l",
+      "id": "37",
+      "bbox": [
+        1026,
+        301,
+        34,
+        5
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.12.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#8EB6A7"
+    },
+    {
+      "order": 38,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7qpg3ex0",
+      "id": "38",
+      "bbox": [
+        1026,
+        316,
+        228,
+        24
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.12.0.1"
+      },
+      "geometry": "rect",
+      "text": "安全边界",
+      "textPreview": "安全边界",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "安全边界"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "安全边界",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "安全边界",
+              "fontSize": 18,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 39,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/i5sneloj",
+      "id": "39",
+      "bbox": [
+        1026,
+        355,
+        228,
+        34
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.12.0.2"
+      },
+      "geometry": "rect",
+      "text": "不伪造传感器读数；高风险场景提醒真实装备和救援渠道。",
+      "textPreview": "不伪造传感器读数；高风险场景提醒真实装备和救援渠道。",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "fontSize": 12.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "不伪造传感器读数；高风险场景提醒真"
+          },
+          {
+            "index": 2,
+            "text": "实装备和救援渠道。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "不伪造传感器读数；高风险场景提醒真实装备和救援渠道。",
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "不伪造传感器读数；高风险场景提醒真实装备和救援渠道。",
+              "fontSize": 12.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 40,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ahoza1gv",
+      "id": "40",
+      "bbox": [
+        720,
+        525,
+        520,
+        70
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.13"
+      },
+      "geometry": "rect",
+      "text": "路演表达：AI 是 Trail Sense 的“操作层”和“解释层”，不是替代原 App。",
+      "textPreview": "路演表达：AI 是 Trail Sense 的“操作层”和“解释层”，不是替代原 App。",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "路演表达：AI 是 Trail Sense"
+          },
+          {
+            "index": 2,
+            "text": "的“操作层”和“解释层”，不是替代原 App。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "路演表达：AI 是 Trail Sense 的“操作层”和“解释层”，不是替代原 App。",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "路演表达：AI 是 Trail Sense 的“操作层”和“解释层”，不是替代原 App。",
+              "fontSize": 24,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 41,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/32lszqtc",
+      "id": "41",
+      "bbox": [
+        72,
+        652,
+        700,
+        24
+      ],
+      "composeSource": {
+        "run": 3,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "text": "Gemma 4 Hackathon Shanghai · Trail Sense AI Assistant",
+      "textPreview": "Gemma 4 Hackathon Shanghai · Trail Sense AI Assistant",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Gemma 4 Hackathon Shanghai · Trail Sense AI Assistant"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Gemma 4 Hackathon Shanghai · Trail Sense AI Assistant",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Gemma 4 Hackathon Shanghai · Trail Sense AI Assistant",
+              "fontSize": 13,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 1280,
+          "height": 720
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "position": {
+              "left": 0,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1280
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 1280,
+              "height": 720
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/90je9cvi",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "shape",
+            "position": {
+              "left": 0,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 34
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 34,
+              "height": 720
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 34,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/yd0z6103",
+              "id": "2",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "shape",
+            "position": {
+              "left": 34,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 8
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 8,
+              "height": 720
+            },
+            "frame": {
+              "left": 34,
+              "top": 0,
+              "width": 8,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/rytsvu9k",
+              "id": "3",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "shape",
+            "position": {
+              "left": 72,
+              "top": 50
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 108
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 6
+              }
+            },
+            "intrinsicSize": {
+              "width": 108,
+              "height": 6
+            },
+            "frame": {
+              "left": 72,
+              "top": 50,
+              "width": 108,
+              "height": 6
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/g7adsji5",
+              "id": "4",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.4",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 34
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 520
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 28
+              }
+            },
+            "intrinsicSize": {
+              "width": 520,
+              "height": 28
+            },
+            "frame": {
+              "left": 72,
+              "top": 34,
+              "width": 520,
+              "height": 28
+            },
+            "children": [],
+            "text": "TRAIL SENSE AI ASSISTANT",
+            "transform": "none",
+            "element": {
+              "aid": "sh/9s36hcrm",
+              "id": "5",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.5",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 62
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 820
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 60
+              }
+            },
+            "intrinsicSize": {
+              "width": 820,
+              "height": 60
+            },
+            "frame": {
+              "left": 72,
+              "top": 62,
+              "width": 820,
+              "height": 60
+            },
+            "children": [],
+            "text": "AI 的角色：把“工具列表”变成“可执行户外工作流”",
+            "transform": "none",
+            "element": {
+              "aid": "sh/y1kre1w7",
+              "id": "6",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.6",
+            "kind": "text",
+            "position": {
+              "left": 1160,
+              "top": 646
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 80
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 32
+              }
+            },
+            "intrinsicSize": {
+              "width": 80,
+              "height": 32
+            },
+            "frame": {
+              "left": 1160,
+              "top": 646,
+              "width": 80,
+              "height": 32
+            },
+            "children": [],
+            "text": "04",
+            "transform": "none",
+            "element": {
+              "aid": "sh/rmhk3q5o",
+              "id": "7",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 34,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 34,
+              "top": 0,
+              "width": 8,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 72,
+              "top": 50,
+              "width": 108,
+              "height": 6
+            }
+          },
+          {
+            "path": "0.4",
+            "frame": {
+              "left": 72,
+              "top": 34,
+              "width": 520,
+              "height": 28
+            }
+          },
+          {
+            "path": "0.5",
+            "frame": {
+              "left": 72,
+              "top": 62,
+              "width": 820,
+              "height": 60
+            }
+          },
+          {
+            "path": "0.6",
+            "frame": {
+              "left": 1160,
+              "top": 646,
+              "width": 80,
+              "height": 32
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 1280,
+          "height": 720
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "text",
+            "position": {
+              "left": 76,
+              "top": 150
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 480
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 52
+              }
+            },
+            "intrinsicSize": {
+              "width": 480,
+              "height": 52
+            },
+            "frame": {
+              "left": 76,
+              "top": 150,
+              "width": 480,
+              "height": 52
+            },
+            "children": [],
+            "text": "用户不需要先知道工具名。",
+            "transform": "none",
+            "element": {
+              "aid": "sh/g3ex0nux",
+              "id": "8",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "text",
+            "position": {
+              "left": 76,
+              "top": 218
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 560
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 92
+              }
+            },
+            "intrinsicSize": {
+              "width": 560,
+              "height": 92
+            },
+            "frame": {
+              "left": 76,
+              "top": 218,
+              "width": 560,
+              "height": 92
+            },
+            "children": [],
+            "text": "例如“我迷路了，手机没信号怎么办？”不是一个聊天问题，而是一个多工具协同问题：定位、路径、信标、离线地图、求救信号和安全提醒需要按顺序组织。",
+            "transform": "none",
+            "element": {
+              "aid": "sh/5o7qpg3e",
+              "id": "9",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "panel",
+            "position": {
+              "left": 90,
+              "top": 440
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 180
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 38
+              }
+            },
+            "intrinsicSize": {
+              "width": 180,
+              "height": 28
+            },
+            "frame": {
+              "left": 90,
+              "top": 440,
+              "width": 180,
+              "height": 38
+            },
+            "children": [
+              {
+                "path": "0.2.0",
+                "kind": "text",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 180
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 28
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 180,
+                  "height": 28
+                },
+                "frame": {
+                  "left": 90,
+                  "top": 445,
+                  "width": 180,
+                  "height": 28
+                },
+                "children": [],
+                "text": "自然语言问题",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/cvixczed",
+                  "id": "11",
+                  "kind": "shape"
+                }
+              }
+            ],
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "align": "center",
+            "justify": "center",
+            "contentFrame": {
+              "left": 90,
+              "top": 440,
+              "width": 180,
+              "height": 38
+            },
+            "element": {
+              "aid": "sh/5gbq1ory",
+              "id": "10",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "layers",
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1280
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 395,
+              "height": 464
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "children": [
+              {
+                "path": "0.3.0",
+                "kind": "shape",
+                "position": {
+                  "left": 280,
+                  "top": 457.5
+                },
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 110
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 3
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 110,
+                  "height": 3
+                },
+                "frame": {
+                  "left": 280,
+                  "top": 457.5,
+                  "width": 110,
+                  "height": 3
+                },
+                "children": [],
+                "geometry": "rect",
+                "element": {
+                  "aid": "sh/nap4r65w",
+                  "id": "12",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.3.1",
+                "kind": "shape",
+                "position": {
+                  "left": 385,
+                  "top": 454
+                },
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 10
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 10
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 10,
+                  "height": 10
+                },
+                "frame": {
+                  "left": 385,
+                  "top": 454,
+                  "width": 10,
+                  "height": 10
+                },
+                "children": [],
+                "geometry": "ellipse",
+                "element": {
+                  "aid": "sh/upwb2hwf",
+                  "id": "13",
+                  "kind": "shape"
+                }
+              }
+            ],
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignItems": "stretch",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "items": [
+              {
+                "path": "0.3.0",
+                "frame": {
+                  "left": 280,
+                  "top": 457.5,
+                  "width": 110,
+                  "height": 3
+                }
+              },
+              {
+                "path": "0.3.1",
+                "frame": {
+                  "left": 385,
+                  "top": 454,
+                  "width": 10,
+                  "height": 10
+                }
+              }
+            ]
+          },
+          {
+            "path": "0.4",
+            "kind": "panel",
+            "position": {
+              "left": 400,
+              "top": 440
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 150
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 38
+              }
+            },
+            "intrinsicSize": {
+              "width": 150,
+              "height": 28
+            },
+            "frame": {
+              "left": 400,
+              "top": 440,
+              "width": 150,
+              "height": 38
+            },
+            "children": [
+              {
+                "path": "0.4.0",
+                "kind": "text",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 150
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 28
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 150,
+                  "height": 28
+                },
+                "frame": {
+                  "left": 400,
+                  "top": 445,
+                  "width": 150,
+                  "height": 28
+                },
+                "children": [],
+                "text": "意图识别",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/cj6tovah",
+                  "id": "15",
+                  "kind": "shape"
+                }
+              }
+            ],
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "align": "center",
+            "justify": "center",
+            "contentFrame": {
+              "left": 400,
+              "top": 440,
+              "width": 150,
+              "height": 38
+            },
+            "element": {
+              "aid": "sh/54zidony",
+              "id": "14",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.5",
+            "kind": "layers",
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1280
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 675,
+              "height": 464
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "children": [
+              {
+                "path": "0.5.0",
+                "kind": "shape",
+                "position": {
+                  "left": 560,
+                  "top": 457.5
+                },
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 110
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 3
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 110,
+                  "height": 3
+                },
+                "frame": {
+                  "left": 560,
+                  "top": 457.5,
+                  "width": 110,
+                  "height": 3
+                },
+                "children": [],
+                "geometry": "rect",
+                "element": {
+                  "aid": "sh/nyd0z610",
+                  "id": "16",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.5.1",
+                "kind": "shape",
+                "position": {
+                  "left": 665,
+                  "top": 454
+                },
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 10
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 10
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 10,
+                  "height": 10
+                },
+                "frame": {
+                  "left": 665,
+                  "top": 454,
+                  "width": 10,
+                  "height": 10
+                },
+                "children": [],
+                "geometry": "ellipse",
+                "element": {
+                  "aid": "sh/udg7adsj",
+                  "id": "17",
+                  "kind": "shape"
+                }
+              }
+            ],
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignItems": "stretch",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "items": [
+              {
+                "path": "0.5.0",
+                "frame": {
+                  "left": 560,
+                  "top": 457.5,
+                  "width": 110,
+                  "height": 3
+                }
+              },
+              {
+                "path": "0.5.1",
+                "frame": {
+                  "left": 665,
+                  "top": 454,
+                  "width": 10,
+                  "height": 10
+                }
+              }
+            ]
+          },
+          {
+            "path": "0.6",
+            "kind": "panel",
+            "position": {
+              "left": 680,
+              "top": 440
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 150
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 38
+              }
+            },
+            "intrinsicSize": {
+              "width": 150,
+              "height": 28
+            },
+            "frame": {
+              "left": 680,
+              "top": 440,
+              "width": 150,
+              "height": 38
+            },
+            "children": [
+              {
+                "path": "0.6.0",
+                "kind": "text",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 150
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 28
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 150,
+                  "height": 28
+                },
+                "frame": {
+                  "left": 680,
+                  "top": 445,
+                  "width": 150,
+                  "height": 28
+                },
+                "children": [],
+                "text": "工具组合",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/cfa9w3m9",
+                  "id": "19",
+                  "kind": "shape"
+                }
+              }
+            ],
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "align": "center",
+            "justify": "center",
+            "contentFrame": {
+              "left": 680,
+              "top": 440,
+              "width": 150,
+              "height": 38
+            },
+            "element": {
+              "aid": "sh/1032lszq",
+              "id": "18",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.7",
+            "kind": "layers",
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1280
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 955,
+              "height": 464
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "children": [
+              {
+                "path": "0.7.0",
+                "kind": "shape",
+                "position": {
+                  "left": 840,
+                  "top": 457.5
+                },
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 110
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 3
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 110,
+                  "height": 3
+                },
+                "frame": {
+                  "left": 840,
+                  "top": 457.5,
+                  "width": 110,
+                  "height": 3
+                },
+                "children": [],
+                "geometry": "rect",
+                "element": {
+                  "aid": "sh/obm58z25",
+                  "id": "20",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.7.1",
+                "kind": "shape",
+                "position": {
+                  "left": 945,
+                  "top": 454
+                },
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 10
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 10
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 10,
+                  "height": 10
+                },
+                "frame": {
+                  "left": 945,
+                  "top": 454,
+                  "width": 10,
+                  "height": 10
+                },
+                "children": [],
+                "geometry": "ellipse",
+                "element": {
+                  "aid": "sh/hwfyxobm",
+                  "id": "21",
+                  "kind": "shape"
+                }
+              }
+            ],
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignItems": "stretch",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "items": [
+              {
+                "path": "0.7.0",
+                "frame": {
+                  "left": 840,
+                  "top": 457.5,
+                  "width": 110,
+                  "height": 3
+                }
+              },
+              {
+                "path": "0.7.1",
+                "frame": {
+                  "left": 945,
+                  "top": 454,
+                  "width": 10,
+                  "height": 10
+                }
+              }
+            ]
+          },
+          {
+            "path": "0.8",
+            "kind": "panel",
+            "position": {
+              "left": 960,
+              "top": 440
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 150
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 38
+              }
+            },
+            "intrinsicSize": {
+              "width": 150,
+              "height": 28
+            },
+            "frame": {
+              "left": 960,
+              "top": 440,
+              "width": 150,
+              "height": 38
+            },
+            "children": [
+              {
+                "path": "0.8.0",
+                "kind": "text",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 150
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 28
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 150,
+                  "height": 28
+                },
+                "frame": {
+                  "left": 960,
+                  "top": 445,
+                  "width": 150,
+                  "height": 28
+                },
+                "children": [],
+                "text": "行动卡片",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/zqtcj6to",
+                  "id": "23",
+                  "kind": "shape"
+                }
+              }
+            ],
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "align": "center",
+            "justify": "center",
+            "contentFrame": {
+              "left": 960,
+              "top": 440,
+              "width": 150,
+              "height": 38
+            },
+            "element": {
+              "aid": "sh/65wjudg7",
+              "id": "22",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.9",
+            "kind": "panel",
+            "position": {
+              "left": 720,
+              "top": 150
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 260
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 112
+              }
+            },
+            "intrinsicSize": {
+              "width": 260,
+              "height": 112
+            },
+            "frame": {
+              "left": 720,
+              "top": 150,
+              "width": 260,
+              "height": 112
+            },
+            "children": [
+              {
+                "path": "0.9.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 228
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 80
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 228,
+                  "height": 88
+                },
+                "frame": {
+                  "left": 736,
+                  "top": 166,
+                  "width": 228,
+                  "height": 80
+                },
+                "children": [
+                  {
+                    "path": "0.9.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 34
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 34,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 736,
+                      "top": 166,
+                      "width": 34,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/hk3q5o7q",
+                      "id": "25",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.9.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 15
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 228
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 24
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 228,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 736,
+                      "top": 181,
+                      "width": 228,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "找工具",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/6xkf6dcb",
+                      "id": "26",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.9.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 54
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 228
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 34
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 228,
+                      "height": 34
+                    },
+                    "frame": {
+                      "left": 736,
+                      "top": 220,
+                      "width": 228,
+                      "height": 34
+                    },
+                    "children": [],
+                    "text": "根据目标推荐正确工具，而不是让用户翻工具列表。",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/zed8v6ps",
+                      "id": "27",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 736,
+                  "top": 166,
+                  "width": 228,
+                  "height": 80
+                },
+                "items": [
+                  {
+                    "path": "0.9.0.0",
+                    "frame": {
+                      "left": 736,
+                      "top": 166,
+                      "width": 34,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.9.0.1",
+                    "frame": {
+                      "left": 736,
+                      "top": 181,
+                      "width": 228,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.9.0.2",
+                    "frame": {
+                      "left": 736,
+                      "top": 220,
+                      "width": 228,
+                      "height": 34
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 16,
+              "right": 16,
+              "bottom": 16,
+              "left": 16
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 736,
+              "top": 166,
+              "width": 228,
+              "height": 80
+            },
+            "element": {
+              "aid": "sh/oza1gvy9",
+              "id": "24",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.10",
+            "kind": "panel",
+            "position": {
+              "left": 1010,
+              "top": 150
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 260
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 112
+              }
+            },
+            "intrinsicSize": {
+              "width": 260,
+              "height": 112
+            },
+            "frame": {
+              "left": 1010,
+              "top": 150,
+              "width": 260,
+              "height": 112
+            },
+            "children": [
+              {
+                "path": "0.10.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 228
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 80
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 228,
+                  "height": 88
+                },
+                "frame": {
+                  "left": 1026,
+                  "top": 166,
+                  "width": 228,
+                  "height": 80
+                },
+                "children": [
+                  {
+                    "path": "0.10.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 34
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 34,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 1026,
+                      "top": 166,
+                      "width": 34,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/hcrmhk3q",
+                      "id": "29",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.10.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 15
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 228
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 24
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 228,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 1026,
+                      "top": 181,
+                      "width": 228,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "解释读数",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/72x4nap4",
+                      "id": "30",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.10.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 54
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 228
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 34
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 228,
+                      "height": 34
+                    },
+                    "frame": {
+                      "left": 1026,
+                      "top": 220,
+                      "width": 228,
+                      "height": 34
+                    },
+                    "children": [],
+                    "text": "把气压、天气、导航、云层等上下文解释成实际判断。",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/ih4byhgn",
+                      "id": "31",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 1026,
+                  "top": 166,
+                  "width": 228,
+                  "height": 80
+                },
+                "items": [
+                  {
+                    "path": "0.10.0.0",
+                    "frame": {
+                      "left": 1026,
+                      "top": 166,
+                      "width": 34,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.10.0.1",
+                    "frame": {
+                      "left": 1026,
+                      "top": 181,
+                      "width": 228,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.10.0.2",
+                    "frame": {
+                      "left": 1026,
+                      "top": 220,
+                      "width": 228,
+                      "height": 34
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 16,
+              "right": 16,
+              "bottom": 16,
+              "left": 16
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 1026,
+              "top": 166,
+              "width": 228,
+              "height": 80
+            },
+            "element": {
+              "aid": "sh/orytsvu9",
+              "id": "28",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.11",
+            "kind": "panel",
+            "position": {
+              "left": 720,
+              "top": 285
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 260
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 112
+              }
+            },
+            "intrinsicSize": {
+              "width": 260,
+              "height": 112
+            },
+            "frame": {
+              "left": 720,
+              "top": 285,
+              "width": 260,
+              "height": 112
+            },
+            "children": [
+              {
+                "path": "0.11.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 228
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 80
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 228,
+                  "height": 88
+                },
+                "frame": {
+                  "left": 736,
+                  "top": 301,
+                  "width": 228,
+                  "height": 80
+                },
+                "children": [
+                  {
+                    "path": "0.11.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 34
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 34,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 736,
+                      "top": 301,
+                      "width": 34,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/0nuxc3yl",
+                      "id": "33",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.11.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 15
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 228
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 24
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 228,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 736,
+                      "top": 316,
+                      "width": 228,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "执行动作",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/7ed8bat4",
+                      "id": "34",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.11.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 54
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 228
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 34
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 228,
+                      "height": 34
+                    },
+                    "frame": {
+                      "left": 736,
+                      "top": 355,
+                      "width": 228,
+                      "height": 34
+                    },
+                    "children": [],
+                    "text": "SOS 手电筒、哨子、打开工具等通过本机动作呈现。",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/itgfmlkj",
+                      "id": "35",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 736,
+                  "top": 301,
+                  "width": 228,
+                  "height": 80
+                },
+                "items": [
+                  {
+                    "path": "0.11.0.0",
+                    "frame": {
+                      "left": 736,
+                      "top": 301,
+                      "width": 34,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.11.0.1",
+                    "frame": {
+                      "left": 736,
+                      "top": 316,
+                      "width": 228,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.11.0.2",
+                    "frame": {
+                      "left": 736,
+                      "top": 355,
+                      "width": 228,
+                      "height": 34
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 16,
+              "right": 16,
+              "bottom": 16,
+              "left": 16
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 736,
+              "top": 301,
+              "width": 228,
+              "height": 80
+            },
+            "element": {
+              "aid": "sh/p8nqxs72",
+              "id": "32",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.12",
+            "kind": "panel",
+            "position": {
+              "left": 1010,
+              "top": 285
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 260
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 112
+              }
+            },
+            "intrinsicSize": {
+              "width": 260,
+              "height": 112
+            },
+            "frame": {
+              "left": 1010,
+              "top": 285,
+              "width": 260,
+              "height": 112
+            },
+            "children": [
+              {
+                "path": "0.12.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 228
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 80
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 228,
+                  "height": 88
+                },
+                "frame": {
+                  "left": 1026,
+                  "top": 301,
+                  "width": 228,
+                  "height": 80
+                },
+                "children": [
+                  {
+                    "path": "0.12.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 34
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 34,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 1026,
+                      "top": 301,
+                      "width": 34,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/0z61032l",
+                      "id": "37",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.12.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 15
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 228
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 24
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 228,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 1026,
+                      "top": 316,
+                      "width": 228,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "安全边界",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/7qpg3ex0",
+                      "id": "38",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.12.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 54
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 228
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 34
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 228,
+                      "height": 34
+                    },
+                    "frame": {
+                      "left": 1026,
+                      "top": 355,
+                      "width": 228,
+                      "height": 34
+                    },
+                    "children": [],
+                    "text": "不伪造传感器读数；高风险场景提醒真实装备和救援渠道。",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/i5sneloj",
+                      "id": "39",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 1026,
+                  "top": 301,
+                  "width": 228,
+                  "height": 80
+                },
+                "items": [
+                  {
+                    "path": "0.12.0.0",
+                    "frame": {
+                      "left": 1026,
+                      "top": 301,
+                      "width": 34,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.12.0.1",
+                    "frame": {
+                      "left": 1026,
+                      "top": 316,
+                      "width": 228,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.12.0.2",
+                    "frame": {
+                      "left": 1026,
+                      "top": 355,
+                      "width": 228,
+                      "height": 34
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 16,
+              "right": 16,
+              "bottom": 16,
+              "left": 16
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 1026,
+              "top": 301,
+              "width": 228,
+              "height": 80
+            },
+            "element": {
+              "aid": "sh/pkzupwb2",
+              "id": "36",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.13",
+            "kind": "text",
+            "position": {
+              "left": 720,
+              "top": 525
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 520
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 70
+              }
+            },
+            "intrinsicSize": {
+              "width": 520,
+              "height": 70
+            },
+            "frame": {
+              "left": 720,
+              "top": 525,
+              "width": 520,
+              "height": 70
+            },
+            "children": [],
+            "text": "路演表达：AI 是 Trail Sense 的“操作层”和“解释层”，不是替代原 App。",
+            "transform": "none",
+            "element": {
+              "aid": "sh/ahoza1gv",
+              "id": "40",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 76,
+              "top": 150,
+              "width": 480,
+              "height": 52
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 76,
+              "top": 218,
+              "width": 560,
+              "height": 92
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 90,
+              "top": 440,
+              "width": 180,
+              "height": 38
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.4",
+            "frame": {
+              "left": 400,
+              "top": 440,
+              "width": 150,
+              "height": 38
+            }
+          },
+          {
+            "path": "0.5",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.6",
+            "frame": {
+              "left": 680,
+              "top": 440,
+              "width": 150,
+              "height": 38
+            }
+          },
+          {
+            "path": "0.7",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.8",
+            "frame": {
+              "left": 960,
+              "top": 440,
+              "width": 150,
+              "height": 38
+            }
+          },
+          {
+            "path": "0.9",
+            "frame": {
+              "left": 720,
+              "top": 150,
+              "width": 260,
+              "height": 112
+            }
+          },
+          {
+            "path": "0.10",
+            "frame": {
+              "left": 1010,
+              "top": 150,
+              "width": 260,
+              "height": 112
+            }
+          },
+          {
+            "path": "0.11",
+            "frame": {
+              "left": 720,
+              "top": 285,
+              "width": 260,
+              "height": 112
+            }
+          },
+          {
+            "path": "0.12",
+            "frame": {
+              "left": 1010,
+              "top": 285,
+              "width": 260,
+              "height": 112
+            }
+          },
+          {
+            "path": "0.13",
+            "frame": {
+              "left": 720,
+              "top": 525,
+              "width": 520,
+              "height": 70
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 772,
+          "height": 676
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "text",
+            "position": {
+              "left": 72,
+              "top": 652
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 700
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 24
+              }
+            },
+            "intrinsicSize": {
+              "width": 700,
+              "height": 24
+            },
+            "frame": {
+              "left": 72,
+              "top": 652,
+              "width": 700,
+              "height": 24
+            },
+            "children": [],
+            "text": "Gemma 4 Hackathon Shanghai · Trail Sense AI Assistant",
+            "transform": "none",
+            "element": {
+              "aid": "sh/32lszqtc",
+              "id": "41",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 72,
+              "top": 652,
+              "width": 700,
+              "height": 24
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

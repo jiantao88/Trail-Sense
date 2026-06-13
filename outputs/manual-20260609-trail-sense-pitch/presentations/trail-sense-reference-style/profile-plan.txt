@@ -1,0 +1,8 @@
+task mode: create
+primary deck-profile: engineering-platform
+secondary gates: product-platform, consumer-retail visual polish
+required proof objects: product map, user workflow, local inference architecture, Agent Skill workflow, multimodal pipeline, engineering delivery evidence, differentiation matrix
+source/asset requirements: use existing project story and PPT outline; reference image is a visual style reference only
+brand authenticity constraints: do not invent official third-party logos; use text labels for Gemma 4, LiteRT-LM, Android, YouTube, and Trail Sense
+profile-specific QA gates: architecture labels remain technically accurate; each slide has a claim and proof object; final deck exports to editable PPTX
+known missing inputs: no official high-resolution Trail Sense logo asset provided, so deck uses text/logo-like simple marks as non-official presentation graphics

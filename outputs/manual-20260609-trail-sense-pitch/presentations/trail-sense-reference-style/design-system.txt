@@ -1,0 +1,26 @@
+Slide size: 1280 x 720.
+
+Background system: warm paper canvas with subtle green gradients, contour-line ellipses, and low mountain silhouettes. Selected slides use larger mountain atmosphere in the lower/right area.
+
+Typography: Avenir Next for Chinese and English content; Avenir Next Condensed for badges, page markers, and compact labels.
+
+Palette:
+- paper: #F7F1E4
+- ink: #122419
+- pine: #173F22
+- moss: #46683B
+- sage: #71865C
+- line: #8FA181
+- cream: #FFFDF4
+- amber: #C8953C
+- sky: #DDE8E5
+
+Container grammar: thin green-gray borders, 10-18px radius, cream fills, dense cards with real grouping purpose only.
+
+Page marker grammar: deep green rounded square at top-left, white two-digit number, aligned to slide title baseline.
+
+Diagram grammar: rounded nodes, restrained arrows, local-device phone frame, bottom conclusion strip when a slide needs a one-line takeaway.
+
+Image grammar: no low-resolution raster slide crops; mountain atmosphere is recreated with editable shapes and gradients.
+
+Banned motifs: purple SaaS gradients, generic AI glow, fake official logos, speaker notes, tiny unreadable body paragraphs.

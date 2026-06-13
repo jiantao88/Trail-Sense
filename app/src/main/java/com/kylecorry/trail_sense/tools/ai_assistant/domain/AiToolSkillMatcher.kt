@@ -20,18 +20,27 @@ object AiToolSkillMatcher {
         entries: Collection<AiToolSkillEntry>,
         limit: Int = 2
     ): List<ScoredSkill> {
-        return entries
-            .mapNotNull { entry ->
-                val score = score(question, entry)
-                if (score <= 0f) {
-                    null
-                } else {
-                    ScoredSkill(entry, score)
+        val results = mutableListOf<ScoredSkill>()
+
+        for (entry in entries) {
+            val score = score(question, entry)
+            if (score > 0f) {
+                results.add(ScoredSkill(entry, score))
+
+                // Early termination: if we found a high-confidence match
+                // and have enough results, we can stop searching
+                if (score > HIGH_CONFIDENCE_THRESHOLD && results.size >= limit) {
+                    break
                 }
             }
+        }
+
+        return results
             .sortedByDescending { it.score }
             .take(limit)
     }
+
+    private const val HIGH_CONFIDENCE_THRESHOLD = 0.8f
 
     private fun score(question: String, entry: AiToolSkillEntry): Float {
         val searchable = listOf(

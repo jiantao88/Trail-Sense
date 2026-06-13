@@ -76,6 +76,7 @@ import com.kylecorry.trail_sense.shared.extensions.compose.useState
 import com.kylecorry.trail_sense.shared.navigateWithAnimation
 import com.kylecorry.trail_sense.shared.sensors.LocationSubsystem
 import com.kylecorry.trail_sense.tools.ai_assistant.domain.AiContext
+import com.kylecorry.trail_sense.tools.ai_assistant.domain.AiFastPathDetector
 import com.kylecorry.trail_sense.tools.ai_assistant.domain.AiPromptBuilder
 import com.kylecorry.trail_sense.tools.ai_assistant.domain.AiToolCallCard
 import com.kylecorry.trail_sense.tools.ai_assistant.domain.AiToolKnowledgeService
@@ -86,6 +87,7 @@ import com.kylecorry.trail_sense.tools.ai_assistant.domain.NavigationAiContextPr
 import com.kylecorry.trail_sense.tools.ai_assistant.domain.WeatherAiContextProvider
 import com.kylecorry.trail_sense.tools.ai_assistant.infrastructure.AiAssistantTools
 import com.kylecorry.trail_sense.tools.ai_assistant.infrastructure.AiInferenceSubsystem
+import com.kylecorry.trail_sense.tools.ai_assistant.infrastructure.AiPerformanceMonitor
 import com.kylecorry.trail_sense.tools.ai_assistant.infrastructure.AiToolExecutionService
 import com.kylecorry.trail_sense.tools.clouds.infrastructure.CloudDetailsService
 import com.kylecorry.trail_sense.tools.clouds.infrastructure.persistence.CloudRepo
@@ -128,6 +130,7 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
     private var retainedSuggestedQuestions: List<String>? = null
     private var retainedAttachedImage: Bitmap? = null
     private var retainedCurrentSessionId: Long? = null
+    private var cachedChatHistory: Pair<Int, String>? = null  // Cache: (messageCount, history)
     private var imagePickerCallback: ((Uri?) -> Unit)? = null
     private val imagePicker = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         imagePickerCallback?.invoke(uri)
@@ -355,10 +358,28 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
             val userMessage = ChatMessage(text, isUser = true, image = messageImage)
             val loadingMessage = ChatMessage("", isUser = false, isLoading = true)
             val priorMessages = messages
+
+            // Determine if we can use fast path (skip skill execution)
+            val useFastPath = AiFastPathDetector.shouldUseFastPath(
+                text,
+                hasContext = aiContext != null
+            )
+
+            // Log the decision for debugging
+            val decision = AiFastPathDetector.getDecisionReason(text, aiContext != null)
+            Log.d(TAG, "AI assistant path decision: $decision")
+
             aiAssistantTools.configure(selectedSkillIds)
             toolExecutionService.configure(selectedSkillIds)
-            val selectedSkill = toolExecutionService.selectSkill(text, selectedSkillIds)
+
+            // Only select and activate skill if not using fast path
+            val selectedSkill = if (!useFastPath) {
+                toolExecutionService.selectSkill(text, selectedSkillIds)
+            } else {
+                null
+            }
             selectedSkill?.let { toolExecutionService.activateSkill(it) }
+
             setMessages(priorMessages + userMessage + loadingMessage)
             setInputText("")
             setIsGenerating(true)
@@ -428,6 +449,7 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
             }
 
             generationScope.launch {
+                val performanceSummary = AiPerformanceMonitor.RequestSummary()
                 val completedToolMessages = mutableListOf<ChatMessage>()
                 var displayUserMessage = userMessage
                 try {
@@ -435,51 +457,68 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
                     setMessages(priorMessages + displayUserMessage + loadingMessage)
                     setSessions(chatRepo.getAllSessions())
 
-                    val skillRun = selectedSkill?.let {
-                        toolExecutionService.executeStepByStep(
-                            skill = it,
-                            question = text,
-                            onToolStarted = { runningCard ->
-                                setMessages(
-                                    priorMessages +
-                                        displayUserMessage +
-                                        completedToolMessages +
-                                        ChatMessage(
-                                            text = "",
-                                            isUser = false,
-                                            toolCalls = listOf(runningCard)
-                                        ) +
-                                        loadingMessage
-                                )
-                            },
-                            onToolFinished = { completedCard ->
-                                completedToolMessages.add(saveToolMessage(completedCard))
-                                setSessions(chatRepo.getAllSessions())
-                                setMessages(
-                                    priorMessages +
-                                        displayUserMessage +
-                                        completedToolMessages +
-                                        loadingMessage
-                                )
-                            }
-                        )
+                    val skillRun = AiPerformanceMonitor.measureSuspend("Skill execution") {
+                        selectedSkill?.let {
+                            toolExecutionService.executeStepByStep(
+                                skill = it,
+                                question = text,
+                                onToolStarted = { runningCard ->
+                                    setMessages(
+                                        priorMessages +
+                                            displayUserMessage +
+                                            completedToolMessages +
+                                            ChatMessage(
+                                                text = "",
+                                                isUser = false,
+                                                toolCalls = listOf(runningCard)
+                                            ) +
+                                            loadingMessage
+                                    )
+                                },
+                                onToolFinished = { completedCard ->
+                                    completedToolMessages.add(saveToolMessage(completedCard))
+                                    setSessions(chatRepo.getAllSessions())
+                                    setMessages(
+                                        priorMessages +
+                                            displayUserMessage +
+                                            completedToolMessages +
+                                            loadingMessage
+                                    )
+                                }
+                            )
+                        }
                     }
                     val toolResults = skillRun?.toPromptContext()
 
-                    val toolKnowledge = toolKnowledgeService.getPromptContext(
-                        text,
-                        currentAiContext?.toolId,
-                        enabledSkillIds = selectedSkillIds
-                    )
-                    val chatHistory = if (hasImage) null else buildChatHistory(priorMessages)
-                    val prompt = AiPromptBuilder.buildUserPrompt(
-                        currentAiContext,
-                        text,
-                        toolKnowledge,
-                        chatHistory,
-                        hasImage = hasImage,
-                        toolResults = toolResults
-                    )
+                    // Only load tool knowledge if not using fast path
+                    val toolKnowledge = AiPerformanceMonitor.measure("Tool knowledge loading") {
+                        if (!useFastPath) {
+                            toolKnowledgeService.getPromptContext(
+                                text,
+                                currentAiContext?.toolId,
+                                enabledSkillIds = selectedSkillIds
+                            )
+                        } else {
+                            null
+                        }
+                    }
+
+                    val chatHistory = AiPerformanceMonitor.measure("Chat history building") {
+                        if (hasImage) null else buildChatHistory(priorMessages)
+                    }
+
+                    val prompt = AiPerformanceMonitor.measure("Prompt building") {
+                        AiPromptBuilder.buildUserPrompt(
+                            currentAiContext,
+                            text,
+                            toolKnowledge,
+                            chatHistory,
+                            hasImage = hasImage,
+                            toolResults = toolResults
+                        )
+                    }
+
+                    AiPerformanceMonitor.logEvent("Prompt size: ${prompt.length} chars, Fast path: $useFastPath")
 
                     if (hasImage) {
                         recreateConversation(aiSubsystem, aiToolProviders)
@@ -734,6 +773,12 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
     }
 
     private fun buildChatHistory(messages: List<ChatMessage>): String? {
+        // Use cached result if message count hasn't changed
+        val cached = cachedChatHistory
+        if (cached != null && cached.first == messages.size) {
+            return cached.second.takeIf { it.isNotBlank() }
+        }
+
         val history = messages
             .filter { !it.isLoading && it.text.isNotBlank() }
             .takeLast(6)
@@ -742,7 +787,11 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
                 "$sender: ${it.text}"
             }
 
-        return history.takeIf { it.isNotBlank() }
+        // Cache the result
+        val result = history.takeIf { it.isNotBlank() }
+        cachedChatHistory = messages.size to (result ?: "")
+
+        return result
     }
 
     private fun formatAiResponse(response: String): String {

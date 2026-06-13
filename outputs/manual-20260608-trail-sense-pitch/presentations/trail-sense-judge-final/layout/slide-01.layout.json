@@ -1,0 +1,2519 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/09jbmr",
+    "id": "09jbmr",
+    "slide": 1,
+    "layoutId": "23010e84-c1f2-437a-b3cd-97685f612b44",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "27d21f7c-39eb-469b-b752-f686ab5f6c49",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#0B3328",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Avenir Next",
+      "Avenir Next Condensed"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "23010e84-c1f2-437a-b3cd-97685f612b44",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "27d21f7c-39eb-469b-b752-f686ab5f6c49",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "27d21f7c-39eb-469b-b752-f686ab5f6c49",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u18jqh0f",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect"
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1orytsvu",
+      "id": "2",
+      "bbox": [
+        0,
+        0,
+        34,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1"
+      },
+      "geometry": "rect",
+      "fillColor": "#F0B35A"
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c7u54zid",
+      "id": "3",
+      "bbox": [
+        34,
+        0,
+        8,
+        720
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2"
+      },
+      "geometry": "rect",
+      "fillColor": "#E8EFE4"
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/judg7ads",
+      "id": "4",
+      "bbox": [
+        790,
+        0,
+        360,
+        360
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.0"
+      },
+      "geometry": "ellipse",
+      "fillColor": "rgba(240, 179, 90, 0.17)"
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u9knih4b",
+      "id": "5",
+      "bbox": [
+        890,
+        244,
+        340,
+        340
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.1"
+      },
+      "geometry": "ellipse",
+      "fillColor": "rgba(255, 249, 236, 0.1)"
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1032lszq",
+      "id": "6",
+      "bbox": [
+        74,
+        62,
+        460,
+        28
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.2"
+      },
+      "geometry": "rect",
+      "text": "TRAIL SENSE AI ASSISTANT",
+      "textPreview": "TRAIL SENSE AI ASSISTANT",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "Avenir Next Condensed",
+        "color": "#F0B35A",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "TRAIL SENSE AI ASSISTANT"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "TRAIL SENSE AI ASSISTANT",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Avenir Next Condensed",
+            "color": "#F0B35A",
+            "bold": true,
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "TRAIL SENSE AI ASSISTANT",
+              "fontSize": 21,
+              "typeface": "Avenir Next Condensed",
+              "color": "#F0B35A",
+              "bold": true,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cfa9w3m9",
+      "id": "7",
+      "bbox": [
+        74,
+        138,
+        760,
+        150
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.3"
+      },
+      "geometry": "rect",
+      "text": "让离线户外工具箱\n具备端侧 AI 判断力",
+      "textPreview": "让离线户外工具箱 | 具备端侧 AI 判断力",
+      "resolvedFontSize": 54,
+      "resolvedTextStyle": {
+        "fontSize": 54,
+        "typeface": "Avenir Next",
+        "color": "#FFF9EC",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "让离线户外工具箱"
+          },
+          {
+            "index": 2,
+            "text": "具备端侧 AI 判断力"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "让离线户外工具箱",
+          "resolvedTextStyle": {
+            "fontSize": 54,
+            "typeface": "Avenir Next",
+            "color": "#FFF9EC",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "让离线户外工具箱",
+              "fontSize": 54,
+              "typeface": "Avenir Next",
+              "color": "#FFF9EC",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "具备端侧 AI 判断力",
+          "resolvedTextStyle": {
+            "fontSize": 54,
+            "typeface": "Avenir Next",
+            "color": "#FFF9EC",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "具备端侧 AI 判断力",
+              "fontSize": 54,
+              "typeface": "Avenir Next",
+              "color": "#FFF9EC",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nyd0z610",
+      "id": "8",
+      "bbox": [
+        78,
+        330,
+        710,
+        92
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.4"
+      },
+      "geometry": "rect",
+      "text": "基于 Trail Sense 的天气、导航、路径、信标、云识别、生存指南和应急工具，接入 Gemma 4 本地推理、Agent Skill、Native Function Calling 与多模态输入。",
+      "textPreview": "基于 Trail Sense 的天气、导航、路径、信标、云识别、生存指南和应急工具，接入 Gemma 4 本地推理、Agent Skill、Native Function Calling 与多模态输入。",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Avenir Next",
+        "color": "#E8EFE4",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "基于 Trail Sense"
+          },
+          {
+            "index": 2,
+            "text": "的天气、导航、路径、信标、云识别、生存指南和应急工具，接"
+          },
+          {
+            "index": 3,
+            "text": "入 Gemma 4 本地推理、Agent Skill、Native Function Calling"
+          },
+          {
+            "index": 4,
+            "text": "与多模态输入。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "基于 Trail Sense 的天气、导航、路径、信标、云识别、生存指南和应急工具，接入 Gemma 4 本地推理、Agent Skill、Native Function Calling 与多模态输入。",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Avenir Next",
+            "color": "#E8EFE4",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "基于 Trail Sense 的天气、导航、路径、信标、云识别、生存指南和应急工具，接入 Gemma 4 本地推理、Agent Skill、Native Function Calling 与多模态输入。",
+              "fontSize": 24,
+              "typeface": "Avenir Next",
+              "color": "#E8EFE4",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/udg7adsj",
+      "id": "9",
+      "bbox": [
+        78,
+        470,
+        440,
+        36
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.5"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F0B35A"
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/czed8v6p",
+      "id": "10",
+      "bbox": [
+        78,
+        476,
+        440,
+        24
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.5.0"
+      },
+      "geometry": "rect",
+      "text": "Gemma 4 · LiteRT-LM · Agent Skill · Edge AI",
+      "textPreview": "Gemma 4 · LiteRT-LM · Agent Skill · Edge AI",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "Avenir Next Condensed",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Gemma 4 · LiteRT-LM · Agent Skill · Edge AI"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Gemma 4 · LiteRT-LM · Agent Skill · Edge AI",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Avenir Next Condensed",
+            "color": "#10231C",
+            "bold": true,
+            "alignment": "center",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Gemma 4 · LiteRT-LM · Agent Skill · Edge AI",
+              "fontSize": 17,
+              "typeface": "Avenir Next Condensed",
+              "color": "#10231C",
+              "bold": true,
+              "alignment": "center",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5kb6xkf6",
+      "id": "11",
+      "bbox": [
+        78,
+        538,
+        250,
+        124
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.6"
+      },
+      "geometry": "roundRect",
+      "fillColor": "rgba(255, 255, 255, 0.82)",
+      "lineColor": "#DDE6D8",
+      "lineWidth": 1
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ytsvu9kn",
+      "id": "12",
+      "bbox": [
+        96,
+        556,
+        45,
+        5
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.6.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#F0B35A"
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/neloj2t8",
+      "id": "13",
+      "bbox": [
+        96,
+        574,
+        214,
+        38
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.6.0.1"
+      },
+      "geometry": "rect",
+      "text": "0 云端 LLM",
+      "textPreview": "0 云端 LLM",
+      "resolvedFontSize": 30,
+      "resolvedTextStyle": {
+        "fontSize": 30,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "0 云端 LLM"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "0 云端 LLM",
+          "resolvedTextStyle": {
+            "fontSize": 30,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0 云端 LLM",
+              "fontSize": 30,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cbulwval",
+      "id": "14",
+      "bbox": [
+        96,
+        618,
+        214,
+        34
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.6.0.2"
+      },
+      "geometry": "rect",
+      "text": "推理和工具上下文在本机完成",
+      "textPreview": "推理和工具上下文在本机完成",
+      "resolvedFontSize": 14.51,
+      "resolvedTextStyle": {
+        "fontSize": 14.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "推理和工具上下文在本机完成"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "推理和工具上下文在本机完成",
+          "resolvedTextStyle": {
+            "fontSize": 14.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "推理和工具上下文在本机完成",
+              "fontSize": 14.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5sneloj2",
+      "id": "15",
+      "bbox": [
+        354,
+        538,
+        250,
+        124
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.7"
+      },
+      "geometry": "roundRect",
+      "fillColor": "rgba(255, 255, 255, 0.82)",
+      "lineColor": "#DDE6D8",
+      "lineWidth": 1
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u54zidon",
+      "id": "16",
+      "bbox": [
+        372,
+        556,
+        45,
+        5
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.7.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#78A85B"
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nqxs72x4",
+      "id": "17",
+      "bbox": [
+        372,
+        574,
+        214,
+        38
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.7.0.1"
+      },
+      "geometry": "rect",
+      "text": "12+ 工具",
+      "textPreview": "12+ 工具",
+      "resolvedFontSize": 30,
+      "resolvedTextStyle": {
+        "fontSize": 30,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "12+ 工具"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "12+ 工具",
+          "resolvedTextStyle": {
+            "fontSize": 30,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "12+ 工具",
+              "fontSize": 30,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gbq1oryt",
+      "id": "18",
+      "bbox": [
+        372,
+        618,
+        214,
+        34
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.7.0.2"
+      },
+      "geometry": "rect",
+      "text": "接入原 Trail Sense 户外能力",
+      "textPreview": "接入原 Trail Sense 户外能力",
+      "resolvedFontSize": 14.51,
+      "resolvedTextStyle": {
+        "fontSize": 14.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "接入原 Trail Sense 户外能力"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "接入原 Trail Sense 户外能力",
+          "resolvedTextStyle": {
+            "fontSize": 14.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "接入原 Trail Sense 户外能力",
+              "fontSize": 14.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5wjudg7a",
+      "id": "19",
+      "bbox": [
+        630,
+        538,
+        250,
+        124
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.8"
+      },
+      "geometry": "roundRect",
+      "fillColor": "rgba(255, 255, 255, 0.82)",
+      "lineColor": "#DDE6D8",
+      "lineWidth": 1
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t47y1kre",
+      "id": "20",
+      "bbox": [
+        648,
+        556,
+        45,
+        5
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.8.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#83B2A3"
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0je9cvix",
+      "id": "21",
+      "bbox": [
+        648,
+        574,
+        214,
+        38
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.8.0.1"
+      },
+      "geometry": "rect",
+      "text": "完整 App",
+      "textPreview": "完整 App",
+      "resolvedFontSize": 30,
+      "resolvedTextStyle": {
+        "fontSize": 30,
+        "typeface": "Avenir Next",
+        "color": "#10231C",
+        "bold": true,
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "完整 App"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "完整 App",
+          "resolvedTextStyle": {
+            "fontSize": 30,
+            "typeface": "Avenir Next",
+            "color": "#10231C",
+            "bold": true,
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "完整 App",
+              "fontSize": 30,
+              "typeface": "Avenir Next",
+              "color": "#10231C",
+              "bold": true,
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/byhgn29g",
+      "id": "22",
+      "bbox": [
+        648,
+        618,
+        214,
+        34
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.8.0.2"
+      },
+      "geometry": "rect",
+      "text": "不是单点 AI demo",
+      "textPreview": "不是单点 AI demo",
+      "resolvedFontSize": 14.51,
+      "resolvedTextStyle": {
+        "fontSize": 14.51,
+        "typeface": "Avenir Next",
+        "color": "#31463F",
+        "alignment": "left",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "不是单点 AI demo"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "不是单点 AI demo",
+          "resolvedTextStyle": {
+            "fontSize": 14.51,
+            "typeface": "Avenir Next",
+            "color": "#31463F",
+            "wrap": "square",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "不是单点 AI demo",
+              "fontSize": 14.51,
+              "typeface": "Avenir Next",
+              "color": "#31463F",
+              "wrap": "square",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/idonyd0z",
+      "id": "23",
+      "bbox": [
+        950,
+        620,
+        220,
+        30
+      ],
+      "composeSource": {
+        "run": 2,
+        "path": "0.9"
+      },
+      "geometry": "rect",
+      "text": "半决赛路演最终版",
+      "textPreview": "半决赛路演最终版",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Avenir Next Condensed",
+        "color": "#FFF9EC",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "半决赛路演最终版"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "半决赛路演最终版",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Avenir Next Condensed",
+            "color": "#FFF9EC",
+            "bold": true,
+            "alignment": "right",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "半决赛路演最终版",
+              "fontSize": 18,
+              "typeface": "Avenir Next Condensed",
+              "color": "#FFF9EC",
+              "bold": true,
+              "alignment": "right",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 1280,
+          "height": 720
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "position": {
+              "left": 0,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 1280
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 1280,
+              "height": 720
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/u18jqh0f",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "shape",
+            "position": {
+              "left": 0,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 34
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 34,
+              "height": 720
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 34,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/1orytsvu",
+              "id": "2",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "shape",
+            "position": {
+              "left": 34,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 8
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 720
+              }
+            },
+            "intrinsicSize": {
+              "width": 8,
+              "height": 720
+            },
+            "frame": {
+              "left": 34,
+              "top": 0,
+              "width": 8,
+              "height": 720
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/c7u54zid",
+              "id": "3",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 34,
+              "height": 720
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 34,
+              "top": 0,
+              "width": 8,
+              "height": 720
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "requestedSize": {
+          "width": {
+            "mode": "fixed",
+            "value": 1280
+          },
+          "height": {
+            "mode": "fixed",
+            "value": 720
+          }
+        },
+        "intrinsicSize": {
+          "width": 1230,
+          "height": 662
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "position": {
+              "left": 790,
+              "top": 0
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 360
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 360
+              }
+            },
+            "intrinsicSize": {
+              "width": 360,
+              "height": 360
+            },
+            "frame": {
+              "left": 790,
+              "top": 0,
+              "width": 360,
+              "height": 360
+            },
+            "children": [],
+            "geometry": "ellipse",
+            "element": {
+              "aid": "sh/judg7ads",
+              "id": "4",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "shape",
+            "position": {
+              "left": 890,
+              "top": 244
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 340
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 340
+              }
+            },
+            "intrinsicSize": {
+              "width": 340,
+              "height": 340
+            },
+            "frame": {
+              "left": 890,
+              "top": 244,
+              "width": 340,
+              "height": 340
+            },
+            "children": [],
+            "geometry": "ellipse",
+            "element": {
+              "aid": "sh/u9knih4b",
+              "id": "5",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.2",
+            "kind": "text",
+            "position": {
+              "left": 74,
+              "top": 62
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 460
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 28
+              }
+            },
+            "intrinsicSize": {
+              "width": 460,
+              "height": 28
+            },
+            "frame": {
+              "left": 74,
+              "top": 62,
+              "width": 460,
+              "height": 28
+            },
+            "children": [],
+            "text": "TRAIL SENSE AI ASSISTANT",
+            "transform": "none",
+            "element": {
+              "aid": "sh/1032lszq",
+              "id": "6",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.3",
+            "kind": "text",
+            "position": {
+              "left": 74,
+              "top": 138
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 760
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 150
+              }
+            },
+            "intrinsicSize": {
+              "width": 760,
+              "height": 150
+            },
+            "frame": {
+              "left": 74,
+              "top": 138,
+              "width": 760,
+              "height": 150
+            },
+            "children": [],
+            "text": "让离线户外工具箱\n具备端侧 AI 判断力",
+            "transform": "none",
+            "element": {
+              "aid": "sh/cfa9w3m9",
+              "id": "7",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.4",
+            "kind": "text",
+            "position": {
+              "left": 78,
+              "top": 330
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 710
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 92
+              }
+            },
+            "intrinsicSize": {
+              "width": 710,
+              "height": 92
+            },
+            "frame": {
+              "left": 78,
+              "top": 330,
+              "width": 710,
+              "height": 92
+            },
+            "children": [],
+            "text": "基于 Trail Sense 的天气、导航、路径、信标、云识别、生存指南和应急工具，接入 Gemma 4 本地推理、Agent Skill、Native Function Calling 与多模态输入。",
+            "transform": "none",
+            "element": {
+              "aid": "sh/nyd0z610",
+              "id": "8",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.5",
+            "kind": "panel",
+            "position": {
+              "left": 78,
+              "top": 470
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 440
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 36
+              }
+            },
+            "intrinsicSize": {
+              "width": 440,
+              "height": 24
+            },
+            "frame": {
+              "left": 78,
+              "top": 470,
+              "width": 440,
+              "height": 36
+            },
+            "children": [
+              {
+                "path": "0.5.0",
+                "kind": "text",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 440
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 24
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 440,
+                  "height": 24
+                },
+                "frame": {
+                  "left": 78,
+                  "top": 476,
+                  "width": 440,
+                  "height": 24
+                },
+                "children": [],
+                "text": "Gemma 4 · LiteRT-LM · Agent Skill · Edge AI",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/czed8v6p",
+                  "id": "10",
+                  "kind": "shape"
+                }
+              }
+            ],
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "align": "center",
+            "justify": "center",
+            "contentFrame": {
+              "left": 78,
+              "top": 470,
+              "width": 440,
+              "height": 36
+            },
+            "element": {
+              "aid": "sh/udg7adsj",
+              "id": "9",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.6",
+            "kind": "panel",
+            "position": {
+              "left": 78,
+              "top": 538
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 250
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 124
+              }
+            },
+            "intrinsicSize": {
+              "width": 250,
+              "height": 124
+            },
+            "frame": {
+              "left": 78,
+              "top": 538,
+              "width": 250,
+              "height": 124
+            },
+            "children": [
+              {
+                "path": "0.6.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 214
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 88
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 214,
+                  "height": 96
+                },
+                "frame": {
+                  "left": 96,
+                  "top": 556,
+                  "width": 214,
+                  "height": 88
+                },
+                "children": [
+                  {
+                    "path": "0.6.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 45
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 45,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 96,
+                      "top": 556,
+                      "width": 45,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/ytsvu9kn",
+                      "id": "12",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.6.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 18
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 214
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 38
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 214,
+                      "height": 38
+                    },
+                    "frame": {
+                      "left": 96,
+                      "top": 574,
+                      "width": 214,
+                      "height": 38
+                    },
+                    "children": [],
+                    "text": "0 云端 LLM",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/neloj2t8",
+                      "id": "13",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.6.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 62
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 214
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 34
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 214,
+                      "height": 34
+                    },
+                    "frame": {
+                      "left": 96,
+                      "top": 618,
+                      "width": 214,
+                      "height": 34
+                    },
+                    "children": [],
+                    "text": "推理和工具上下文在本机完成",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/cbulwval",
+                      "id": "14",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 96,
+                  "top": 556,
+                  "width": 214,
+                  "height": 88
+                },
+                "items": [
+                  {
+                    "path": "0.6.0.0",
+                    "frame": {
+                      "left": 96,
+                      "top": 556,
+                      "width": 45,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.6.0.1",
+                    "frame": {
+                      "left": 96,
+                      "top": 574,
+                      "width": 214,
+                      "height": 38
+                    }
+                  },
+                  {
+                    "path": "0.6.0.2",
+                    "frame": {
+                      "left": 96,
+                      "top": 618,
+                      "width": 214,
+                      "height": 34
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 18,
+              "right": 18,
+              "bottom": 18,
+              "left": 18
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 96,
+              "top": 556,
+              "width": 214,
+              "height": 88
+            },
+            "element": {
+              "aid": "sh/5kb6xkf6",
+              "id": "11",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.7",
+            "kind": "panel",
+            "position": {
+              "left": 354,
+              "top": 538
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 250
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 124
+              }
+            },
+            "intrinsicSize": {
+              "width": 250,
+              "height": 124
+            },
+            "frame": {
+              "left": 354,
+              "top": 538,
+              "width": 250,
+              "height": 124
+            },
+            "children": [
+              {
+                "path": "0.7.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 214
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 88
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 214,
+                  "height": 96
+                },
+                "frame": {
+                  "left": 372,
+                  "top": 556,
+                  "width": 214,
+                  "height": 88
+                },
+                "children": [
+                  {
+                    "path": "0.7.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 45
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 45,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 372,
+                      "top": 556,
+                      "width": 45,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/u54zidon",
+                      "id": "16",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.7.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 18
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 214
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 38
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 214,
+                      "height": 38
+                    },
+                    "frame": {
+                      "left": 372,
+                      "top": 574,
+                      "width": 214,
+                      "height": 38
+                    },
+                    "children": [],
+                    "text": "12+ 工具",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/nqxs72x4",
+                      "id": "17",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.7.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 62
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 214
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 34
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 214,
+                      "height": 34
+                    },
+                    "frame": {
+                      "left": 372,
+                      "top": 618,
+                      "width": 214,
+                      "height": 34
+                    },
+                    "children": [],
+                    "text": "接入原 Trail Sense 户外能力",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/gbq1oryt",
+                      "id": "18",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 372,
+                  "top": 556,
+                  "width": 214,
+                  "height": 88
+                },
+                "items": [
+                  {
+                    "path": "0.7.0.0",
+                    "frame": {
+                      "left": 372,
+                      "top": 556,
+                      "width": 45,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.7.0.1",
+                    "frame": {
+                      "left": 372,
+                      "top": 574,
+                      "width": 214,
+                      "height": 38
+                    }
+                  },
+                  {
+                    "path": "0.7.0.2",
+                    "frame": {
+                      "left": 372,
+                      "top": 618,
+                      "width": 214,
+                      "height": 34
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 18,
+              "right": 18,
+              "bottom": 18,
+              "left": 18
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 372,
+              "top": 556,
+              "width": 214,
+              "height": 88
+            },
+            "element": {
+              "aid": "sh/5sneloj2",
+              "id": "15",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.8",
+            "kind": "panel",
+            "position": {
+              "left": 630,
+              "top": 538
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 250
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 124
+              }
+            },
+            "intrinsicSize": {
+              "width": 250,
+              "height": 124
+            },
+            "frame": {
+              "left": 630,
+              "top": 538,
+              "width": 250,
+              "height": 124
+            },
+            "children": [
+              {
+                "path": "0.8.0",
+                "kind": "layers",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fixed",
+                    "value": 214
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 88
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 214,
+                  "height": 96
+                },
+                "frame": {
+                  "left": 648,
+                  "top": 556,
+                  "width": 214,
+                  "height": 88
+                },
+                "children": [
+                  {
+                    "path": "0.8.0.0",
+                    "kind": "shape",
+                    "position": {
+                      "left": 0,
+                      "top": 0
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 45
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 45,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 648,
+                      "top": 556,
+                      "width": 45,
+                      "height": 5
+                    },
+                    "children": [],
+                    "geometry": "rect",
+                    "element": {
+                      "aid": "sh/t47y1kre",
+                      "id": "20",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.8.0.1",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 18
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 214
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 38
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 214,
+                      "height": 38
+                    },
+                    "frame": {
+                      "left": 648,
+                      "top": 574,
+                      "width": 214,
+                      "height": 38
+                    },
+                    "children": [],
+                    "text": "完整 App",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/0je9cvix",
+                      "id": "21",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.8.0.2",
+                    "kind": "text",
+                    "position": {
+                      "left": 0,
+                      "top": 62
+                    },
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 214
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 34
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 214,
+                      "height": 34
+                    },
+                    "frame": {
+                      "left": 648,
+                      "top": 618,
+                      "width": 214,
+                      "height": 34
+                    },
+                    "children": [],
+                    "text": "不是单点 AI demo",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/byhgn29g",
+                      "id": "22",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 648,
+                  "top": 556,
+                  "width": 214,
+                  "height": 88
+                },
+                "items": [
+                  {
+                    "path": "0.8.0.0",
+                    "frame": {
+                      "left": 648,
+                      "top": 556,
+                      "width": 45,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.8.0.1",
+                    "frame": {
+                      "left": 648,
+                      "top": 574,
+                      "width": 214,
+                      "height": 38
+                    }
+                  },
+                  {
+                    "path": "0.8.0.2",
+                    "frame": {
+                      "left": 648,
+                      "top": 618,
+                      "width": 214,
+                      "height": 34
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 18,
+              "right": 18,
+              "bottom": 18,
+              "left": 18
+            },
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 648,
+              "top": 556,
+              "width": 214,
+              "height": 88
+            },
+            "element": {
+              "aid": "sh/5wjudg7a",
+              "id": "19",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.9",
+            "kind": "text",
+            "position": {
+              "left": 950,
+              "top": 620
+            },
+            "requestedSize": {
+              "width": {
+                "mode": "fixed",
+                "value": 220
+              },
+              "height": {
+                "mode": "fixed",
+                "value": 30
+              }
+            },
+            "intrinsicSize": {
+              "width": 220,
+              "height": 30
+            },
+            "frame": {
+              "left": 950,
+              "top": 620,
+              "width": 220,
+              "height": 30
+            },
+            "children": [],
+            "text": "半决赛路演最终版",
+            "transform": "none",
+            "element": {
+              "aid": "sh/idonyd0z",
+              "id": "23",
+              "kind": "shape"
+            }
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 790,
+              "top": 0,
+              "width": 360,
+              "height": 360
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 890,
+              "top": 244,
+              "width": 340,
+              "height": 340
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 74,
+              "top": 62,
+              "width": 460,
+              "height": 28
+            }
+          },
+          {
+            "path": "0.3",
+            "frame": {
+              "left": 74,
+              "top": 138,
+              "width": 760,
+              "height": 150
+            }
+          },
+          {
+            "path": "0.4",
+            "frame": {
+              "left": 78,
+              "top": 330,
+              "width": 710,
+              "height": 92
+            }
+          },
+          {
+            "path": "0.5",
+            "frame": {
+              "left": 78,
+              "top": 470,
+              "width": 440,
+              "height": 36
+            }
+          },
+          {
+            "path": "0.6",
+            "frame": {
+              "left": 78,
+              "top": 538,
+              "width": 250,
+              "height": 124
+            }
+          },
+          {
+            "path": "0.7",
+            "frame": {
+              "left": 354,
+              "top": 538,
+              "width": 250,
+              "height": 124
+            }
+          },
+          {
+            "path": "0.8",
+            "frame": {
+              "left": 630,
+              "top": 538,
+              "width": 250,
+              "height": 124
+            }
+          },
+          {
+            "path": "0.9",
+            "frame": {
+              "left": 950,
+              "top": 620,
+              "width": 220,
+              "height": 30
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

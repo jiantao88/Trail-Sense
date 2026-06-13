@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Trail Sense AI Assistant 路演文稿</title>
+<style>
+  :root {
+    --bg: #071016;
+    --panel: #0d1b23;
+    --panel-2: #102832;
+    --text: #ecf7f4;
+    --muted: #9fb6b4;
+    --accent: #3ad29f;
+    --accent-2: #c7f45a;
+    --line: rgba(160, 225, 212, 0.18);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.72;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top right, rgba(58, 210, 159, 0.16), transparent 32rem),
+      linear-gradient(180deg, #08131c 0%, var(--bg) 48%, #05090e 100%);
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: calc(12px + env(safe-area-inset-top)) 18px 12px;
+    background: rgba(7, 16, 22, 0.9);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(14px);
+  }
+
+  .eyebrow {
+    margin: 0 0 2px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.22;
+    letter-spacing: 0;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 3px 10px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(16, 40, 50, 0.75);
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  main {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: 18px 16px calc(40px + env(safe-area-inset-bottom));
+  }
+
+  .card {
+    margin: 0 0 14px;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(13, 27, 35, 0.86);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+  }
+
+  .section-title {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: baseline;
+    margin: 0 0 10px;
+  }
+
+  h2 {
+    margin: 0;
+    color: var(--accent-2);
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+
+  .time {
+    flex: 0 0 auto;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 12px;
+    font-size: 17px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    color: #ffffff;
+  }
+
+  .cue {
+    margin: 0 0 10px;
+    padding: 9px 11px;
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    background: rgba(58, 210, 159, 0.08);
+    color: #c9fff0;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .slide-tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    margin: 0 0 10px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: rgba(58, 210, 159, 0.12);
+    color: #baffec;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .toc {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin: 0 0 14px;
+  }
+
+  .toc a {
+    min-height: 34px;
+    padding: 6px 10px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: rgba(16, 40, 50, 0.62);
+    color: var(--text);
+    font-size: 13px;
+  }
+
+  .compact p {
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  a {
+    color: #7ce8ff;
+    text-decoration: none;
+  }
+
+  @media (min-width: 680px) {
+    header {
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+
+    main {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .card {
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    h2 {
+      font-size: 21px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Trail Sense AI Assistant</p>
+    <h1>半决赛 5 分钟路演文稿</h1>
+    <div class="meta">
+      <span class="pill">总时长约 5 分钟</span>
+      <span class="pill">问题约 45 秒</span>
+      <span class="pill">方案与技术约 3 分钟</span>
+      <span class="pill">总结约 45 秒</span>
+    </div>
+  </header>
+
+  <main>
+    <nav class="toc" aria-label="Slide 文稿目录">
+      <a href="#slide-01">01 封面</a>
+      <a href="#slide-02">02 问题</a>
+      <a href="#slide-03">03 产品</a>
+      <a href="#slide-04">04 流程</a>
+      <a href="#slide-05">05 架构</a>
+      <a href="#slide-06">06 Skill</a>
+      <a href="#slide-07">07 多模态</a>
+      <a href="#slide-08">08 结尾</a>
+    </nav>
+
+    <section class="card">
+      <div class="section-title">
+        <h2 id="slide-01">封面 · 端侧 AI 判断力</h2>
+        <span class="time">约 15 秒</span>
+      </div>
+      <span class="slide-tag">Slide 01</span>
+      <p>各位评委好，我们的项目是 <strong>Trail Sense AI Assistant</strong>。</p>
+      <p>一句话来说：我们希望让离线户外工具箱，在无网时也能听懂人话，并给出可执行判断。</p>
+      <p>它基于 Trail Sense 已有的天气、导航、路径、信标、云识别、生存指南和应急工具，接入 Gemma 4 本地推理、Agent Skill、Native Function Calling 和多模态输入。</p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2 id="slide-02">问题 · 缺少低成本判断</h2>
+        <span class="time">约 45 秒</span>
+      </div>
+      <span class="slide-tag">Slide 02 · 问题陈述</span>
+      <p>先讲问题。户外场景真正缺的不是 App，而是低成本判断。</p>
+      <p>想象一个用户在山里迷路，手机信号很弱，天快黑了。他手机里可能有指南针、路径、天气、气压、海拔、SOS、手电筒这些工具，但问题是：他不知道该先打开哪个工具，也不知道气压下降、云层变化、日落时间这些读数意味着什么。</p>
+      <p>这个需求不是小众需求。美国 BEA 数据显示，2024 年户外休闲经济贡献了 6967 亿美元，占美国 GDP 的 2.4%。OIA 2026 Hiking Report 也提到，美国已有 6340 万徒步用户。Trail Sense 本身也已经是一个成熟的离线户外工具项目，在 GitHub 上有约 2.7k stars。</p>
+      <p>也就是说，户外工具有用户基础，但现有方案有几个痛点：工具很多，用户要自己找；传感器读数专业，用户要自己解释；紧急场景时间紧，不能慢慢研究；而云端 AI 在弱网或无网时无法承担核心体验。</p>
+      <p><strong>所以我们的机会是：把 Trail Sense 从“用户自己查工具”，升级成“用户说目标，系统组织工具、解释读数、准备动作”。</strong></p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2 id="slide-03">完整产品 · 工具箱 + AI 操作层</h2>
+        <span class="time">约 30 秒</span>
+      </div>
+      <span class="slide-tag">Slide 03 · 解决方案</span>
+      <p>我们的解决方案，就是在已有 Trail Sense 工具体系上，加一层端侧 AI Assistant。它不是重写一个 App，而是在现有天气、导航、路径、信标、云识别、生存指南、应急工具之上，增加一个理解工具体系的 AI 操作层。</p>
+      <p>项目价值不是让 AI 替代原工具，而是让 AI 把原工具组织成更低操作成本的户外工作流。用户仍然使用真实的天气、导航、路线、生存与应急能力，只是入口从“我去找功能”变成“我说出当前目标”。</p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2 id="slide-04">用户流程 · 说目标，组织工具</h2>
+        <span class="time">约 35 秒</span>
+      </div>
+      <span class="slide-tag">Slide 04 · 原型流程</span>
+      <p>用户的使用流程很简单。比如用户说：“我迷路了，手机没信号怎么办？”AI 会先识别当前意图和风险等级，然后组合导航、路径、信标、离线地图、SOS、手电筒、哨子这些工具。</p>
+      <p>接下来，它会结合本地上下文给出行动卡片：先确认当前位置，再检查返程路径，再保留电量，再准备求救信号。</p>
+      <p>这页最核心的是：用户不需要翻工具列表，也不需要理解每个传感器背后的专业逻辑。AI 在这里承担 Trail Sense 的操作层和解释层。</p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2 id="slide-05">端侧架构 · Gemma 4 推理链路</h2>
+        <span class="time">约 40 秒</span>
+      </div>
+      <span class="slide-tag">Slide 05 · 技术架构</span>
+      <p>在技术架构上，用户输入会先进入 AI Assistant UI，然后由 Prompt 和知识库组织上下文，再送入 Gemma 4 本地 LLM。</p>
+      <p>模型推理后，不只是返回一句文本，而是通过 Native Function Calling 调用真实的 Trail Sense 工具，再由工具执行层拿到本地结果，最后返回文本、图片或状态。</p>
+      <p>这条链路的 Edge AI 价值很明确：模型、推理、工具上下文、聊天历史和图片输入都在设备侧完成，网络只用于首次下载模型。户外场景最需要 AI 的时候，往往也是网络最不可靠的时候。</p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2 id="slide-06">Agent Skill · 可执行工作流</h2>
+        <span class="time">约 35 秒</span>
+      </div>
+      <span class="slide-tag">Slide 06 · 核心创新</span>
+      <p>我们还加入了 Agent Skill。Skill 表达的不是单点功能，而是完成任务的步骤。</p>
+      <p>比如“迷路无信号”“天气风险”“天黑返程”，系统会先加载匹配的户外 Skill，再调用本地工具，最后生成回答和行动卡片。</p>
+      <p>这让 AI 从“会聊天”变成“会组织行动”。它知道什么时候该查导航，什么时候该看气压和云层，什么时候该提醒用户保留电量或准备求救信号。</p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2 id="slide-07">多模态输入 · 图片进入本地推理</h2>
+        <span class="time">约 30 秒</span>
+      </div>
+      <span class="slide-tag">Slide 07 · 多模态能力</span>
+      <p>同时，我们支持多模态输入。用户可以上传户外照片、天空云层照片，或者 Trail Sense 截图。</p>
+      <p>系统会把图片压缩后，和文本一起送入 Gemma 4 Conversation。这样它可以解释云型、读取截图里的单位和数值，或者结合户外环境给出观察建议。</p>
+      <p>图片在这里不是装饰，而是户外观察上下文。它让 AI 能理解用户看到的环境，而不只是理解用户输入的一句话。</p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2 id="slide-08">结尾 · Q&A</h2>
+        <span class="time">约 45 秒</span>
+      </div>
+      <span class="slide-tag">Slide 08 · 收束</span>
+      <p>最后总结一下。Trail Sense AI Assistant 不是一个单独的聊天机器人，而是把成熟离线户外工具箱升级成端侧 AI 操作层。</p>
+      <p>技术上，它把 Gemma 4 本地 LLM、Agent Skill、Native Function Calling 和多模态输入接入真实 Android App；产品上，它把“找工具、读数值、做判断”压缩成用户可以直接表达目标的工作流。</p>
+      <p>我们的核心判断是：户外工具不应该只会显示数字和按钮，它应该能在用户最紧张、最没网络、最需要判断的时候，听懂人话，并把判断变成下一步行动。</p>
+      <p>谢谢大家。</p>
+    </section>
+
+    <section class="card compact">
+      <div class="section-title">
+        <h2>数据来源</h2>
+      </div>
+      <p>BEA 2024 户外休闲经济数据：<a href="https://www.bea.gov/data/special-topics/outdoor-recreation">bea.gov/data/special-topics/outdoor-recreation</a></p>
+      <p>OIA 2026 Hiking Report：<a href="https://outdoorindustry.org/oia-2026-hiking-report/">outdoorindustry.org/oia-2026-hiking-report</a></p>
+      <p>Trail Sense 项目：<a href="https://github.com/kylecorry31/Trail-Sense">github.com/kylecorry31/Trail-Sense</a></p>
+    </section>
+  </main>
+</body>
+</html>

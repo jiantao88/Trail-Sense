@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trail Sense AI 助手架构与调用流程</title>
+  <style>
+    :root,
+    [data-theme="dark"] {
+      --bg: #07111f;
+      --bg-soft: #0f172a;
+      --panel: rgba(15, 23, 42, 0.78);
+      --panel-strong: #111c31;
+      --border: rgba(148, 163, 184, 0.22);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --dim: #64748b;
+      --primary: #38bdf8;
+      --primary-soft: rgba(56, 189, 248, 0.14);
+      --green: #34d399;
+      --green-soft: rgba(52, 211, 153, 0.14);
+      --purple: #a78bfa;
+      --purple-soft: rgba(167, 139, 250, 0.14);
+      --amber: #fbbf24;
+      --amber-soft: rgba(251, 191, 36, 0.14);
+      --rose: #fb7185;
+      --rose-soft: rgba(251, 113, 133, 0.14);
+      --orange: #fb923c;
+      --orange-soft: rgba(251, 146, 60, 0.14);
+      --shadow: 0 22px 70px rgba(0, 0, 0, 0.35);
+      --grid: rgba(148, 163, 184, 0.08);
+      --chip-bg: rgba(15, 23, 42, 0.72);
+    }
+
+    [data-theme="light"] {
+      --bg: #f7fafc;
+      --bg-soft: #e2e8f0;
+      --panel: rgba(255, 255, 255, 0.9);
+      --panel-strong: #ffffff;
+      --border: rgba(100, 116, 139, 0.26);
+      --text: #0f172a;
+      --muted: #475569;
+      --dim: #64748b;
+      --primary: #0284c7;
+      --primary-soft: rgba(2, 132, 199, 0.11);
+      --green: #059669;
+      --green-soft: rgba(5, 150, 105, 0.11);
+      --purple: #7c3aed;
+      --purple-soft: rgba(124, 58, 237, 0.11);
+      --amber: #d97706;
+      --amber-soft: rgba(217, 119, 6, 0.11);
+      --rose: #e11d48;
+      --rose-soft: rgba(225, 29, 72, 0.1);
+      --orange: #ea580c;
+      --orange-soft: rgba(234, 88, 12, 0.1);
+      --shadow: 0 18px 55px rgba(15, 23, 42, 0.12);
+      --grid: rgba(100, 116, 139, 0.11);
+      --chip-bg: rgba(255, 255, 255, 0.8);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(56, 189, 248, 0.18), transparent 28rem),
+        radial-gradient(circle at 82% 16%, rgba(167, 139, 250, 0.16), transparent 32rem),
+        radial-gradient(circle at 55% 90%, rgba(52, 211, 153, 0.12), transparent 30rem),
+        linear-gradient(135deg, var(--bg), var(--bg-soft));
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), transparent 85%);
+      z-index: -1;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(1440px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.84), rgba(15, 23, 42, 0.48));
+      box-shadow: var(--shadow);
+      padding: 34px;
+    }
+
+    [data-theme="light"] .hero {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(241, 245, 249, 0.8));
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -140px;
+      top: -160px;
+      width: 420px;
+      height: 420px;
+      background: conic-gradient(from 130deg, var(--primary), var(--purple), var(--green), var(--primary));
+      opacity: 0.13;
+      filter: blur(10px);
+      border-radius: 999px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--green);
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    .pulse {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.5);
+      animation: pulse 1.7s infinite;
+    }
+
+    @keyframes pulse {
+      70% { box-shadow: 0 0 0 13px rgba(52, 211, 153, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+    }
+
+    h1 {
+      font-size: clamp(34px, 4.6vw, 76px);
+      line-height: 0.96;
+      margin: 18px 0 18px;
+      max-width: 960px;
+      letter-spacing: -0.06em;
+    }
+
+    .hero p {
+      max-width: 980px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(15px, 1.4vw, 19px);
+      line-height: 1.7;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn {
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: var(--chip-bg);
+      border-radius: 999px;
+      padding: 11px 16px;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform .18s ease, border .18s ease, background .18s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); border-color: var(--primary); }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--primary), var(--purple));
+      border-color: transparent;
+      color: #fff;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .stat {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: rgba(15, 23, 42, 0.38);
+    }
+
+    [data-theme="light"] .stat { background: rgba(255, 255, 255, 0.68); }
+
+    .stat strong { display: block; font-size: 28px; margin-bottom: 4px; }
+    .stat span { color: var(--muted); font-size: 13px; line-height: 1.45; }
+
+    .section {
+      margin-top: 26px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 24px 26px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title { margin: 0; font-size: 24px; letter-spacing: -0.035em; }
+    .section-desc { margin: 8px 0 0; color: var(--muted); line-height: 1.65; max-width: 920px; }
+    .tag { font-size: 12px; color: var(--muted); border: 1px solid var(--border); padding: 7px 10px; border-radius: 999px; white-space: nowrap; height: fit-content; }
+
+    .content { padding: 24px 26px 28px; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: rgba(15, 23, 42, 0.34);
+      padding: 18px;
+      min-height: 100%;
+    }
+
+    [data-theme="light"] .card { background: rgba(255, 255, 255, 0.66); }
+
+    .card h3 { margin: 0 0 10px; font-size: 17px; }
+    .card p, .card li { color: var(--muted); line-height: 1.65; }
+    .card p { margin: 0; }
+    .card ul { margin: 10px 0 0; padding-left: 18px; }
+
+    .diagram-wrap {
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    svg.diagram {
+      min-width: 1120px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .node { filter: drop-shadow(0 12px 18px rgba(0,0,0,.22)); }
+    .node rect { stroke-width: 1.6; }
+    .node-title { font-size: 15px; font-weight: 900; fill: var(--text); }
+    .node-sub { font-size: 11.5px; fill: var(--muted); }
+    .lane-title { font-size: 13px; font-weight: 900; fill: var(--muted); letter-spacing: .12em; }
+    .arrow { stroke: var(--dim); stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+    .arrow.hot { stroke: var(--green); marker-end: url(#arrowHot); }
+    .arrow.ai { stroke: var(--purple); marker-end: url(#arrowAi); }
+    .arrow.tool { stroke: var(--amber); marker-end: url(#arrowTool); }
+    .flow-label { font-size: 11px; fill: var(--muted); font-weight: 800; }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+      position: relative;
+    }
+
+    .step {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 16px;
+      background: var(--panel-strong);
+    }
+
+    .step::after {
+      content: "→";
+      position: absolute;
+      right: -13px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--primary);
+      font-weight: 900;
+      z-index: 1;
+    }
+
+    .step:last-child::after { display: none; }
+    .step b { display: inline-flex; width: 28px; height: 28px; align-items: center; justify-content: center; border-radius: 50%; color: #fff; background: linear-gradient(135deg, var(--primary), var(--purple)); margin-bottom: 10px; }
+    .step h3 { margin: 0 0 8px; font-size: 15px; }
+    .step p { margin: 0; color: var(--muted); line-height: 1.55; font-size: 13px; }
+
+    .chart-card {
+      height: 360px;
+      position: relative;
+    }
+
+    canvas { width: 100%; height: 290px; display: block; }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+    .code-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .code-list li {
+      border: 1px solid var(--border);
+      background: rgba(2, 6, 23, 0.22);
+      border-radius: 14px;
+      padding: 11px 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    [data-theme="light"] .code-list li { background: rgba(248, 250, 252, 0.75); }
+    code { color: var(--green); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+    .callout {
+      border-left: 4px solid var(--green);
+      background: var(--green-soft);
+      border-radius: 16px;
+      padding: 16px 18px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .footer {
+      margin-top: 26px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .btn, .actions { display: none; }
+      .section, .hero { break-inside: avoid; box-shadow: none; }
+    }
+
+    @media (max-width: 980px) {
+      .stats, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: 1fr; }
+      .step::after { content: "↓"; right: 50%; top: auto; bottom: -19px; transform: translateX(50%); }
+      .topbar, .section-head { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="topbar">
+        <div>
+          <div class="kicker"><span class="pulse"></span>Trail Sense · AI Assistant</div>
+          <h1>AI 助手架构与调用流程图</h1>
+          <p>
+            本页面展示 Trail Sense AI 助手从用户输入问题、匹配 AI Skill、读取 Trail Sense 工具数据、组装 Prompt，到调用本地 LiteRTLM / Gemma 大模型并流式返回答案的完整链路。
+          </p>
+        </div>
+        <button class="btn" onclick="toggleTheme()">切换主题</button>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="#architecture">查看总体架构</a>
+        <a class="btn" href="#runtime-flow">查看运行流程</a>
+        <a class="btn" href="#charts">查看图表</a>
+        <button class="btn" onclick="window.print()">打印 / 导出 PDF</button>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>32</strong><span>AI Assistant 相关源码文件</span></div>
+        <div class="stat"><strong>2</strong><span>暴露给 LLM 的工具：loadSkill / runTrailSenseTool</span></div>
+        <div class="stat"><strong>6</strong><span>User Prompt 主要上下文区块</span></div>
+        <div class="stat"><strong>0.35</strong><span>Skill 自动匹配最低分数阈值</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="architecture">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">1. 总体架构图</h2>
+          <p class="section-desc">AI 助手由 UI、上下文、知识检索、Skill 执行、LiteRTLM 推理、工具调用和持久化几层组成。大模型运行在本地，通过 ToolProvider 可以反向调用 Trail Sense 工具。</p>
+        </div>
+        <span class="tag">Architecture</span>
+      </div>
+      <div class="content diagram-wrap">
+        <svg class="diagram" viewBox="0 0 1320 760" role="img" aria-label="Trail Sense AI 助手总体架构图">
+          <defs>
+            <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="var(--dim)" /></marker>
+            <marker id="arrowHot" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="var(--green)" /></marker>
+            <marker id="arrowAi" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="var(--purple)" /></marker>
+            <marker id="arrowTool" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="var(--amber)" /></marker>
+            <linearGradient id="gBlue" x1="0" x2="1"><stop offset="0" stop-color="rgba(56,189,248,.26)"/><stop offset="1" stop-color="rgba(14,165,233,.10)"/></linearGradient>
+            <linearGradient id="gGreen" x1="0" x2="1"><stop offset="0" stop-color="rgba(52,211,153,.25)"/><stop offset="1" stop-color="rgba(16,185,129,.09)"/></linearGradient>
+            <linearGradient id="gPurple" x1="0" x2="1"><stop offset="0" stop-color="rgba(167,139,250,.25)"/><stop offset="1" stop-color="rgba(139,92,246,.09)"/></linearGradient>
+            <linearGradient id="gAmber" x1="0" x2="1"><stop offset="0" stop-color="rgba(251,191,36,.25)"/><stop offset="1" stop-color="rgba(245,158,11,.09)"/></linearGradient>
+            <linearGradient id="gRose" x1="0" x2="1"><stop offset="0" stop-color="rgba(251,113,133,.24)"/><stop offset="1" stop-color="rgba(244,63,94,.08)"/></linearGradient>
+          </defs>
+
+          <rect x="20" y="40" width="1280" height="670" rx="26" fill="rgba(15,23,42,.18)" stroke="var(--border)" />
+          <text class="lane-title" x="48" y="78">USER / UI</text>
+          <text class="lane-title" x="48" y="234">CONTEXT + KNOWLEDGE</text>
+          <text class="lane-title" x="48" y="404">SKILL + TOOL EXECUTION</text>
+          <text class="lane-title" x="48" y="582">LOCAL LLM RUNTIME</text>
+
+          <g class="node">
+            <rect x="70" y="100" width="180" height="82" rx="18" fill="url(#gBlue)" stroke="var(--primary)" />
+            <text class="node-title" x="92" y="132">用户输入</text>
+            <text class="node-sub" x="92" y="156">问题 / 截图 / 图片</text>
+          </g>
+          <g class="node">
+            <rect x="325" y="92" width="230" height="100" rx="18" fill="url(#gBlue)" stroke="var(--primary)" />
+            <text class="node-title" x="350" y="124">AiAssistantFragment</text>
+            <text class="node-sub" x="350" y="149">Compose 聊天 UI</text>
+            <text class="node-sub" x="350" y="170">消息状态 / 图片 / Skill 选择</text>
+          </g>
+          <g class="node">
+            <rect x="640" y="100" width="210" height="82" rx="18" fill="url(#gPurple)" stroke="var(--purple)" />
+            <text class="node-title" x="664" y="132">AiChatRepo</text>
+            <text class="node-sub" x="664" y="156">会话、消息、图片持久化</text>
+          </g>
+
+          <g class="node">
+            <rect x="82" y="260" width="230" height="112" rx="18" fill="url(#gGreen)" stroke="var(--green)" />
+            <text class="node-title" x="106" y="292">AiContextProvider</text>
+            <text class="node-sub" x="106" y="318">Weather / Clouds / Navigation</text>
+            <text class="node-sub" x="106" y="340">当前工具上下文</text>
+          </g>
+          <g class="node">
+            <rect x="395" y="250" width="260" height="126" rx="18" fill="url(#gAmber)" stroke="var(--amber)" />
+            <text class="node-title" x="420" y="282">AiToolKnowledgeService</text>
+            <text class="node-sub" x="420" y="308">工具知识检索</text>
+            <text class="node-sub" x="420" y="330">Skill 工作流说明</text>
+            <text class="node-sub" x="420" y="352">User Guide 摘要</text>
+          </g>
+          <g class="node">
+            <rect x="730" y="250" width="245" height="126" rx="18" fill="url(#gAmber)" stroke="var(--amber)" />
+            <text class="node-title" x="754" y="282">AiToolSkillService</text>
+            <text class="node-sub" x="754" y="308">读取 ai_tool_skills</text>
+            <text class="node-sub" x="754" y="330">Skill Prompt Context</text>
+            <text class="node-sub" x="754" y="352">sample prompts</text>
+          </g>
+          <g class="node">
+            <rect x="1040" y="260" width="205" height="108" rx="18" fill="url(#gAmber)" stroke="var(--amber)" />
+            <text class="node-title" x="1062" y="292">知识资源</text>
+            <text class="node-sub" x="1062" y="318">ai_tool_knowledge</text>
+            <text class="node-sub" x="1062" y="340">ai_tool_skills</text>
+          </g>
+
+          <g class="node">
+            <rect x="95" y="438" width="245" height="112" rx="18" fill="url(#gGreen)" stroke="var(--green)" />
+            <text class="node-title" x="120" y="470">AiToolExecutionService</text>
+            <text class="node-sub" x="120" y="496">选择 Skill / 执行工具链</text>
+            <text class="node-sub" x="120" y="518">生成 AiToolCallCard</text>
+          </g>
+          <g class="node">
+            <rect x="405" y="438" width="220" height="112" rx="18" fill="url(#gGreen)" stroke="var(--green)" />
+            <text class="node-title" x="430" y="470">AiToolSkillMatcher</text>
+            <text class="node-sub" x="430" y="496">phrase score</text>
+            <text class="node-sub" x="430" y="518">token score</text>
+          </g>
+          <g class="node">
+            <rect x="700" y="438" width="245" height="112" rx="18" fill="url(#gRose)" stroke="var(--rose)" />
+            <text class="node-title" x="724" y="470">TrailSenseAiToolRunner</text>
+            <text class="node-sub" x="724" y="496">按 Tools.ID 分发</text>
+            <text class="node-sub" x="724" y="518">读取当前数据 / 准备动作</text>
+          </g>
+          <g class="node">
+            <rect x="1015" y="438" width="230" height="112" rx="18" fill="url(#gRose)" stroke="var(--rose)" />
+            <text class="node-title" x="1040" y="470">Trail Sense Tools</text>
+            <text class="node-sub" x="1040" y="496">Weather / Clouds / Navigation</text>
+            <text class="node-sub" x="1040" y="518">Whistle / Flashlight / Paths...</text>
+          </g>
+
+          <g class="node">
+            <rect x="95" y="615" width="235" height="82" rx="18" fill="url(#gPurple)" stroke="var(--purple)" />
+            <text class="node-title" x="120" y="647">AiPromptBuilder</text>
+            <text class="node-sub" x="120" y="671">System + User Prompt</text>
+          </g>
+          <g class="node">
+            <rect x="405" y="605" width="245" height="102" rx="18" fill="url(#gPurple)" stroke="var(--purple)" />
+            <text class="node-title" x="430" y="637">AiInferenceSubsystem</text>
+            <text class="node-sub" x="430" y="662">Engine / Conversation</text>
+            <text class="node-sub" x="430" y="684">MessageCallback 流式输出</text>
+          </g>
+          <g class="node">
+            <rect x="720" y="615" width="215" height="82" rx="18" fill="url(#gPurple)" stroke="var(--purple)" />
+            <text class="node-title" x="744" y="647">ModelManager</text>
+            <text class="node-sub" x="744" y="671">本地 Gemma LiteRTLM 模型</text>
+          </g>
+          <g class="node">
+            <rect x="1015" y="605" width="230" height="102" rx="18" fill="url(#gPurple)" stroke="var(--purple)" />
+            <text class="node-title" x="1040" y="637">AiAssistantTools</text>
+            <text class="node-sub" x="1040" y="662">loadSkill()</text>
+            <text class="node-sub" x="1040" y="684">runTrailSenseTool()</text>
+          </g>
+
+          <path class="arrow hot" d="M250 141 C280 141 292 141 325 141" />
+          <path class="arrow" d="M555 141 C590 141 604 141 640 141" />
+          <path class="arrow" d="M440 192 C390 224 320 250 255 260" />
+          <path class="arrow tool" d="M475 192 C488 215 505 228 522 250" />
+          <path class="arrow tool" d="M655 313 C685 313 700 313 730 313" />
+          <path class="arrow tool" d="M975 313 C1002 313 1016 313 1040 313" />
+          <path class="arrow hot" d="M440 192 C325 280 236 340 218 438" />
+          <path class="arrow hot" d="M340 494 C365 494 380 494 405 494" />
+          <path class="arrow hot" d="M625 494 C655 494 670 494 700 494" />
+          <path class="arrow hot" d="M945 494 C975 494 990 494 1015 494" />
+          <path class="arrow ai" d="M218 550 C218 578 218 590 218 615" />
+          <path class="arrow ai" d="M330 656 C360 656 375 656 405 656" />
+          <path class="arrow ai" d="M650 656 C680 656 690 656 720 656" />
+          <path class="arrow tool" d="M650 650 C780 570 905 565 1015 635" />
+          <path class="arrow tool" d="M1015 680 C880 735 260 735 220 550" />
+          <text class="flow-label" x="972" y="733">LLM 可通过 ToolProvider 反向调用 Trail Sense 工具</text>
+        </svg>
+      </div>
+    </section>
+
+    <section class="section" id="runtime-flow">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">2. 用户提问后的主流程</h2>
+          <p class="section-desc">当前实现会在调用大模型之前，先由 UI 层尝试自动匹配一个 Skill 并执行其工具链；随后把工具结果、工具知识和上下文一起喂给大模型。</p>
+        </div>
+        <span class="tag">Flowchart</span>
+      </div>
+      <div class="content">
+        <div class="timeline">
+          <div class="step"><b>1</b><h3>输入问题</h3><p>用户在 AI Assistant 聊天界面输入文字，可附带图片或截图。</p></div>
+          <div class="step"><b>2</b><h3>选择 Skill</h3><p>AiToolExecutionService 使用 AiToolSkillMatcher 对可用 Skill 打分。</p></div>
+          <div class="step"><b>3</b><h3>执行工具</h3><p>若命中 Skill，则逐个运行 skill.toolIds 中声明的 Trail Sense 工具。</p></div>
+          <div class="step"><b>4</b><h3>检索知识</h3><p>AiToolKnowledgeService 合并 Skill 知识、工具知识与 User Guide 摘要。</p></div>
+          <div class="step"><b>5</b><h3>构造 Prompt</h3><p>AiPromptBuilder 拼接历史、工具结果、知识、上下文、图片提示和问题。</p></div>
+          <div class="step"><b>6</b><h3>模型回答</h3><p>AiInferenceSubsystem 调用本地 LiteRTLM 模型，并通过 callback 流式更新 UI。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">3. 详细时序图</h2>
+          <p class="section-desc">该时序图展示 UI 预执行 Skill 与大模型工具调用能力如何同时存在：先预执行工具得到确定数据；之后大模型仍可通过注册的 ToolProvider 再次请求工具。</p>
+        </div>
+        <span class="tag">Sequence</span>
+      </div>
+      <div class="content diagram-wrap">
+        <svg class="diagram" viewBox="0 0 1320 720" role="img" aria-label="AI 助手调用时序图">
+          <defs>
+            <marker id="seqArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="var(--primary)" /></marker>
+            <marker id="seqArrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="var(--green)" /></marker>
+            <marker id="seqArrowPurple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="var(--purple)" /></marker>
+          </defs>
+          <rect x="18" y="24" width="1284" height="660" rx="24" fill="rgba(15,23,42,.16)" stroke="var(--border)" />
+
+          <g font-size="13" font-weight="900" fill="var(--text)">
+            <text x="70" y="64">User</text>
+            <text x="230" y="64">AiAssistantFragment</text>
+            <text x="498" y="64">AiToolExecutionService</text>
+            <text x="770" y="64">Knowledge + Prompt</text>
+            <text x="1000" y="64">AiInferenceSubsystem</text>
+            <text x="1190" y="64">Local LLM</text>
+          </g>
+
+          <g stroke="var(--border)" stroke-dasharray="6 8">
+            <line x1="88" y1="86" x2="88" y2="650" />
+            <line x1="310" y1="86" x2="310" y2="650" />
+            <line x1="580" y1="86" x2="580" y2="650" />
+            <line x1="835" y1="86" x2="835" y2="650" />
+            <line x1="1070" y1="86" x2="1070" y2="650" />
+            <line x1="1230" y1="86" x2="1230" y2="650" />
+          </g>
+
+          <g stroke-width="2.2" fill="none">
+            <path d="M88 118 L310 118" stroke="var(--primary)" marker-end="url(#seqArrow)" />
+            <path d="M310 162 L580 162" stroke="var(--green)" marker-end="url(#seqArrowGreen)" />
+            <path d="M580 206 C650 206 650 238 580 238" stroke="var(--green)" marker-end="url(#seqArrowGreen)" />
+            <path d="M580 282 L310 282" stroke="var(--green)" marker-end="url(#seqArrowGreen)" />
+            <path d="M310 326 L835 326" stroke="var(--primary)" marker-end="url(#seqArrow)" />
+            <path d="M835 370 L310 370" stroke="var(--primary)" marker-end="url(#seqArrow)" />
+            <path d="M310 414 L1070 414" stroke="var(--purple)" marker-end="url(#seqArrowPurple)" />
+            <path d="M1070 458 L1230 458" stroke="var(--purple)" marker-end="url(#seqArrowPurple)" />
+            <path d="M1230 502 C1170 502 1130 530 1070 530" stroke="var(--amber)" marker-end="url(#seqArrow)" />
+            <path d="M1070 574 L310 574" stroke="var(--purple)" marker-end="url(#seqArrowPurple)" />
+            <path d="M310 618 L88 618" stroke="var(--primary)" marker-end="url(#seqArrow)" />
+          </g>
+
+          <g font-size="12" font-weight="800" fill="var(--muted)">
+            <text x="116" y="108">输入问题 / 图片</text>
+            <text x="348" y="152">selectSkill(question)</text>
+            <text x="606" y="198">executeStepByStep()</text>
+            <text x="604" y="230">runTool(toolId)</text>
+            <text x="364" y="272">AiSkillRun + ToolCards</text>
+            <text x="420" y="316">getPromptContext()</text>
+            <text x="472" y="360">toolKnowledge + context</text>
+            <text x="528" y="404">sendMessage(prompt, images)</text>
+            <text x="1095" y="448">sendMessageAsync()</text>
+            <text x="1118" y="494">可选：LLM tool call</text>
+            <text x="666" y="564">onMessage / onDone / onError</text>
+            <text x="132" y="608">流式显示答案</text>
+          </g>
+
+          <rect x="450" y="210" width="260" height="82" rx="16" fill="var(--green-soft)" stroke="var(--green)" />
+          <text x="472" y="240" class="node-title">工具预执行</text>
+          <text x="472" y="264" class="node-sub">在调用模型前完成，结果写入 Prompt</text>
+
+          <rect x="1085" y="500" width="178" height="82" rx="16" fill="var(--amber-soft)" stroke="var(--amber)" />
+          <text x="1105" y="530" class="node-title">ToolProvider</text>
+          <text x="1105" y="554" class="node-sub">loadSkill / runTool</text>
+        </svg>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">4. Prompt 组装流程</h2>
+          <p class="section-desc">User Prompt 是一个聚合容器，会把历史、工具结果、工具知识、当前工具上下文、图片说明和用户问题合成模型输入。</p>
+        </div>
+        <span class="tag">Prompt</span>
+      </div>
+      <div class="content grid-3">
+        <div class="card"><h3>System Prompt</h3><p>定义 AI 助手身份、安全规则、语言要求、工具知识优先级、传感器读数不可编造等约束。</p></div>
+        <div class="card"><h3>User Prompt Context</h3><ul><li>Recent chat history</li><li>Trail Sense tool results</li><li>Trail Sense tool knowledge</li><li>Context from current tool</li><li>Attached image hint</li><li>User question</li></ul></div>
+        <div class="card"><h3>模型输入</h3><p>最终由 AiInferenceSubsystem 转成 LiteRTLM Content：图片会压缩成 JPEG bytes，文本作为 Content.Text 发送。</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="charts">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">5. 架构图表</h2>
+          <p class="section-desc">以下图表用于快速理解 AI 助手内部职责分布、Prompt 内容构成，以及一次提问的关键阶段。</p>
+        </div>
+        <span class="tag">Charts</span>
+      </div>
+      <div class="content grid-2">
+        <div class="card chart-card">
+          <h3>职责分布图</h3>
+          <canvas id="roleChart" aria-label="职责分布图"></canvas>
+          <div class="legend" id="roleLegend"></div>
+        </div>
+        <div class="card chart-card">
+          <h3>Prompt 内容构成</h3>
+          <canvas id="promptChart" aria-label="Prompt 内容构成图"></canvas>
+          <div class="legend" id="promptLegend"></div>
+        </div>
+        <div class="card chart-card">
+          <h3>运行阶段复杂度</h3>
+          <canvas id="stageChart" aria-label="运行阶段复杂度柱状图"></canvas>
+          <div class="legend"><span><i class="swatch" style="background: var(--primary)"></i>相对复杂度评分</span></div>
+        </div>
+        <div class="card chart-card">
+          <h3>工具调用路径</h3>
+          <canvas id="toolChart" aria-label="工具调用路径图"></canvas>
+          <div class="legend"><span><i class="swatch" style="background: var(--green)"></i>UI 预执行</span><span><i class="swatch" style="background: var(--purple)"></i>LLM ToolProvider</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">6. 关键代码入口</h2>
+          <p class="section-desc">后续排查或扩展 AI 助手时，优先看这些文件和方法。</p>
+        </div>
+        <span class="tag">Code Map</span>
+      </div>
+      <div class="content grid-2">
+        <div class="card">
+          <h3>主链路入口</h3>
+          <ul class="code-list">
+            <li><code>AiAssistantFragment.sendMessage()</code>：用户点击发送后的主流程。</li>
+            <li><code>AiInferenceSubsystem.initialize()</code>：初始化 LiteRTLM Engine，GPU 失败回退 CPU。</li>
+            <li><code>AiInferenceSubsystem.createConversation()</code>：注入 system prompt 和 tools。</li>
+            <li><code>AiInferenceSubsystem.sendMessage()</code>：发送文本与图片给本地模型。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Skill / Tool 入口</h3>
+          <ul class="code-list">
+            <li><code>AiToolExecutionService.selectSkill()</code>：对 Skill 打分并选择最佳工作流。</li>
+            <li><code>AiToolExecutionService.executeStepByStep()</code>：逐步执行工具并更新工具卡片。</li>
+            <li><code>AiAssistantTools.loadSkill()</code>：暴露给 LLM 的 Skill 加载工具。</li>
+            <li><code>AiAssistantTools.runTrailSenseTool()</code>：暴露给 LLM 的 Trail Sense 工具调用入口。</li>
+            <li><code>TrailSenseAiToolRunner.run()</code>：按 Tools.ID 读取或准备具体工具数据。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="content">
+        <div class="callout">
+          <strong>核心结论：</strong>这套 AI 助手采用「本地大模型 + RAG 式工具知识 + Skill 工作流 + Trail Sense 工具读取」的混合架构。它不是单纯聊天机器人，而是在发送给大模型前尽量把可验证的工具数据和工作流约束写入 Prompt，同时保留 LiteRTLM ToolProvider 让模型在需要时主动调用工具。
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      Generated for Trail Sense AI Assistant architecture review · 本页面为静态 HTML，无需构建即可打开。
+    </div>
+  </main>
+
+  <script>
+    const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.dataset.theme = html.dataset.theme === 'light' ? 'dark' : 'light';
+      drawAllCharts();
+    }
+
+    function roundedRect(ctx, x, y, w, h, r) {
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.arcTo(x + w, y, x + w, y + h, r);
+      ctx.arcTo(x + w, y + h, x, y + h, r);
+      ctx.arcTo(x, y + h, x, y, r);
+      ctx.arcTo(x, y, x + w, y, r);
+      ctx.closePath();
+    }
+
+    function setupCanvas(canvas) {
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = Math.max(1, Math.floor(rect.width * dpr));
+      canvas.height = Math.max(1, Math.floor(rect.height * dpr));
+      const ctx = canvas.getContext('2d');
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      return { ctx, width: rect.width, height: rect.height };
+    }
+
+    function drawDonut(canvasId, legendId, items) {
+      const canvas = document.getElementById(canvasId);
+      const { ctx, width, height } = setupCanvas(canvas);
+      ctx.clearRect(0, 0, width, height);
+      const total = items.reduce((sum, item) => sum + item.value, 0);
+      const cx = width / 2;
+      const cy = height / 2 - 4;
+      const radius = Math.min(width, height) * 0.36;
+      const inner = radius * 0.58;
+      let angle = -Math.PI / 2;
+
+      items.forEach((item) => {
+        const slice = (item.value / total) * Math.PI * 2;
+        ctx.beginPath();
+        ctx.arc(cx, cy, radius, angle, angle + slice);
+        ctx.arc(cx, cy, inner, angle + slice, angle, true);
+        ctx.closePath();
+        ctx.fillStyle = item.color;
+        ctx.fill();
+        angle += slice;
+      });
+
+      ctx.fillStyle = css('--text');
+      ctx.font = '800 24px system-ui, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(total.toString(), cx, cy + 4);
+      ctx.fillStyle = css('--muted');
+      ctx.font = '700 12px system-ui, sans-serif';
+      ctx.fillText('相对权重', cx, cy + 25);
+
+      const legend = document.getElementById(legendId);
+      legend.innerHTML = items.map(item => `<span><i class="swatch" style="background:${item.color}"></i>${item.label} ${item.value}</span>`).join('');
+    }
+
+    function drawBars(canvasId, labels, values, color) {
+      const canvas = document.getElementById(canvasId);
+      const { ctx, width, height } = setupCanvas(canvas);
+      ctx.clearRect(0, 0, width, height);
+      const pad = { left: 42, right: 18, top: 20, bottom: 62 };
+      const chartW = width - pad.left - pad.right;
+      const chartH = height - pad.top - pad.bottom;
+      const max = Math.max(...values) * 1.15;
+
+      ctx.strokeStyle = css('--border');
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      for (let i = 0; i <= 4; i++) {
+        const y = pad.top + chartH - (chartH / 4) * i;
+        ctx.moveTo(pad.left, y);
+        ctx.lineTo(width - pad.right, y);
+      }
+      ctx.stroke();
+
+      const gap = 14;
+      const barW = (chartW - gap * (values.length - 1)) / values.length;
+      values.forEach((value, i) => {
+        const h = chartH * (value / max);
+        const x = pad.left + i * (barW + gap);
+        const y = pad.top + chartH - h;
+        const grad = ctx.createLinearGradient(0, y, 0, y + h);
+        grad.addColorStop(0, color);
+        grad.addColorStop(1, color + '66');
+        roundedRect(ctx, x, y, barW, h, 10);
+        ctx.fillStyle = grad;
+        ctx.fill();
+
+        ctx.fillStyle = css('--text');
+        ctx.font = '800 13px system-ui, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(value.toString(), x + barW / 2, y - 7);
+
+        ctx.save();
+        ctx.translate(x + barW / 2, height - 18);
+        ctx.rotate(-Math.PI / 6);
+        ctx.fillStyle = css('--muted');
+        ctx.font = '700 11px system-ui, sans-serif';
+        ctx.fillText(labels[i], 0, 0);
+        ctx.restore();
+      });
+    }
+
+    function drawToolPath() {
+      const canvas = document.getElementById('toolChart');
+      const { ctx, width, height } = setupCanvas(canvas);
+      ctx.clearRect(0, 0, width, height);
+      const nodes = [
+        { x: 52, y: 68, w: 116, h: 52, text: '用户问题', c: css('--primary') },
+        { x: 214, y: 48, w: 154, h: 52, text: 'Skill 预匹配', c: css('--green') },
+        { x: 414, y: 48, w: 154, h: 52, text: '工具预执行', c: css('--green') },
+        { x: 214, y: 158, w: 154, h: 52, text: 'Prompt', c: css('--purple') },
+        { x: 414, y: 158, w: 154, h: 52, text: '本地 LLM', c: css('--purple') },
+      ];
+      const scale = Math.min(1, width / 620);
+      ctx.save();
+      ctx.translate((width - 620 * scale) / 2, 18);
+      ctx.scale(scale, scale);
+
+      function arrow(x1, y1, x2, y2, color) {
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+        const ang = Math.atan2(y2 - y1, x2 - x1);
+        ctx.beginPath();
+        ctx.moveTo(x2, y2);
+        ctx.lineTo(x2 - 10 * Math.cos(ang - .5), y2 - 10 * Math.sin(ang - .5));
+        ctx.lineTo(x2 - 10 * Math.cos(ang + .5), y2 - 10 * Math.sin(ang + .5));
+        ctx.closePath();
+        ctx.fillStyle = color;
+        ctx.fill();
+      }
+
+      arrow(168, 94, 214, 74, css('--green'));
+      arrow(368, 74, 414, 74, css('--green'));
+      arrow(491, 100, 320, 158, css('--green'));
+      arrow(368, 184, 414, 184, css('--purple'));
+      arrow(568, 184, 575, 110, css('--amber'));
+      arrow(575, 110, 568, 74, css('--amber'));
+
+      nodes.forEach(n => {
+        roundedRect(ctx, n.x, n.y, n.w, n.h, 14);
+        ctx.fillStyle = n.c + '22';
+        ctx.strokeStyle = n.c;
+        ctx.lineWidth = 2;
+        ctx.fill();
+        ctx.stroke();
+        ctx.fillStyle = css('--text');
+        ctx.font = '800 15px system-ui, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(n.text, n.x + n.w / 2, n.y + 32);
+      });
+      ctx.fillStyle = css('--muted');
+      ctx.font = '700 12px system-ui, sans-serif';
+      ctx.fillText('LLM 可选 ToolProvider 回调', 494, 128);
+      ctx.restore();
+    }
+
+    function drawAllCharts() {
+      drawDonut('roleChart', 'roleLegend', [
+        { label: 'UI / 状态', value: 20, color: css('--primary') },
+        { label: 'Skill / Tool', value: 30, color: css('--green') },
+        { label: '知识 / Prompt', value: 22, color: css('--amber') },
+        { label: '本地推理', value: 18, color: css('--purple') },
+        { label: '持久化', value: 10, color: css('--rose') },
+      ]);
+      drawDonut('promptChart', 'promptLegend', [
+        { label: '工具结果', value: 28, color: css('--green') },
+        { label: '工具知识', value: 24, color: css('--amber') },
+        { label: '当前上下文', value: 18, color: css('--primary') },
+        { label: '聊天历史', value: 12, color: css('--rose') },
+        { label: '图片提示', value: 10, color: css('--orange') },
+        { label: '用户问题', value: 8, color: css('--purple') },
+      ]);
+      drawBars('stageChart', ['输入处理', 'Skill 匹配', '工具执行', '知识检索', 'Prompt', '推理输出'], [2, 4, 8, 6, 5, 9], css('--primary'));
+      drawToolPath();
+    }
+
+    window.addEventListener('resize', () => {
+      clearTimeout(window.__chartResizeTimer);
+      window.__chartResizeTimer = setTimeout(drawAllCharts, 120);
+    });
+    window.addEventListener('load', drawAllCharts);
+  </script>
+</body>
+</html>

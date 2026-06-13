@@ -1,0 +1,17 @@
+Thesis: Trail Sense AI Assistant turns a mature offline outdoor toolkit into an edge-AI assistant that can understand goals, interpret outdoor context, and execute local tool workflows without depending on cloud LLMs.
+
+Audience: Gemma 4 Hackathon Shanghai semifinal judges.
+
+One-line arc: start from the outdoor judgment gap, show the full product foundation, prove the AI operating layer, then close with differentiated edge-AI execution.
+
+Slides:
+01 Cover | Claim: offline outdoor tools gain edge-AI judgment | Proof object: hero product framing with technical badges
+02 Problem | Claim: outdoor users lack low-cost judgment, not more apps | Proof object: four-friction board
+03 Product | Claim: AI sits on top of a mature offline tool system | Proof object: original capabilities + new AI layer map
+04 Workflow | Claim: natural language becomes the new entry point | Proof object: user question to tool/action flow
+05 Architecture | Claim: Gemma 4 local inference connects to Trail Sense tool calls | Proof object: layered local architecture diagram
+06 Agent Skill | Claim: outdoor tasks are packaged as executable workflows | Proof object: skill knowledge and function calling pipeline
+07 Multimodal | Claim: photos and screenshots enter the local reasoning chain | Proof object: image input to recognition/explanation pipeline
+08 Delivery | Claim: the project is implemented, tested, packaged, and submitted | Proof object: engineering delivery board
+09 Differentiation | Claim: it is an edge tool AI, not a cloud chatbot | Proof object: comparison matrix
+10 Close | Claim: outdoor tools can understand people even offline | Proof object: final formula and Q&A

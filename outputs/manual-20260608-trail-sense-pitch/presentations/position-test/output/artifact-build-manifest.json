@@ -1,0 +1,27 @@
+{
+  "output": "/Users/zhangjiantao/Documents/GitHub/Trail-Sense/outputs/manual-20260608-trail-sense-pitch/presentations/position-test/output/test.pptx",
+  "outputBytes": 12426,
+  "slideCount": 1,
+  "slideSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "previewDir": "/Users/zhangjiantao/Documents/GitHub/Trail-Sense/outputs/manual-20260608-trail-sense-pitch/presentations/position-test/preview",
+  "previewPaths": [
+    "/Users/zhangjiantao/Documents/GitHub/Trail-Sense/outputs/manual-20260608-trail-sense-pitch/presentations/position-test/preview/slide-01.png"
+  ],
+  "layoutDir": "/Users/zhangjiantao/Documents/GitHub/Trail-Sense/outputs/manual-20260608-trail-sense-pitch/presentations/position-test/layout",
+  "layoutResults": [
+    {
+      "layoutPath": "/Users/zhangjiantao/Documents/GitHub/Trail-Sense/outputs/manual-20260608-trail-sense-pitch/presentations/position-test/layout/slide-01.layout.json"
+    }
+  ],
+  "slides": [
+    {
+      "index": 1,
+      "requestedSlideNumber": 1,
+      "modulePath": "/Users/zhangjiantao/Documents/GitHub/Trail-Sense/outputs/manual-20260608-trail-sense-pitch/presentations/position-test/slides/slide-01.mjs",
+      "exportName": "default"
+    }
+  ]
+}

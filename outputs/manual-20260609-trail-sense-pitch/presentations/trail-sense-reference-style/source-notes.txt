@@ -1,0 +1,12 @@
+Source content:
+- Local PPT outline: outputs/manual-20260608-trail-sense-pitch/presentations/trail-sense-judge-final/output/trail-sense-ai-assistant-ppt-outline.md
+- Prior final PPT storyline from the same workspace.
+- User-provided visual reference: /Users/zhangjiantao/Downloads/ChatGPT Image 2026年6月9日 00_21_56.png
+
+Reference interpretation:
+- The reference is used for visual style: warm paper background, deep green page markers, mountain/outdoor atmosphere, phone mockups, dense but readable information cards, and bottom conclusion bands.
+- The reference is not treated as a source PPTX/template because it is a single raster contact sheet, not an editable deck.
+
+Identity asset policy:
+- No official logo asset is embedded.
+- Trail Sense is represented by text and simple geometric mountain marks for presentation continuity only.

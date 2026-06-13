@@ -1,0 +1,23 @@
+task mode: create
+primary deck-profile: engineering-platform
+secondary profile gates: product-platform, hackathon pitch
+required proof objects:
+- complete product map showing original Trail Sense tools plus AI Assistant
+- system architecture map with Gemma 4, LiteRT-LM, Agent Skill, tool calling, local data
+- workflow / tool-calling sequence for demo story
+- product capability proof tied to outdoor user scenarios
+- validation and deliverable proof: tests, APK, demo video, PR materials
+source/asset requirements:
+- root README.md
+- submissions/2026/C/Trail-Sense-AI-Assistant/README.md
+- submissions/2026/C/Trail-Sense-AI-Assistant/TECHNICAL_REPORT.md
+- local code paths referenced by the technical report
+brand authenticity constraints:
+- no unofficial Google, Gemma, Trail Sense, or GDG logos drawn from scratch
+- use text-based branding, typography, color, and product architecture language
+profile-specific QA gates:
+- every architecture connector must have a clear direction
+- technical labels must name concrete files, model, runtime, or tool concepts
+- deck must not present the AI assistant as the entire product; it must explain the original Trail Sense value first
+known missing inputs:
+- exact semifinals time limit is not provided; deck assumes 8-10 minute roadshow plus Q&A
