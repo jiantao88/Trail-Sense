@@ -385,8 +385,12 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
             setIsGenerating(true)
             setSuggestedQuestions(emptyList())
 
-            val hasImage = messageImage != null
-            val images = listOfNotNull(messageImage)
+            val images = if (aiSubsystem.supportsImages()) {
+                listOfNotNull(messageImage)
+            } else {
+                emptyList()
+            }
+            val hasImage = images.isNotEmpty()
             val currentAiContext = aiContext
             aiContext = null
             setAttachedImage(null)

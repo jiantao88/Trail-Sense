@@ -28,6 +28,8 @@ class AiInferenceSubsystem private constructor(private val context: Context) {
 
     fun isModelAvailable(): Boolean = modelManager.isModelDownloaded()
 
+    fun supportsImages(): Boolean = modelManager.selectedModel.supportsImages
+
     fun isEngineReady(): Boolean {
         return engine != null &&
             conversation != null &&
@@ -44,23 +46,13 @@ class AiInferenceSubsystem private constructor(private val context: Context) {
         }
 
         try {
-            val gpuConfig = EngineConfig(
-                modelPath = modelPath,
-                backend = Backend.GPU(),
-                visionBackend = Backend.GPU(),
-                maxNumTokens = MAX_TOKENS
-            )
+            val gpuConfig = createEngineConfig(modelPath, Backend.GPU(), model.supportsImages)
             val gpuEngine = Engine(gpuConfig)
             gpuEngine.initialize()
             engine = gpuEngine
             initializedModelId = model.id
         } catch (_: Exception) {
-            val cpuConfig = EngineConfig(
-                modelPath = modelPath,
-                backend = Backend.CPU(),
-                visionBackend = Backend.CPU(),
-                maxNumTokens = MAX_TOKENS
-            )
+            val cpuConfig = createEngineConfig(modelPath, Backend.CPU(), model.supportsImages)
             val cpuEngine = Engine(cpuConfig)
             cpuEngine.initialize()
             engine = cpuEngine
@@ -94,7 +86,8 @@ class AiInferenceSubsystem private constructor(private val context: Context) {
     ) = withContext(Dispatchers.Default) {
         val conv = conversation ?: throw IllegalStateException("Conversation not created")
         val contents = mutableListOf<Content>()
-        for (image in images) {
+        val supportedImages = if (supportsImages()) images else emptyList()
+        for (image in supportedImages) {
             val stream = ByteArrayOutputStream()
             val resized = resizeImageForModel(image)
             resized.compress(Bitmap.CompressFormat.JPEG, IMAGE_QUALITY, stream)
@@ -104,6 +97,27 @@ class AiInferenceSubsystem private constructor(private val context: Context) {
             contents.add(Content.Text(input))
         }
         conv.sendMessageAsync(Contents.of(contents), callback, emptyMap())
+    }
+
+    private fun createEngineConfig(
+        modelPath: String,
+        backend: Backend,
+        supportsImages: Boolean
+    ): EngineConfig {
+        return if (supportsImages) {
+            EngineConfig(
+                modelPath = modelPath,
+                backend = backend,
+                visionBackend = backend,
+                maxNumTokens = MAX_TOKENS
+            )
+        } else {
+            EngineConfig(
+                modelPath = modelPath,
+                backend = backend,
+                maxNumTokens = MAX_TOKENS
+            )
+        }
     }
 
     private fun resizeImageForModel(image: Bitmap): Bitmap {
