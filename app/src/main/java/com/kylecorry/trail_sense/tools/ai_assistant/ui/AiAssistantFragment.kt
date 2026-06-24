@@ -131,6 +131,7 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
     private var retainedAttachedImage: Bitmap? = null
     private var retainedCurrentSessionId: Long? = null
     private var cachedChatHistory: Pair<Int, String>? = null  // Cache: (messageCount, history)
+    private var isGenerationCancelled = false  // 添加取消标志
     private var imagePickerCallback: ((Uri?) -> Unit)? = null
     private val imagePicker = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         imagePickerCallback?.invoke(uri)
@@ -456,6 +457,7 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
                 val performanceSummary = AiPerformanceMonitor.RequestSummary()
                 val completedToolMessages = mutableListOf<ChatMessage>()
                 var displayUserMessage = userMessage
+                isGenerationCancelled = false  // 重置取消标志
                 try {
                     displayUserMessage = saveUserMessage()
                     setMessages(priorMessages + displayUserMessage + loadingMessage)
@@ -532,6 +534,11 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
                         images = images,
                         callback = object : MessageCallback {
                             override fun onMessage(message: Message) {
+                                // 检查是否已取消
+                                if (isGenerationCancelled) {
+                                    return
+                                }
+
                                 val partialResponse = message.toString()
                                 if (partialResponse.isEmpty()) {
                                     return
@@ -542,6 +549,10 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
                                     return
                                 }
                                 generationScope.launch {
+                                    // 再次检查取消状态
+                                    if (isGenerationCancelled) {
+                                        return@launch
+                                    }
                                     val updated = priorMessages +
                                         displayUserMessage +
                                         completedToolMessages +
@@ -552,6 +563,10 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
 
                             override fun onDone() {
                                 generationScope.launch {
+                                    // 检查是否已取消
+                                    if (isGenerationCancelled) {
+                                        return@launch
+                                    }
                                     if (isFinalized) {
                                         return@launch
                                     }
@@ -573,6 +588,25 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
                             override fun onError(throwable: Throwable) {
                                 Log.e(TAG, "AI response failed", throwable)
                                 generationScope.launch {
+                                    // 检查是否已取消
+                                    if (isGenerationCancelled) {
+                                        // 取消时也要保存已生成的内容
+                                        if (responseBuilder.isNotEmpty()) {
+                                            val response = formatAiResponse(responseBuilder.toString())
+                                            val responseMessage = saveResponseMessage(response)
+                                            setIsGenerating(false)
+                                            setMessages(
+                                                priorMessages +
+                                                    displayUserMessage +
+                                                    completedToolMessages +
+                                                    responseMessage
+                                            )
+                                            setSessions(chatRepo.getAllSessions())
+                                        } else {
+                                            setIsGenerating(false)
+                                        }
+                                        return@launch
+                                    }
                                     if (isFinalized) {
                                         return@launch
                                     }
@@ -666,7 +700,10 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
                 attachedImage = attachedImage,
                 onInputChanged = setInputText,
                 onSend = ::sendMessage,
-                onStop = { aiSubsystem.stopResponse() },
+                onStop = {
+                    isGenerationCancelled = true
+                    aiSubsystem.stopResponse()
+                },
                 onDownloadModelClick = {
                     findNavController().navigateWithAnimation(R.id.aiSettingsFragment)
                 },
