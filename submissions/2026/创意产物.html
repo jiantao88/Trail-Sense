@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trail Sense AI Assistant - 创意产物</title>
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --ink: #16201b;
+      --muted: #66706b;
+      --line: #d9d2c4;
+      --panel: #fffdf8;
+      --green: #2f6f4e;
+      --moss: #dce8d4;
+      --blue: #284f7a;
+      --sky: #dbe8ef;
+      --amber: #c07a2a;
+      --red: #b74432;
+      --shadow: 0 20px 50px rgba(22, 32, 27, .12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(244, 241, 234, .92);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      backdrop-filter: blur(14px);
+    }
+
+    nav, main {
+      width: min(1160px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    nav {
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 850;
+    }
+
+    .logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--green), var(--blue));
+      font-weight: 900;
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    main { padding: 42px 0 58px; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(330px, .75fr);
+      gap: 30px;
+      align-items: center;
+      min-height: calc(100vh - 128px);
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(36px, 5vw, 66px);
+      line-height: 1.04;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 720px;
+      margin: 0 0 24px;
+      color: #3d4842;
+      font-size: 18px;
+    }
+
+    .chips, .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 11px;
+      background: var(--panel);
+      color: #34413b;
+      font-size: 14px;
+    }
+
+    .actions { margin-top: 24px; }
+
+    button {
+      border: 0;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font: inherit;
+      font-weight: 760;
+      cursor: pointer;
+      color: white;
+      background: var(--green);
+    }
+
+    button.secondary {
+      color: var(--green);
+      background: var(--moss);
+    }
+
+    .phone {
+      border-radius: 30px;
+      padding: 12px;
+      background: #111916;
+      box-shadow: var(--shadow);
+    }
+
+    .screen {
+      min-height: 620px;
+      border-radius: 21px;
+      overflow: hidden;
+      background: #fbfaf6;
+    }
+
+    .appbar {
+      padding: 18px;
+      color: white;
+      background: linear-gradient(135deg, var(--green), var(--blue));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .pill {
+      border-radius: 999px;
+      padding: 4px 9px;
+      background: rgba(255, 255, 255, .18);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .screen-body { padding: 15px; }
+
+    .compass {
+      width: 170px;
+      height: 170px;
+      margin: 8px auto 16px;
+      border: 2px solid #c8d2ca;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      position: relative;
+      background: radial-gradient(circle, white 0 36%, #eef4ec 37% 100%);
+    }
+
+    .needle {
+      width: 12px;
+      height: 116px;
+      border-radius: 999px;
+      background: linear-gradient(var(--red) 0 50%, var(--blue) 51% 100%);
+      transform: rotate(34deg);
+    }
+
+    .north, .south, .east, .west {
+      position: absolute;
+      font-size: 12px;
+      font-weight: 850;
+      color: #47534d;
+    }
+
+    .north { top: 8px; }
+    .south { bottom: 8px; }
+    .east { right: 10px; }
+    .west { left: 10px; }
+
+    .card, .panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .card {
+      padding: 14px;
+      margin-top: 11px;
+    }
+
+    .card strong, .panel strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .card p, .panel p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin: 28px 0;
+    }
+
+    .panel {
+      padding: 18px;
+    }
+
+    .panel h2, .panel h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .demo {
+      display: grid;
+      grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .scenario-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .scenario {
+      width: 100%;
+      text-align: left;
+      color: var(--ink);
+      background: #f7f4ed;
+      border: 1px solid var(--line);
+    }
+
+    .scenario.active {
+      color: white;
+      background: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .flow {
+      display: grid;
+      gap: 12px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fffdf8;
+    }
+
+    .num {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: var(--moss);
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .step h3 {
+      margin: 0 0 4px;
+      font-size: 17px;
+    }
+
+    .step p { margin: 0; color: var(--muted); }
+
+    .notice {
+      margin-top: 26px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--amber);
+      background: #fff8e8;
+      color: #553a13;
+      border-radius: 8px;
+    }
+
+    footer {
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 920px) {
+      .hero, .demo { grid-template-columns: 1fr; }
+      .hero { min-height: auto; }
+      .phone { max-width: 430px; margin: 0 auto; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .tagline { display: none; }
+    }
+
+    @media (max-width: 560px) {
+      nav, main { width: min(100% - 24px, 1160px); }
+      .grid { grid-template-columns: 1fr; }
+      .screen { min-height: 560px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="brand"><span class="logo">TS</span><span>Trail Sense AI Assistant</span></div>
+      <div class="tagline">硬件交互赛道 · 端侧 AI · 离线户外工具箱</div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="项目概览">
+      <div>
+        <h1>让离线户外工具，听得懂人的问题。</h1>
+        <p class="lead">Trail Sense AI Assistant 基于现有 Trail Sense Android App，把 Gemma 4 本地推理、手机传感器和 Native Function Calling 接到户外工具体系中。用户不用先记菜单，只要说出当前处境，AI 就能推荐工具、解释读数、准备应急行动。</p>
+        <div class="chips">
+          <span class="chip">Gemma 4 本地推理</span>
+          <span class="chip">GPS / 指南针 / 气压计</span>
+          <span class="chip">Native Function Calling</span>
+          <span class="chip">SOS 行动卡片</span>
+          <span class="chip">位置和聊天不上传</span>
+        </div>
+        <div class="actions">
+          <button onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">查看交互方案</button>
+          <button class="secondary" onclick="window.print()">打印提案</button>
+        </div>
+      </div>
+
+      <aside class="phone" aria-label="App 交互示意">
+        <div class="screen">
+          <div class="appbar">
+            <strong>AI Assistant</strong>
+            <span class="pill">Offline ready</span>
+          </div>
+          <div class="screen-body">
+            <div class="compass" aria-label="指南针示意">
+              <span class="north">N</span><span class="south">S</span><span class="east">E</span><span class="west">W</span>
+              <div class="needle"></div>
+            </div>
+            <div class="card">
+              <strong>用户</strong>
+              <p>我迷路了，手机没信号，应该先用哪个工具？</p>
+            </div>
+            <div class="card">
+              <strong>AI Assistant</strong>
+              <p>先停止移动并确认安全位置。建议依次打开路径回溯、信标、指南针和 SOS 工具；如果需要，我可以准备 SOS 手电筒行动卡片。</p>
+            </div>
+            <div class="card">
+              <strong>本地工具结果</strong>
+              <p>已匹配：Backtrack、Beacons、Compass、Flashlight、Whistle。所有上下文来自本机。</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid" aria-label="核心能力">
+      <article class="panel">
+        <h2>找工具</h2>
+        <p>把“我该怎么办”映射到 Trail Sense 的天气、导航、路径、信标、日落和求救工具。</p>
+      </article>
+      <article class="panel">
+        <h2>解释读数</h2>
+        <p>把气压、天气趋势、方位、路径和云层观察解释成下一步行动建议。</p>
+      </article>
+      <article class="panel">
+        <h2>执行动作</h2>
+        <p>通过工具调用准备 SOS 手电筒、哨子和打开指定工具的行动卡片。</p>
+      </article>
+      <article class="panel">
+        <h2>端侧隐私</h2>
+        <p>模型下载后在 Android 设备本地运行，位置、路径、图片和聊天默认不上传。</p>
+      </article>
+    </section>
+
+    <section id="demo" class="demo" aria-label="场景演示">
+      <div class="panel">
+        <h2>三种高频户外场景</h2>
+        <p>选择一个场景，查看 AI 如何把自然语言转成 Trail Sense 的本地工具工作流。</p>
+        <div class="scenario-list">
+          <button class="scenario active" onclick="setScenario(0, this)">迷路且无网络</button>
+          <button class="scenario" onclick="setScenario(1, this)">气压变化和天气风险</button>
+          <button class="scenario" onclick="setScenario(2, this)">天黑前返程判断</button>
+        </div>
+      </div>
+
+      <div class="flow" id="flow"></div>
+    </section>
+
+    <section class="notice">
+      Trail Sense AI Assistant 是辅助工具，不替代真实地图、指南针、官方天气信息、专业救援和必要户外装备。涉及生命安全的判断，AI 必须表达不确定性并提醒用户使用可靠信息源。
+    </section>
+
+    <footer>
+      创意基于当前 Trail Sense AI Assistant 项目生成，用于 TRAE AI 创造力大赛报名展示。
+    </footer>
+  </main>
+
+  <script>
+    const scenarios = [
+      [
+        ['理解目标', '用户描述“迷路、无网络、需要回到安全位置”，AI 识别为导航和应急工作流。'],
+        ['匹配工具', '推荐 Backtrack、Beacons、Compass、Photo Maps，并保留 SOS Flashlight / Whistle 作为应急动作。'],
+        ['读取本地上下文', '通过 Native Function Calling 查询路径、信标、方向等本机数据，不调用云端 AI。'],
+        ['生成行动卡片', '输出停止移动、确认方位、回溯路径、发送求救信号的步骤。']
+      ],
+      [
+        ['理解目标', '用户询问气压下降、云层变化或天气读数含义，AI 识别为天气风险解释。'],
+        ['匹配工具', '调用 Weather、Barometer、Cloud Scanner、Lightning Strike Distance 等工具知识。'],
+        ['解释限制', 'AI 不伪造传感器数据；没有气压计或定位权限时会明确说明。'],
+        ['给出建议', '提示关注压力趋势、云层、雷电距离和返程窗口，必要时建议撤离。']
+      ],
+      [
+        ['理解目标', '用户担心天黑前是否能走完路线，AI 识别为时间、路径和导航综合判断。'],
+        ['匹配工具', '组合 Sunset Alerts、Navigation、Paths、Pedometer 和 Weather。'],
+        ['本地估算', '结合剩余日照、路径距离、步速和天气趋势生成保守建议。'],
+        ['准备动作', '建议设置日落提醒、打开路径记录，必要时准备手电筒和返程方案。']
+      ]
+    ];
+
+    function setScenario(index, button) {
+      document.querySelectorAll('.scenario').forEach(item => item.classList.remove('active'));
+      button.classList.add('active');
+      renderFlow(scenarios[index]);
+    }
+
+    function renderFlow(items) {
+      document.getElementById('flow').innerHTML = items.map((item, index) => `
+        <article class="step">
+          <div class="num">${index + 1}</div>
+          <div>
+            <h3>${item[0]}</h3>
+            <p>${item[1]}</p>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    renderFlow(scenarios[0]);
+  </script>
+</body>
+</html>

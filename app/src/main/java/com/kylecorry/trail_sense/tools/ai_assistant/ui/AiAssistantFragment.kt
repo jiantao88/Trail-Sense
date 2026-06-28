@@ -323,16 +323,32 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
             if (!restoredLatestSession && !hasContextSuggestions) {
                 setSuggestedQuestions(getDefaultSkillQuestions())
             }
+        }
 
-            if (!aiSubsystem.isModelAvailable()) {
+        // Re-run on each resume so a newly downloaded/selected model gets initialized.
+        // Guard on isEngineInitialized() (NOT isEngineReady()) so that closing or
+        // rebuilding a conversation elsewhere (onNewChat, image send) does not cause
+        // the engine to be re-initialized or an unwanted conversation to be recreated.
+        LaunchedEffect(resumedCount) {
+            Log.d(TAG, "AI init effect triggered (resumedCount=$resumedCount)")
+            val modelAvailable = aiSubsystem.isModelAvailable()
+            val modelId = aiSubsystem.selectedModelId
+            val engineInitialized = aiSubsystem.isEngineInitialized()
+            Log.d(TAG, "AI init state: modelAvailable=$modelAvailable, modelId=$modelId, engineInitialized=$engineInitialized")
+
+            if (!modelAvailable) {
+                Log.w(TAG, "AI model not available for id=$modelId, showing download prompt")
                 setError(getString(R.string.ai_model_not_downloaded))
                 return@LaunchedEffect
             }
             setError(null)
-            if (!aiSubsystem.isEngineReady()) {
+            if (!engineInitialized) {
+                Log.i(TAG, "Starting engine initialization for model=$modelId")
                 setIsInitializing(true)
                 try {
+                    val startTime = System.currentTimeMillis()
                     aiSubsystem.initialize()
+                    Log.i(TAG, "Engine initialized in ${System.currentTimeMillis() - startTime}ms for model=$modelId")
                     val systemPrompt = AiPromptBuilder.buildSystemPrompt(
                         resources.configuration.locales[0] ?: Locale.ENGLISH
                     )
@@ -340,11 +356,14 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
                         systemInstruction = Contents.of(listOf(Content.Text(systemPrompt))),
                         tools = aiToolProviders
                     )
+                    Log.i(TAG, "Initial conversation created for model=$modelId, tools=${aiToolProviders.size}")
                 } catch (e: Exception) {
-                    Log.e(TAG, "AI initialization failed", e)
+                    Log.e(TAG, "AI initialization failed for model=$modelId", e)
                     setError(getString(R.string.ai_initialization_failed))
                 }
                 setIsInitializing(false)
+            } else {
+                Log.d(TAG, "Engine already initialized for model=$modelId, skipping init")
             }
         }
 
