@@ -7,6 +7,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import kotlinx.coroutines.CancellationException
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -52,8 +53,11 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -261,6 +265,8 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
         val (selectedSkillIds, setSelectedSkillIds) = useState(availableSkills.map { it.id }.toSet())
         val listState = rememberLazyListState()
         val scope = rememberCoroutineScope()
+        var isInitializationInProgress by remember { mutableStateOf(false) }
+        var lastInitializedModelId by remember { mutableStateOf<String?>(null) }
 
         LaunchedEffect(Unit) {
             val toolId = arguments?.getString("tool_id")
@@ -330,41 +336,98 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
         // rebuilding a conversation elsewhere (onNewChat, image send) does not cause
         // the engine to be re-initialized or an unwanted conversation to be recreated.
         LaunchedEffect(resumedCount) {
-            Log.d(TAG, "AI init effect triggered (resumedCount=$resumedCount)")
+            Log.i(TAG, "==================================================")
+            Log.i(TAG, "AI INIT EFFECT TRIGGERED (resumedCount=$resumedCount)")
+            Log.i(TAG, "==================================================")
+
             val modelAvailable = aiSubsystem.isModelAvailable()
             val modelId = aiSubsystem.selectedModelId
             val engineInitialized = aiSubsystem.isEngineInitialized()
-            Log.d(TAG, "AI init state: modelAvailable=$modelAvailable, modelId=$modelId, engineInitialized=$engineInitialized")
+            val engineReady = aiSubsystem.isEngineReady()
+            val supportsImages = aiSubsystem.supportsImages()
+
+            Log.d(TAG, "AI init state check:")
+            Log.d(TAG, "  - modelId: $modelId")
+            Log.d(TAG, "  - modelAvailable: $modelAvailable")
+            Log.d(TAG, "  - supportsImages: $supportsImages")
+            Log.d(TAG, "  - engineInitialized: $engineInitialized")
+            Log.d(TAG, "  - engineReady: $engineReady")
+            Log.d(TAG, "  - isInitializationInProgress: $isInitializationInProgress")
+            Log.d(TAG, "  - lastInitializedModelId: $lastInitializedModelId")
+            Log.d(TAG, "  - aiToolProviders count: ${aiToolProviders.size}")
 
             if (!modelAvailable) {
-                Log.w(TAG, "AI model not available for id=$modelId, showing download prompt")
+                Log.e(TAG, "AI MODEL NOT AVAILABLE for id=$modelId - user needs to download model")
                 setError(getString(R.string.ai_model_not_downloaded))
                 return@LaunchedEffect
             }
+
             setError(null)
-            if (!engineInitialized) {
-                Log.i(TAG, "Starting engine initialization for model=$modelId")
-                setIsInitializing(true)
-                try {
-                    val startTime = System.currentTimeMillis()
+
+            // Skip if already initialized for this model
+            if (engineInitialized && engineReady && lastInitializedModelId == modelId) {
+                Log.d(TAG, "Engine already initialized and ready for model=$modelId, skipping init")
+                Log.i(TAG, "AI INIT EFFECT COMPLETED (already ready)")
+                return@LaunchedEffect
+            }
+
+            // Prevent double initialization - if another coroutine is already initializing, wait
+            if (isInitializationInProgress) {
+                Log.w(TAG, "Initialization already in progress, skipping duplicate trigger")
+                Log.i(TAG, "AI INIT EFFECT COMPLETED (in progress)")
+                return@LaunchedEffect
+            }
+
+            isInitializationInProgress = true
+            setIsInitializing(true)
+
+            try {
+                val startTime = System.currentTimeMillis()
+
+                if (!engineInitialized) {
+                    Log.i(TAG, ">>> Starting engine initialization for model=$modelId")
                     aiSubsystem.initialize()
-                    Log.i(TAG, "Engine initialized in ${System.currentTimeMillis() - startTime}ms for model=$modelId")
+                    val engineInitMs = System.currentTimeMillis() - startTime
+                    Log.i(TAG, "Engine initialized SUCCESSFULLY in ${engineInitMs}ms")
+                } else {
+                    Log.d(TAG, "Engine already initialized, skipping engine init")
+                }
+
+                if (!engineReady || lastInitializedModelId != modelId) {
+                    Log.i(TAG, "Creating conversation with system prompt and tools...")
                     val systemPrompt = AiPromptBuilder.buildSystemPrompt(
                         resources.configuration.locales[0] ?: Locale.ENGLISH
                     )
+                    Log.d(TAG, "System prompt length: ${systemPrompt.length} chars")
                     aiSubsystem.createConversation(
                         systemInstruction = Contents.of(listOf(Content.Text(systemPrompt))),
                         tools = aiToolProviders
                     )
-                    Log.i(TAG, "Initial conversation created for model=$modelId, tools=${aiToolProviders.size}")
-                } catch (e: Exception) {
-                    Log.e(TAG, "AI initialization failed for model=$modelId", e)
-                    setError(getString(R.string.ai_initialization_failed))
+                    lastInitializedModelId = modelId
+                    Log.i(TAG, "Conversation created SUCCESSFULLY!")
                 }
+
+                val totalMs = System.currentTimeMillis() - startTime
+                Log.i(TAG, ">>> TOTAL initialization time: ${totalMs}ms for model=$modelId")
+            } catch (e: CancellationException) {
+                Log.w(TAG, "AI initialization was cancelled")
+                throw e
+            } catch (e: Throwable) {
+                Log.e(TAG, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                Log.e(TAG, "!!! AI INITIALIZATION FAILED for model=$modelId")
+                Log.e(TAG, "!!! Error type: ${e::class.qualifiedName}")
+                Log.e(TAG, "!!! Error message: ${e.message}")
+                Log.e(TAG, "!!! Error cause: ${e.cause}")
+                Log.e(TAG, "!!! Stack trace:", e)
+                Log.e(TAG, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                setError(getString(R.string.ai_initialization_failed))
+                lastInitializedModelId = null
+            } finally {
                 setIsInitializing(false)
-            } else {
-                Log.d(TAG, "Engine already initialized for model=$modelId, skipping init")
+                isInitializationInProgress = false
             }
+
+            Log.i(TAG, "AI INIT EFFECT COMPLETED")
         }
 
         fun sendMessage(text: String) {

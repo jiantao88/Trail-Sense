@@ -3,9 +3,14 @@ package com.kylecorry.trail_sense.tools.ai_assistant.domain
 import android.content.Context
 import com.kylecorry.trail_sense.R
 import com.kylecorry.trail_sense.shared.text.TextUtils
+import com.kylecorry.trail_sense.tools.ai_assistant.infrastructure.RerankerSubsystem
 import com.kylecorry.trail_sense.tools.tools.infrastructure.Tools
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.runBlocking
 
 class AiToolSkillService(private val context: Context) {
+
+    private val rerankerSubsystem by lazy { RerankerSubsystem.getInstance(context) }
 
     private val entries by lazy {
         TextUtils.loadTextFromResources(context, R.raw.ai_tool_skills)
@@ -57,9 +62,58 @@ class AiToolSkillService(private val context: Context) {
         } else {
             entries.filter { it.id in enabledSkillIds }
         }
-        return AiToolSkillMatcher.rankWithScores(question, enabledEntries, limit)
+
+        val candidates = enabledEntries.map { entry ->
+            val searchableText = listOf(
+                entry.name,
+                entry.needs,
+                entry.summary,
+                entry.steps,
+                entry.caveats,
+                entry.samplePrompts.joinToString(" ")
+            ).joinToString(" ")
+
+            RerankCandidate(
+                id = entry.id,
+                text = searchableText,
+                metadata = mapOf("priority" to "0.7")
+            )
+        }
+
+        val candidateMap = enabledEntries.associateBy { it.id }
+
+        return try {
+            val results = runBlocking(Dispatchers.Default) {
+                rerankerSubsystem.rerankSkills(
+                    query = question,
+                    candidates = candidates,
+                    recallCount = (limit * 3).coerceAtLeast(6),
+                    finalTopK = limit
+                )
+            }
+
+            results.mapNotNull { result ->
+                candidateMap[result.candidate.id]
+            }.also { matched ->
+                if (matched.size < limit) {
+                    val fallback = keywordFallbackRank(question, enabledEntries, limit)
+                    (matched + fallback).distinctBy { it.id }.take(limit)
+                }
+            }
+        } catch (e: Exception) {
+            keywordFallbackRank(question, enabledEntries, limit)
+        }
+    }
+
+    private fun keywordFallbackRank(
+        question: String,
+        entries: Collection<AiToolSkillEntry>,
+        limit: Int
+    ): List<AiToolSkillEntry> {
+        return AiToolSkillMatcher.rankWithScores(question, entries, limit * 2)
             .filter { it.score >= MIN_MATCH_SCORE }
             .map { it.skill }
+            .take(limit)
     }
 
     private fun buildSkillSection(entry: AiToolSkillEntry): String {

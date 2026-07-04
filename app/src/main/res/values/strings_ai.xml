@@ -30,4 +30,19 @@
     <string name="ai_tool_status_unavailable">Unavailable</string>
     <string name="ai_tool_status_failed">Failed</string>
     <string name="ai_open_tool">Open tool</string>
+    <string name="ai_chat_models_section">Chat Models</string>
+    <string name="ai_reranker_models_section">Smart Matching Models (Optional)</string>
+    <string name="ai_reranker_title">Semantic Reranker</string>
+    <string name="ai_reranker_benefit_title">Why download a reranker model?</string>
+    <string name="ai_reranker_benefit_detail">A Cross-Encoder reranker dramatically improves how well the AI understands your question and selects the right tool or information. Benefits include:\n\n• Better understanding of synonyms and paraphrased questions\n• More accurate tool selection (e.g., "I\'m cold" correctly matches temperature/weather tools)\n• Improved knowledge search in survival guides\n• Works completely offline once downloaded\n• Small model size (~87MB for Mini version)\n\nWithout a reranker, the AI uses simple keyword matching which may miss semantically relevant tools.</string>
+    <string name="ai_reranker_recommended">Recommended for best offline experience</string>
+    <string name="ai_reranker_download_prompt">Download semantic reranker for better matching?</string>
+    <string name="ai_download_now">Download now</string>
+    <string name="ai_later">Later</string>
+    <string name="ai_no_reranker">Not installed (using keyword matching)</string>
+    <string name="ai_reranker_active">Semantic matching active</string>
+    <string name="ai_model_image_support">Supports images</string>
+    <string name="ai_model_fast">Fast</string>
+    <string name="ai_model_balanced">Balanced</string>
+    <string name="ai_model_high_quality">High quality</string>
 </resources>

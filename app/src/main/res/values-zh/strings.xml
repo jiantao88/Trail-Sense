@@ -1635,4 +1635,19 @@
     <string name="ai_tool_status_unavailable">不可用</string>
     <string name="ai_tool_status_failed">失败</string>
     <string name="ai_open_tool">打开工具</string>
+    <string name="ai_chat_models_section">对话模型</string>
+    <string name="ai_reranker_models_section">智能匹配模型（可选）</string>
+    <string name="ai_reranker_title">语义重排模型</string>
+    <string name="ai_reranker_benefit_title">为什么要下载重排模型？</string>
+    <string name="ai_reranker_benefit_detail">Cross-Encoder 语义重排模型能显著提升 AI 理解你的问题并选择正确工具/信息的能力。优势包括：\n\n• 更好地理解同义词和同义转述的问题\n• 更准确的工具选择（例如"我冷"能正确匹配温度/天气工具）\n• 生存指南等知识搜索更精准\n• 下载后完全离线可用\n• 模型体积小（Mini 版约 87MB）\n\n如果不下载重排模型，AI 将使用简单的关键词匹配，可能会漏掉语义相关的工具。</string>
+    <string name="ai_reranker_recommended">推荐下载，获得最佳离线体验</string>
+    <string name="ai_reranker_download_prompt">下载语义重排模型以提升匹配准确率？</string>
+    <string name="ai_download_now">立即下载</string>
+    <string name="ai_later">稍后再说</string>
+    <string name="ai_no_reranker">未安装（使用关键词匹配）</string>
+    <string name="ai_reranker_active">语义匹配已启用</string>
+    <string name="ai_model_image_support">支持图片</string>
+    <string name="ai_model_fast">快速</string>
+    <string name="ai_model_balanced">均衡</string>
+    <string name="ai_model_high_quality">高质量</string>
 </resources>

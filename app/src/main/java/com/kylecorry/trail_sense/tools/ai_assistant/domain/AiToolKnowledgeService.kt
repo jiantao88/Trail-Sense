@@ -4,12 +4,16 @@ import android.content.Context
 import androidx.annotation.RawRes
 import com.kylecorry.trail_sense.R
 import com.kylecorry.trail_sense.shared.text.TextUtils
+import com.kylecorry.trail_sense.tools.ai_assistant.infrastructure.RerankerSubsystem
 import com.kylecorry.trail_sense.tools.tools.infrastructure.Tool
 import com.kylecorry.trail_sense.tools.tools.infrastructure.ToolSearch
 import com.kylecorry.trail_sense.tools.tools.infrastructure.Tools
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.runBlocking
 
 class AiToolKnowledgeService(private val context: Context) {
 
+    private val rerankerSubsystem by lazy { RerankerSubsystem.getInstance(context) }
     private val toolSearch by lazy { ToolSearch(context) }
     private val skillService by lazy { AiToolSkillService(context) }
     private val entries by lazy {
@@ -65,21 +69,72 @@ class AiToolKnowledgeService(private val context: Context) {
         skillToolIds: List<Long>
     ): List<Tool> {
         val preferred = preferredToolId?.let { findPreferredTool(it) }
-        val rankedIds = AiToolKnowledgeMatcher.rank(
-            question,
-            entries.values,
-            preferred?.id,
-            limit
-        ) { entry ->
-            Tools.getTool(context, entry.toolId)?.name.orEmpty()
+
+        val knowledgeMatches = try {
+            val candidates = entries.values.map { entry ->
+                val toolName = Tools.getTool(context, entry.toolId)?.name.orEmpty()
+                val searchableText = listOf(
+                    toolName,
+                    entry.needs,
+                    entry.where,
+                    entry.how,
+                    entry.values,
+                    entry.caveats,
+                    entry.related.orEmpty()
+                ).joinToString(" ")
+
+                RerankCandidate(
+                    id = entry.toolId.toString(),
+                    text = searchableText,
+                    metadata = buildMap {
+                        put("priority", if (entry.toolId == preferred?.id) "1.0" else "0.6")
+                        put("toolId", entry.toolId.toString())
+                    }
+                )
+            }
+
+            val results = runBlocking(Dispatchers.Default) {
+                rerankerSubsystem.rerankKnowledge(
+                    query = question,
+                    candidates = candidates,
+                    recallCount = (limit * 2).coerceAtLeast(10),
+                    finalTopK = limit
+                )
+            }
+
+            results.mapNotNull { result ->
+                val toolId = result.candidate.metadata["toolId"]?.toLongOrNull()
+                    ?: result.candidate.id.toLongOrNull()
+                toolId?.let { Tools.getTool(context, it) }
+            }.ifEmpty {
+                keywordFallbackTools(question, preferred?.id, limit)
+            }
+        } catch (e: Exception) {
+            keywordFallbackTools(question, preferred?.id, limit)
         }
-        val knowledgeMatches = rankedIds.mapNotNull { Tools.getTool(context, it) }
+
         val skillMatches = skillToolIds.mapNotNull { Tools.getTool(context, it) }
         val searched = toolSearch.search(question)
 
         return (skillMatches + knowledgeMatches + searched)
             .distinctBy { it.id }
             .take(limit)
+    }
+
+    private fun keywordFallbackTools(
+        question: String,
+        preferredToolId: Long?,
+        limit: Int
+    ): List<Tool> {
+        val rankedIds = AiToolKnowledgeMatcher.rank(
+            question,
+            entries.values,
+            preferredToolId,
+            limit
+        ) { entry ->
+            Tools.getTool(context, entry.toolId)?.name.orEmpty()
+        }
+        return rankedIds.mapNotNull { Tools.getTool(context, it) }
     }
 
     private fun findPreferredTool(preferredToolId: String): Tool? {
