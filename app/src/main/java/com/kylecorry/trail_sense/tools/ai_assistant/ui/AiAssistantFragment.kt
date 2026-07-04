@@ -851,6 +851,9 @@ class AiAssistantFragment : TrailSenseComposeFragment() {
                         )
                     }
                 },
+                onSettingsClick = {
+                    findNavController().navigateWithAnimation(R.id.aiSettingsFragment)
+                },
                 onDeleteMessage = { message ->
                     setMessages(messages.filterNot { it === message })
                     message.id?.let { id ->
@@ -974,6 +977,7 @@ private fun AiAssistantContent(
     onClearSkills: () -> Unit,
     onHistoryClick: () -> Unit,
     onNewChat: () -> Unit,
+    onSettingsClick: () -> Unit,
     onDeleteMessage: (ChatMessage) -> Unit,
     listState: androidx.compose.foundation.lazy.LazyListState,
     contextCard: String?,
@@ -1014,12 +1018,21 @@ private fun AiAssistantContent(
                     modifier = Modifier.padding(start = 8.dp)
                 )
             }
-            IconButton(
-                onClick = onNewChat,
-                enabled = !isGenerating,
-                modifier = Modifier.testTag("new_chat_button")
-            ) {
-                Icon(painterResource(R.drawable.ic_add), contentDescription = stringResource(R.string.ai_new_chat))
+            Row {
+                IconButton(
+                    onClick = onSettingsClick,
+                    enabled = !isGenerating,
+                    modifier = Modifier.testTag("settings_button")
+                ) {
+                    Icon(painterResource(R.drawable.ic_settings), contentDescription = stringResource(R.string.ai_settings))
+                }
+                IconButton(
+                    onClick = onNewChat,
+                    enabled = !isGenerating,
+                    modifier = Modifier.testTag("new_chat_button")
+                ) {
+                    Icon(painterResource(R.drawable.ic_add), contentDescription = stringResource(R.string.ai_new_chat))
+                }
             }
         }
 

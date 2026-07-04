@@ -34,14 +34,14 @@ class AiInferenceSubsystem private constructor(private val context: Context) {
     @Volatile private var initializedModelId: String? = null
     private val initMutex = Mutex()
 
-    fun isModelAvailable(): Boolean = modelManager.isModelDownloaded(modelManager.selectedChatModel)
+    fun isModelAvailable(): Boolean = modelManager.isModelDownloaded(modelManager.selectedModel)
 
-    fun supportsImages(): Boolean = modelManager.selectedChatModel.supportsImages
+    fun supportsImages(): Boolean = modelManager.selectedModel.supportsImages
 
-    val selectedModelId: String get() = modelManager.selectedChatModel.id
+    val selectedModelId: String get() = modelManager.selectedModel.id
 
     fun isEngineInitialized(): Boolean {
-        return engine != null && initializedModelId == modelManager.selectedChatModel.id
+        return engine != null && initializedModelId == modelManager.selectedModel.id
     }
 
     fun isEngineReady(): Boolean {
@@ -50,7 +50,7 @@ class AiInferenceSubsystem private constructor(private val context: Context) {
 
     suspend fun initialize() = withContext(Dispatchers.IO) {
         if (isEngineInitialized()) {
-            Log.d(TAG, "initialize: engine already loaded for model=${modelManager.selectedChatModel.id}, skipping")
+            Log.d(TAG, "initialize: engine already loaded for model=${modelManager.selectedModel.id}, skipping")
             return@withContext
         }
 
@@ -60,12 +60,12 @@ class AiInferenceSubsystem private constructor(private val context: Context) {
                 return@withLock
             }
 
-            val model = modelManager.selectedChatModel
+            val model = modelManager.selectedModel
             logDeviceInfo()
 
             Log.i(TAG, "initialize: ===== START MODEL INITIALIZATION =====")
             Log.i(TAG, "initialize: model.id=${model.id}, model.fileName=${model.fileName}, model.expectedSize=${model.sizeBytes}")
-            Log.i(TAG, "initialize: model.supportsImages=${model.supportsImages}, model.type=${model.type}")
+            Log.i(TAG, "initialize: model.supportsImages=${model.supportsImages}")
 
             val modelPath = modelManager.getModelPath(model)
             if (modelPath == null) {

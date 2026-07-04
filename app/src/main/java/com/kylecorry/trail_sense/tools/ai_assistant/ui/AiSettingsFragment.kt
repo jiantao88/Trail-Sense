@@ -15,17 +15,16 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Checkbox
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.RadioButton
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
@@ -40,7 +39,7 @@ import com.kylecorry.trail_sense.shared.extensions.TrailSenseComposeFragment
 import com.kylecorry.trail_sense.shared.extensions.compose.useState
 import com.kylecorry.trail_sense.tools.ai_assistant.infrastructure.AiModel
 import com.kylecorry.trail_sense.tools.ai_assistant.infrastructure.ModelManager
-import com.kylecorry.trail_sense.tools.ai_assistant.infrastructure.ModelType
+import com.kylecorry.trail_sense.tools.ai_assistant.infrastructure.RerankerSubsystem
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -51,11 +50,13 @@ class AiSettingsFragment : TrailSenseComposeFragment() {
     @Composable
     override fun FragmentContent() {
         val modelManager = remember { ModelManager(requireContext()) }
-        val chatModels = remember { modelManager.chatModels }
-        val rerankerModels = remember { modelManager.rerankerModels }
+        val rerankerSubsystem = remember { RerankerSubsystem.getInstance(requireContext()) }
+        val chatModels = remember { modelManager.models }
 
-        val (selectedChatModelId, setSelectedChatModelId) = useState(modelManager.selectedChatModel.id)
-        val (selectedRerankerModelId, setSelectedRerankerModelId) = useState(modelManager.selectedRerankerModel?.id)
+        val (selectedModelId, setSelectedModelId) = useState(modelManager.selectedModel.id)
+        val (semanticRerankerEnabled, setSemanticRerankerEnabled) = useState(
+            rerankerSubsystem.isSemanticRerankerEnabled()
+        )
         val (downloadedModelIds, setDownloadedModelIds) = useState(
             getDownloadedModelIds(modelManager)
         )
@@ -67,22 +68,20 @@ class AiSettingsFragment : TrailSenseComposeFragment() {
 
         AiSettingsContent(
             chatModels = chatModels,
-            rerankerModels = rerankerModels,
-            selectedChatModelId = selectedChatModelId,
-            selectedRerankerModelId = selectedRerankerModelId,
+            selectedModelId = selectedModelId,
+            semanticRerankerEnabled = semanticRerankerEnabled,
             downloadedModelIds = downloadedModelIds,
             downloadingModelId = downloadingModelId,
             progressByModel = progressByModel,
             errorsByModel = errorsByModel,
             showRerankerInfo = showRerankerInfo,
-            onSelectChatModel = { model ->
-                modelManager.selectedChatModel = model
-                setSelectedChatModelId(model.id)
+            onSelectModel = { model ->
+                modelManager.selectedModel = model
+                setSelectedModelId(model.id)
             },
-            onSelectRerankerModel = { model ->
-                modelManager.selectedRerankerModel = model
-                setSelectedRerankerModelId(model?.id)
-                refreshDownloadedState(modelManager, setDownloadedModelIds, setProgressByModel)
+            onToggleSemanticReranker = { enabled ->
+                rerankerSubsystem.setSemanticRerankerEnabled(enabled)
+                setSemanticRerankerEnabled(enabled)
             },
             onDownload = { model ->
                 scope.launch {
@@ -110,16 +109,11 @@ class AiSettingsFragment : TrailSenseComposeFragment() {
                 modelManager.deleteModel(model)
                 refreshDownloadedState(modelManager, setDownloadedModelIds, setProgressByModel)
 
-                if (model.type == ModelType.CHAT && selectedChatModelId == model.id) {
+                if (selectedModelId == model.id) {
                     val nextModel = chatModels.firstOrNull { it.id in downloadedModelIds }
-                        ?: ModelManager.DEFAULT_CHAT_MODEL
-                    modelManager.selectedChatModel = nextModel
-                    setSelectedChatModelId(nextModel.id)
-                }
-
-                if (model.type == ModelType.RERANKER && selectedRerankerModelId == model.id) {
-                    modelManager.selectedRerankerModel = null
-                    setSelectedRerankerModelId(null)
+                        ?: ModelManager.DEFAULT_MODEL
+                    modelManager.selectedModel = nextModel
+                    setSelectedModelId(nextModel.id)
                 }
             },
             onToggleRerankerInfo = { setShowRerankerInfo(!showRerankerInfo) }
@@ -136,29 +130,28 @@ class AiSettingsFragment : TrailSenseComposeFragment() {
     }
 
     private fun getDownloadedModelIds(modelManager: ModelManager): Set<String> {
-        return ModelManager.ALL_MODELS.filter { modelManager.isModelDownloaded(it) }
+        return ModelManager.MODELS.filter { modelManager.isModelDownloaded(it) }
             .map { it.id }
             .toSet()
     }
 
     private fun getDownloadProgress(modelManager: ModelManager): Map<String, Float> {
-        return ModelManager.ALL_MODELS.associate { it.id to modelManager.getDownloadProgress(it).coerceIn(0f, 1f) }
+        return ModelManager.MODELS.associate { it.id to modelManager.getDownloadProgress(it).coerceIn(0f, 1f) }
     }
 }
 
 @Composable
 private fun AiSettingsContent(
     chatModels: List<AiModel>,
-    rerankerModels: List<AiModel>,
-    selectedChatModelId: String,
-    selectedRerankerModelId: String?,
+    selectedModelId: String,
+    semanticRerankerEnabled: Boolean,
     downloadedModelIds: Set<String>,
     downloadingModelId: String?,
     progressByModel: Map<String, Float>,
     errorsByModel: Map<String, String>,
     showRerankerInfo: Boolean,
-    onSelectChatModel: (AiModel) -> Unit,
-    onSelectRerankerModel: (AiModel?) -> Unit,
+    onSelectModel: (AiModel) -> Unit,
+    onToggleSemanticReranker: (Boolean) -> Unit,
     onDownload: (AiModel) -> Unit,
     onDelete: (AiModel) -> Unit,
     onToggleRerankerInfo: () -> Unit,
@@ -194,14 +187,13 @@ private fun AiSettingsContent(
         chatModels.forEach { model ->
             AiModelCard(
                 model = model,
-                isSelected = model.id == selectedChatModelId,
+                isSelected = model.id == selectedModelId,
                 isDownloaded = model.id in downloadedModelIds,
                 isDownloading = model.id == downloadingModelId,
                 progress = progressByModel[model.id] ?: 0f,
                 downloadEnabled = downloadingModelId == null || model.id == downloadingModelId,
                 error = errorsByModel[model.id],
-                isChatModel = true,
-                onSelect = { onSelectChatModel(model) },
+                onSelect = { onSelectModel(model) },
                 onDownload = { onDownload(model) },
                 onDelete = { onDelete(model) }
             )
@@ -209,19 +201,11 @@ private fun AiSettingsContent(
 
         HorizontalDivider()
 
-        RerankerSection(
-            rerankerModels = rerankerModels,
-            selectedRerankerModelId = selectedRerankerModelId,
-            downloadedModelIds = downloadedModelIds,
-            downloadingModelId = downloadingModelId,
-            progressByModel = progressByModel,
-            errorsByModel = errorsByModel,
+        SemanticRerankerSection(
+            semanticRerankerEnabled = semanticRerankerEnabled,
             showRerankerInfo = showRerankerInfo,
-            onSelectRerankerModel = onSelectRerankerModel,
-            onDownload = onDownload,
-            onDelete = onDelete,
-            onToggleRerankerInfo = onToggleRerankerInfo,
-            downloadEnabled = downloadingModelId == null
+            onToggleSemanticReranker = onToggleSemanticReranker,
+            onToggleRerankerInfo = onToggleRerankerInfo
         )
 
         Spacer(modifier = Modifier.height(8.dp))
@@ -235,48 +219,61 @@ private fun AiSettingsContent(
 }
 
 @Composable
-private fun RerankerSection(
-    rerankerModels: List<AiModel>,
-    selectedRerankerModelId: String?,
-    downloadedModelIds: Set<String>,
-    downloadingModelId: String?,
-    progressByModel: Map<String, Float>,
-    errorsByModel: Map<String, String>,
+private fun SemanticRerankerSection(
+    semanticRerankerEnabled: Boolean,
     showRerankerInfo: Boolean,
-    onSelectRerankerModel: (AiModel?) -> Unit,
-    onDownload: (AiModel) -> Unit,
-    onDelete: (AiModel) -> Unit,
-    onToggleRerankerInfo: () -> Unit,
-    downloadEnabled: Boolean
+    onToggleSemanticReranker: (Boolean) -> Unit,
+    onToggleRerankerInfo: () -> Unit
 ) {
-    val isAnyRerankerDownloaded = rerankerModels.any { it.id in downloadedModelIds }
-
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Column {
+            Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = stringResource(R.string.ai_reranker_models_section),
+                    text = stringResource(R.string.ai_semantic_reranker_section),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(
-                    text = if (isAnyRerankerDownloaded) {
-                        stringResource(R.string.ai_reranker_active)
+                    text = if (semanticRerankerEnabled) {
+                        stringResource(R.string.ai_semantic_reranker_enabled)
                     } else {
-                        stringResource(R.string.ai_no_reranker)
+                        stringResource(R.string.ai_semantic_reranker_disabled)
                     },
                     style = MaterialTheme.typography.bodySmall,
-                    color = if (isAnyRerankerDownloaded) {
+                    color = if (semanticRerankerEnabled) {
                         MaterialTheme.colorScheme.primary
                     } else {
                         MaterialTheme.colorScheme.onSurfaceVariant
                     }
                 )
             }
+            Switch(
+                checked = semanticRerankerEnabled,
+                onCheckedChange = onToggleSemanticReranker
+            )
+        }
+
+        if (!semanticRerankerEnabled) {
+            AssistChip(
+                onClick = { onToggleSemanticReranker(true) },
+                label = { Text(stringResource(R.string.ai_semantic_reranker_recommended)) }
+            )
+        }
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = stringResource(R.string.ai_semantic_reranker_builtin),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.weight(1f)
+            )
             TextButton(onClick = onToggleRerankerInfo) {
                 Text(
                     text = if (showRerankerInfo) "×" else "?",
@@ -306,39 +303,6 @@ private fun RerankerSection(
                 }
             }
         }
-
-        if (!isAnyRerankerDownloaded) {
-            AssistChip(
-                onClick = onToggleRerankerInfo,
-                label = { Text(stringResource(R.string.ai_reranker_recommended)) },
-                modifier = Modifier.fillMaxWidth()
-            )
-        }
-
-        rerankerModels.forEach { model ->
-            AiModelCard(
-                model = model,
-                isSelected = model.id == selectedRerankerModelId,
-                isDownloaded = model.id in downloadedModelIds,
-                isDownloading = model.id == downloadingModelId,
-                progress = progressByModel[model.id] ?: 0f,
-                downloadEnabled = downloadEnabled || model.id == downloadingModelId,
-                error = errorsByModel[model.id],
-                isChatModel = false,
-                isNoSelectionOption = true,
-                onSelect = {
-                    if (model.id in downloadedModelIds) {
-                        if (selectedRerankerModelId == model.id) {
-                            onSelectRerankerModel(null)
-                        } else {
-                            onSelectRerankerModel(model)
-                        }
-                    }
-                },
-                onDownload = { onDownload(model) },
-                onDelete = { onDelete(model) }
-            )
-        }
     }
 }
 
@@ -351,8 +315,6 @@ private fun AiModelCard(
     progress: Float,
     downloadEnabled: Boolean,
     error: String?,
-    isChatModel: Boolean,
-    isNoSelectionOption: Boolean = false,
     onSelect: () -> Unit,
     onDownload: () -> Unit,
     onDelete: () -> Unit,
@@ -373,20 +335,12 @@ private fun AiModelCard(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.Top
             ) {
-                if (isChatModel) {
-                    RadioButton(
-                        selected = isSelected,
-                        onClick = if (isDownloaded) onSelect else null,
-                        enabled = isDownloaded,
-                        modifier = Modifier.testTag("model_selector")
-                    )
-                } else {
-                    Checkbox(
-                        checked = isSelected && isDownloaded,
-                        onCheckedChange = { if (isDownloaded) onSelect() },
-                        enabled = isDownloaded
-                    )
-                }
+                RadioButton(
+                    selected = isSelected,
+                    onClick = if (isDownloaded) onSelect else null,
+                    enabled = isDownloaded,
+                    modifier = Modifier.testTag("model_selector")
+                )
                 Column(modifier = Modifier.weight(1f).padding(start = 8.dp)) {
                     Row(
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -409,23 +363,21 @@ private fun AiModelCard(
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
-                        if (isChatModel) {
-                            if (model.supportsImages) {
-                                AssistChip(
-                                    onClick = {},
-                                    label = { Text(stringResource(R.string.ai_model_image_support), style = MaterialTheme.typography.labelSmall) }
-                                )
-                            }
-                            val qualityLabel = when {
-                                model.sizeBytes < 1_000_000_000L -> R.string.ai_model_fast
-                                model.sizeBytes < 2_000_000_000L -> R.string.ai_model_balanced
-                                else -> R.string.ai_model_high_quality
-                            }
+                        if (model.supportsImages) {
                             AssistChip(
                                 onClick = {},
-                                label = { Text(stringResource(qualityLabel), style = MaterialTheme.typography.labelSmall) }
+                                label = { Text(stringResource(R.string.ai_model_image_support), style = MaterialTheme.typography.labelSmall) }
                             )
                         }
+                        val qualityLabel = when {
+                            model.sizeBytes < 1_000_000_000L -> R.string.ai_model_fast
+                            model.sizeBytes < 2_000_000_000L -> R.string.ai_model_balanced
+                            else -> R.string.ai_model_high_quality
+                        }
+                        AssistChip(
+                            onClick = {},
+                            label = { Text(stringResource(qualityLabel), style = MaterialTheme.typography.labelSmall) }
+                        )
                     }
 
                     if (model.description.isNotEmpty()) {
@@ -474,7 +426,7 @@ private fun AiModelCard(
                 }
                 Spacer(modifier = Modifier.height(8.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    if (isChatModel && !isSelected) {
+                    if (!isSelected) {
                         Button(
                             onClick = onSelect,
                             modifier = Modifier.testTag("select_button")

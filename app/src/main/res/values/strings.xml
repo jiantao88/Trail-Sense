@@ -1955,6 +1955,7 @@
     <string name="ai_disclaimer">AI suggestions are for reference only, not a replacement for proper training and judgment.</string>
     <string name="ai_inference_error">An error occurred while generating a response.</string>
     <string name="ai_settings_title">AI Assistant</string>
+    <string name="ai_settings">Model settings</string>
     <string name="ai_model_name">Gemma 4 E2B</string>
     <string name="ai_model_size">2.59 GB</string>
     <string name="ai_recommended_models">Recommended models</string>

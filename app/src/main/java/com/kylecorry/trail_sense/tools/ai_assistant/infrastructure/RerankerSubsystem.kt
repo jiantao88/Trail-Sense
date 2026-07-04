@@ -4,8 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Context
 import com.kylecorry.trail_sense.tools.ai_assistant.domain.CrossEncoderReranker
 import com.kylecorry.trail_sense.tools.ai_assistant.domain.HybridReranker
-import com.kylecorry.trail_sense.tools.ai_assistant.domain.IReranker
 import com.kylecorry.trail_sense.tools.ai_assistant.domain.KeywordReranker
+import com.kylecorry.trail_sense.tools.ai_assistant.domain.LlmReranker
 import com.kylecorry.trail_sense.tools.ai_assistant.domain.RerankCandidate
 import com.kylecorry.trail_sense.tools.ai_assistant.domain.RerankResult
 import com.kylecorry.trail_sense.tools.ai_assistant.domain.RerankerType
@@ -16,27 +16,35 @@ class RerankerSubsystem private constructor(private val context: Context) {
     private val keywordReranker = KeywordReranker()
     private val crossEncoderReranker = CrossEncoderReranker(context, modelManager)
 
+    // LLM 重排器懒加载：仅在引擎就绪时可用
+    private val llmReranker: LlmReranker? by lazy {
+        try {
+            LlmReranker(AiInferenceSubsystem.getInstance(context))
+        } catch (e: Exception) {
+            null
+        }
+    }
+
     private val hybridReranker: HybridReranker by lazy {
         HybridReranker(
-            listOf(
+            listOfNotNull(
                 keywordReranker,
-                crossEncoderReranker
+                crossEncoderReranker,
+                llmReranker
             )
         )
     }
 
-    fun initialize() {
-        if (modelManager.isRerankerDownloaded()) {
-            crossEncoderReranker
-        }
+    fun isSemanticRerankerEnabled(): Boolean {
+        return modelManager.isSemanticRerankerEnabled
+    }
+
+    fun setSemanticRerankerEnabled(enabled: Boolean) {
+        modelManager.isSemanticRerankerEnabled = enabled
     }
 
     fun getActiveStrategy(): HybridReranker.Strategy {
         return hybridReranker.getActiveStrategy()
-    }
-
-    fun isCrossEncoderAvailable(): Boolean {
-        return crossEncoderReranker.isAvailable
     }
 
     fun getAvailableRerankerTypes(): List<RerankerType> {
